@@ -25,34 +25,13 @@ Chaque stagiaire doit utiliser ce dépôt pour :
 
 ---
 
-## Organisation du dépôt
-
-La structure générale du dépôt doit être respectée :
-
-.
-├── stagiaires/
-│ ├── nom_prenom/
-│ │ ├── src/
-│ │ ├── tests/
-│ │ └── README.md
-├── framework/
-│ ├── core/
-│ ├── utils/
-│ └── config/
-└── README.md
-
-
-Chaque stagiaire doit travailler **uniquement dans son propre dossier**.
-
----
-
 ## Instructions pour les stagiaires
 
 1. Forker ou cloner le dépôt
 2. Créer un dossier à votre **nom_prenom** dans `stagiaires/`
 3. Implémenter vos tests et scripts PySpark
 4. Vérifier l’exécution correcte du code
-5. Pousser (push) vos modifications avant la date limite
+5. Pousser (push) vos modifications
 
 ---
 

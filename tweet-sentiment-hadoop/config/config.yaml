@@ -1,0 +1,30 @@
+hadoop:
+  hdfs_url: "hdfs://localhost:9000"
+  raw_path: "/data/tweets/raw"
+  clean_path: "/data/tweets/clean"
+  analytics_path: "/data/tweets/analytics"
+
+kafka:
+  broker: "localhost:9092"
+  topic: "tweets-stream"
+  group_id: "sentiment-consumer"
+
+spark:
+  app_name: "TweetSentimentAnalysis"
+  master: "local[*]"
+  streaming_interval: 10   # seconds
+
+paths:
+  local_data: "data/tweets.csv"
+  model_output: "ml/models/"
+  results_output: "ml/results/"
+
+ml:
+  test_size: 0.2
+  random_state: 42
+  max_features: 10000
+
+hbase:
+  host: "localhost"
+  port: 9090
+  table: "tweet_sentiments"

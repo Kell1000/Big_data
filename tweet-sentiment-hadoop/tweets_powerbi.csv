@@ -1,0 +1,3001 @@
+id,text,sentiment
+1,"The app crashes constantly, completely unusable",negative
+2,Just checked the weather forecast for tomorrow,neutral
+3,Very frustrated with the constant delays,negative
+4,"I love this product, absolutely amazing experience!",positive
+5,"So angry about the hidden fees, total scam",negative
+6,The team is working on the new feature,neutral
+7,"The new update is fantastic, so much better now",positive
+8,"Excellent customer support, resolved my issue immediately",positive
+9,The conference starts next Monday in Paris,neutral
+10,The report will be ready by end of day,neutral
+11,"Just finished an incredible book, highly recommend",positive
+12,The restaurant opens at noon on weekdays,neutral
+13,"The new update is fantastic, so much better now",positive
+14,"I love this product, absolutely amazing experience!",positive
+15,"Worst flight I have ever taken, never again",negative
+16,Very frustrated with the constant delays,negative
+17,Cannot believe how bad this service has gotten,negative
+18,The package arrived this afternoon,neutral
+19,The conference starts next Monday in Paris,neutral
+20,"Such a letdown, expected so much more",negative
+21,"Worst flight I have ever taken, never again",negative
+22,The new model was released yesterday,neutral
+23,The package arrived this afternoon,neutral
+24,This is the worst decision I have ever made,negative
+25,Downloaded the latest version of the software,neutral
+26,"The app crashes constantly, completely unusable",negative
+27,"Just finished an incredible book, highly recommend",positive
+28,"Great service today, very happy with the results",positive
+29,The restaurant opens at noon on weekdays,neutral
+30,Downloaded the latest version of the software,neutral
+31,"Worst flight I have ever taken, never again",negative
+32,Currently reading about machine learning,neutral
+33,Outstanding performance today by the whole team,positive
+34,My flight departs at 6am tomorrow morning,neutral
+35,"Beautiful weather today, perfect for a walk",positive
+36,The package arrived this afternoon,neutral
+37,"Great service today, very happy with the results",positive
+38,"So angry about the hidden fees, total scam",negative
+39,"Terrible experience with customer service, very disappointed",negative
+40,"Just had the most wonderful meal, highly recommend",positive
+41,"Such a letdown, expected so much more",negative
+42,The report will be ready by end of day,neutral
+43,"Horrible quality, broke after just two days",negative
+44,Disgusted by the lack of response from support,negative
+45,"The app crashes constantly, completely unusable",negative
+46,So grateful for all the support from my friends,positive
+47,Currently reading about machine learning,neutral
+48,Feeling motivated and ready to take on the world,positive
+49,"Great service today, very happy with the results",positive
+50,"Horrible quality, broke after just two days",negative
+51,"Horrible quality, broke after just two days",negative
+52,"Thrilled with my new purchase, exceeded expectations",positive
+53,I am going to the store later today,neutral
+54,This is the worst decision I have ever made,negative
+55,Downloaded the latest version of the software,neutral
+56,Feeling motivated and ready to take on the world,positive
+57,"Thrilled with my new purchase, exceeded expectations",positive
+58,The meeting is scheduled for 3pm,neutral
+59,Loving the new features in this app,positive
+60,"Horrible quality, broke after just two days",negative
+61,Currently reading about machine learning,neutral
+62,The new model was released yesterday,neutral
+63,Outstanding performance today by the whole team,positive
+64,"Worst flight I have ever taken, never again",negative
+65,"Extremely disappointed, not what was advertised at all",negative
+66,"The new update is fantastic, so much better now",positive
+67,Currently reading about machine learning,neutral
+68,The restaurant opens at noon on weekdays,neutral
+69,"This update ruined everything, reverting immediately",negative
+70,"The app crashes constantly, completely unusable",negative
+71,"The app crashes constantly, completely unusable",negative
+72,"Extremely disappointed, not what was advertised at all",negative
+73,Outstanding performance today by the whole team,positive
+74,"Terrible experience with customer service, very disappointed",negative
+75,"Waited two hours and still no help, unacceptable",negative
+76,Currently reading about machine learning,neutral
+77,"Waited two hours and still no help, unacceptable",negative
+78,"Horrible quality, broke after just two days",negative
+79,Watched a documentary about space last night,neutral
+80,This product is a complete waste of money,negative
+81,"Horrible quality, broke after just two days",negative
+82,"Excellent customer support, resolved my issue immediately",positive
+83,The restaurant opens at noon on weekdays,neutral
+84,Watched a documentary about space last night,neutral
+85,"Worst flight I have ever taken, never again",negative
+86,This is the worst decision I have ever made,negative
+87,"I love this product, absolutely amazing experience!",positive
+88,Disgusted by the lack of response from support,negative
+89,"So angry about the hidden fees, total scam",negative
+90,"Waited two hours and still no help, unacceptable",negative
+91,The package arrived this afternoon,neutral
+92,"Horrible quality, broke after just two days",negative
+93,"Such a letdown, expected so much more",negative
+94,"I love this product, absolutely amazing experience!",positive
+95,The event was attended by over 500 people,neutral
+96,My flight departs at 6am tomorrow morning,neutral
+97,Updated my profile information on the platform,neutral
+98,Updated my profile information on the platform,neutral
+99,Downloaded the latest version of the software,neutral
+100,Just checked the weather forecast for tomorrow,neutral
+101,"Horrible quality, broke after just two days",negative
+102,Disgusted by the lack of response from support,negative
+103,Downloaded the latest version of the software,neutral
+104,Currently reading about machine learning,neutral
+105,Just checked the weather forecast for tomorrow,neutral
+106,The restaurant opens at noon on weekdays,neutral
+107,"Never buying from this brand again, awful experience",negative
+108,Feeling motivated and ready to take on the world,positive
+109,Feeling motivated and ready to take on the world,positive
+110,"I love this product, absolutely amazing experience!",positive
+111,"Terrible experience with customer service, very disappointed",negative
+112,"This update ruined everything, reverting immediately",negative
+113,"Horrible quality, broke after just two days",negative
+114,"Just finished an incredible book, highly recommend",positive
+115,Cannot believe how bad this service has gotten,negative
+116,"Never buying from this brand again, awful experience",negative
+117,"Just finished an incredible book, highly recommend",positive
+118,"Beautiful weather today, perfect for a walk",positive
+119,This is the worst decision I have ever made,negative
+120,Best coffee I have ever had this morning,positive
+121,Currently reading about machine learning,neutral
+122,"Worst flight I have ever taken, never again",negative
+123,"Just finished an incredible book, highly recommend",positive
+124,The conference starts next Monday in Paris,neutral
+125,The package arrived this afternoon,neutral
+126,Downloaded the latest version of the software,neutral
+127,Very frustrated with the constant delays,negative
+128,Downloaded the latest version of the software,neutral
+129,This is the worst decision I have ever made,negative
+130,This product is a complete waste of money,negative
+131,The package arrived this afternoon,neutral
+132,"Never buying from this brand again, awful experience",negative
+133,Updated my profile information on the platform,neutral
+134,The conference starts next Monday in Paris,neutral
+135,"Excellent customer support, resolved my issue immediately",positive
+136,Disgusted by the lack of response from support,negative
+137,The restaurant opens at noon on weekdays,neutral
+138,Happy to announce I got the job! Super excited,positive
+139,"The new update is fantastic, so much better now",positive
+140,"Thrilled with my new purchase, exceeded expectations",positive
+141,Feeling motivated and ready to take on the world,positive
+142,Very frustrated with the constant delays,negative
+143,"Extremely disappointed, not what was advertised at all",negative
+144,"The new update is fantastic, so much better now",positive
+145,This product is a complete waste of money,negative
+146,The report will be ready by end of day,neutral
+147,"Extremely disappointed, not what was advertised at all",negative
+148,So grateful for all the support from my friends,positive
+149,"The app crashes constantly, completely unusable",negative
+150,The report will be ready by end of day,neutral
+151,I am going to the store later today,neutral
+152,"The new update is fantastic, so much better now",positive
+153,"Just finished an incredible book, highly recommend",positive
+154,The team is working on the new feature,neutral
+155,"Worst flight I have ever taken, never again",negative
+156,The package arrived this afternoon,neutral
+157,The team is working on the new feature,neutral
+158,This is the worst decision I have ever made,negative
+159,"This is the best day ever, feeling fantastic!",positive
+160,Updated my profile information on the platform,neutral
+161,"So angry about the hidden fees, total scam",negative
+162,"Terrible experience with customer service, very disappointed",negative
+163,Very frustrated with the constant delays,negative
+164,"Worst flight I have ever taken, never again",negative
+165,Happy to announce I got the job! Super excited,positive
+166,"Such a letdown, expected so much more",negative
+167,The package arrived this afternoon,neutral
+168,"So angry about the hidden fees, total scam",negative
+169,Downloaded the latest version of the software,neutral
+170,The event was attended by over 500 people,neutral
+171,"Beautiful weather today, perfect for a walk",positive
+172,The package arrived this afternoon,neutral
+173,"Horrible quality, broke after just two days",negative
+174,"Terrible experience with customer service, very disappointed",negative
+175,So grateful for all the support from my friends,positive
+176,I am going to the store later today,neutral
+177,Loving the new features in this app,positive
+178,Loving the new features in this app,positive
+179,"The new update is fantastic, so much better now",positive
+180,"This update ruined everything, reverting immediately",negative
+181,Best coffee I have ever had this morning,positive
+182,"Such a letdown, expected so much more",negative
+183,"Terrible experience with customer service, very disappointed",negative
+184,Watched a documentary about space last night,neutral
+185,"Such a letdown, expected so much more",negative
+186,The new model was released yesterday,neutral
+187,The restaurant opens at noon on weekdays,neutral
+188,Outstanding performance today by the whole team,positive
+189,"Such a letdown, expected so much more",negative
+190,"So angry about the hidden fees, total scam",negative
+191,Downloaded the latest version of the software,neutral
+192,The event was attended by over 500 people,neutral
+193,Disgusted by the lack of response from support,negative
+194,"Horrible quality, broke after just two days",negative
+195,So grateful for all the support from my friends,positive
+196,Currently reading about machine learning,neutral
+197,"Beautiful weather today, perfect for a walk",positive
+198,The meeting is scheduled for 3pm,neutral
+199,"Waited two hours and still no help, unacceptable",negative
+200,"Just had the most wonderful meal, highly recommend",positive
+201,The team is working on the new feature,neutral
+202,"Great service today, very happy with the results",positive
+203,"This update ruined everything, reverting immediately",negative
+204,"Just had the most wonderful meal, highly recommend",positive
+205,The new model was released yesterday,neutral
+206,"Great service today, very happy with the results",positive
+207,"Just had the most wonderful meal, highly recommend",positive
+208,Just checked the weather forecast for tomorrow,neutral
+209,So grateful for all the support from my friends,positive
+210,The package arrived this afternoon,neutral
+211,So grateful for all the support from my friends,positive
+212,Downloaded the latest version of the software,neutral
+213,Just checked the weather forecast for tomorrow,neutral
+214,"Extremely disappointed, not what was advertised at all",negative
+215,"Extremely disappointed, not what was advertised at all",negative
+216,I am going to the store later today,neutral
+217,Updated my profile information on the platform,neutral
+218,"Waited two hours and still no help, unacceptable",negative
+219,"This is the best day ever, feeling fantastic!",positive
+220,Watched a documentary about space last night,neutral
+221,This product is a complete waste of money,negative
+222,My flight departs at 6am tomorrow morning,neutral
+223,The restaurant opens at noon on weekdays,neutral
+224,"Extremely disappointed, not what was advertised at all",negative
+225,"Extremely disappointed, not what was advertised at all",negative
+226,"Thrilled with my new purchase, exceeded expectations",positive
+227,"The new update is fantastic, so much better now",positive
+228,I am going to the store later today,neutral
+229,Just checked the weather forecast for tomorrow,neutral
+230,"Extremely disappointed, not what was advertised at all",negative
+231,Best coffee I have ever had this morning,positive
+232,Best coffee I have ever had this morning,positive
+233,Just checked the weather forecast for tomorrow,neutral
+234,"Extremely disappointed, not what was advertised at all",negative
+235,"This is the best day ever, feeling fantastic!",positive
+236,Updated my profile information on the platform,neutral
+237,"This update ruined everything, reverting immediately",negative
+238,This product is a complete waste of money,negative
+239,"Excellent customer support, resolved my issue immediately",positive
+240,The team is working on the new feature,neutral
+241,The event was attended by over 500 people,neutral
+242,My flight departs at 6am tomorrow morning,neutral
+243,The meeting is scheduled for 3pm,neutral
+244,The restaurant opens at noon on weekdays,neutral
+245,Updated my profile information on the platform,neutral
+246,"This is the best day ever, feeling fantastic!",positive
+247,Outstanding performance today by the whole team,positive
+248,"Worst flight I have ever taken, never again",negative
+249,Disgusted by the lack of response from support,negative
+250,Just checked the weather forecast for tomorrow,neutral
+251,Just checked the weather forecast for tomorrow,neutral
+252,My flight departs at 6am tomorrow morning,neutral
+253,Downloaded the latest version of the software,neutral
+254,"Extremely disappointed, not what was advertised at all",negative
+255,The event was attended by over 500 people,neutral
+256,I am going to the store later today,neutral
+257,So grateful for all the support from my friends,positive
+258,"Horrible quality, broke after just two days",negative
+259,"Just finished an incredible book, highly recommend",positive
+260,This product is a complete waste of money,negative
+261,"This update ruined everything, reverting immediately",negative
+262,This product is a complete waste of money,negative
+263,"Great service today, very happy with the results",positive
+264,"This update ruined everything, reverting immediately",negative
+265,Watched a documentary about space last night,neutral
+266,Cannot believe how bad this service has gotten,negative
+267,Happy to announce I got the job! Super excited,positive
+268,"Waited two hours and still no help, unacceptable",negative
+269,The new model was released yesterday,neutral
+270,The package arrived this afternoon,neutral
+271,Happy to announce I got the job! Super excited,positive
+272,This product is a complete waste of money,negative
+273,So grateful for all the support from my friends,positive
+274,"Waited two hours and still no help, unacceptable",negative
+275,"Just finished an incredible book, highly recommend",positive
+276,Happy to announce I got the job! Super excited,positive
+277,"Such a letdown, expected so much more",negative
+278,Updated my profile information on the platform,neutral
+279,Best coffee I have ever had this morning,positive
+280,"Waited two hours and still no help, unacceptable",negative
+281,"The app crashes constantly, completely unusable",negative
+282,Feeling motivated and ready to take on the world,positive
+283,Cannot believe how bad this service has gotten,negative
+284,"The new update is fantastic, so much better now",positive
+285,Just checked the weather forecast for tomorrow,neutral
+286,"Just had the most wonderful meal, highly recommend",positive
+287,"Extremely disappointed, not what was advertised at all",negative
+288,The restaurant opens at noon on weekdays,neutral
+289,The restaurant opens at noon on weekdays,neutral
+290,The conference starts next Monday in Paris,neutral
+291,Just checked the weather forecast for tomorrow,neutral
+292,"Thrilled with my new purchase, exceeded expectations",positive
+293,Happy to announce I got the job! Super excited,positive
+294,"Just finished an incredible book, highly recommend",positive
+295,Cannot believe how bad this service has gotten,negative
+296,"Excellent customer support, resolved my issue immediately",positive
+297,"Just finished an incredible book, highly recommend",positive
+298,So grateful for all the support from my friends,positive
+299,The event was attended by over 500 people,neutral
+300,Cannot believe how bad this service has gotten,negative
+301,The team is working on the new feature,neutral
+302,"The new update is fantastic, so much better now",positive
+303,The package arrived this afternoon,neutral
+304,My flight departs at 6am tomorrow morning,neutral
+305,"Great service today, very happy with the results",positive
+306,Updated my profile information on the platform,neutral
+307,"So angry about the hidden fees, total scam",negative
+308,The new model was released yesterday,neutral
+309,"Such a letdown, expected so much more",negative
+310,Watched a documentary about space last night,neutral
+311,"The new update is fantastic, so much better now",positive
+312,"So angry about the hidden fees, total scam",negative
+313,Feeling motivated and ready to take on the world,positive
+314,This product is a complete waste of money,negative
+315,Loving the new features in this app,positive
+316,"Such a letdown, expected so much more",negative
+317,"Extremely disappointed, not what was advertised at all",negative
+318,"Never buying from this brand again, awful experience",negative
+319,"The new update is fantastic, so much better now",positive
+320,Watched a documentary about space last night,neutral
+321,This product is a complete waste of money,negative
+322,This product is a complete waste of money,negative
+323,This product is a complete waste of money,negative
+324,The team is working on the new feature,neutral
+325,"I love this product, absolutely amazing experience!",positive
+326,"Terrible experience with customer service, very disappointed",negative
+327,"I love this product, absolutely amazing experience!",positive
+328,Best coffee I have ever had this morning,positive
+329,Currently reading about machine learning,neutral
+330,My flight departs at 6am tomorrow morning,neutral
+331,The conference starts next Monday in Paris,neutral
+332,Feeling motivated and ready to take on the world,positive
+333,Currently reading about machine learning,neutral
+334,"Worst flight I have ever taken, never again",negative
+335,The meeting is scheduled for 3pm,neutral
+336,This is the worst decision I have ever made,negative
+337,"Just had the most wonderful meal, highly recommend",positive
+338,So grateful for all the support from my friends,positive
+339,"Horrible quality, broke after just two days",negative
+340,Just checked the weather forecast for tomorrow,neutral
+341,This is the worst decision I have ever made,negative
+342,"Extremely disappointed, not what was advertised at all",negative
+343,Outstanding performance today by the whole team,positive
+344,"Never buying from this brand again, awful experience",negative
+345,"Horrible quality, broke after just two days",negative
+346,"This is the best day ever, feeling fantastic!",positive
+347,"Excellent customer support, resolved my issue immediately",positive
+348,"This update ruined everything, reverting immediately",negative
+349,The restaurant opens at noon on weekdays,neutral
+350,So grateful for all the support from my friends,positive
+351,"Just finished an incredible book, highly recommend",positive
+352,The conference starts next Monday in Paris,neutral
+353,Currently reading about machine learning,neutral
+354,The team is working on the new feature,neutral
+355,Updated my profile information on the platform,neutral
+356,"Just had the most wonderful meal, highly recommend",positive
+357,The team is working on the new feature,neutral
+358,Loving the new features in this app,positive
+359,"The new update is fantastic, so much better now",positive
+360,This is the worst decision I have ever made,negative
+361,Currently reading about machine learning,neutral
+362,"The app crashes constantly, completely unusable",negative
+363,"Beautiful weather today, perfect for a walk",positive
+364,"Just finished an incredible book, highly recommend",positive
+365,"Extremely disappointed, not what was advertised at all",negative
+366,The conference starts next Monday in Paris,neutral
+367,Very frustrated with the constant delays,negative
+368,This product is a complete waste of money,negative
+369,"Horrible quality, broke after just two days",negative
+370,"Never buying from this brand again, awful experience",negative
+371,"Waited two hours and still no help, unacceptable",negative
+372,"Never buying from this brand again, awful experience",negative
+373,I am going to the store later today,neutral
+374,"Terrible experience with customer service, very disappointed",negative
+375,Currently reading about machine learning,neutral
+376,This is the worst decision I have ever made,negative
+377,"Great service today, very happy with the results",positive
+378,Feeling motivated and ready to take on the world,positive
+379,This product is a complete waste of money,negative
+380,Cannot believe how bad this service has gotten,negative
+381,So grateful for all the support from my friends,positive
+382,Very frustrated with the constant delays,negative
+383,Feeling motivated and ready to take on the world,positive
+384,The event was attended by over 500 people,neutral
+385,"This is the best day ever, feeling fantastic!",positive
+386,Currently reading about machine learning,neutral
+387,Downloaded the latest version of the software,neutral
+388,Outstanding performance today by the whole team,positive
+389,Best coffee I have ever had this morning,positive
+390,Best coffee I have ever had this morning,positive
+391,The event was attended by over 500 people,neutral
+392,"Great service today, very happy with the results",positive
+393,Feeling motivated and ready to take on the world,positive
+394,The conference starts next Monday in Paris,neutral
+395,The package arrived this afternoon,neutral
+396,So grateful for all the support from my friends,positive
+397,The report will be ready by end of day,neutral
+398,"Just had the most wonderful meal, highly recommend",positive
+399,"Excellent customer support, resolved my issue immediately",positive
+400,"Just had the most wonderful meal, highly recommend",positive
+401,Currently reading about machine learning,neutral
+402,Cannot believe how bad this service has gotten,negative
+403,Outstanding performance today by the whole team,positive
+404,"Worst flight I have ever taken, never again",negative
+405,The team is working on the new feature,neutral
+406,This product is a complete waste of money,negative
+407,Outstanding performance today by the whole team,positive
+408,"Never buying from this brand again, awful experience",negative
+409,"So angry about the hidden fees, total scam",negative
+410,Disgusted by the lack of response from support,negative
+411,"Thrilled with my new purchase, exceeded expectations",positive
+412,"Waited two hours and still no help, unacceptable",negative
+413,"So angry about the hidden fees, total scam",negative
+414,"The app crashes constantly, completely unusable",negative
+415,The meeting is scheduled for 3pm,neutral
+416,Outstanding performance today by the whole team,positive
+417,This product is a complete waste of money,negative
+418,The new model was released yesterday,neutral
+419,Loving the new features in this app,positive
+420,The meeting is scheduled for 3pm,neutral
+421,Feeling motivated and ready to take on the world,positive
+422,"Just finished an incredible book, highly recommend",positive
+423,The conference starts next Monday in Paris,neutral
+424,"Excellent customer support, resolved my issue immediately",positive
+425,Updated my profile information on the platform,neutral
+426,Best coffee I have ever had this morning,positive
+427,This product is a complete waste of money,negative
+428,"So angry about the hidden fees, total scam",negative
+429,"So angry about the hidden fees, total scam",negative
+430,"Waited two hours and still no help, unacceptable",negative
+431,"Excellent customer support, resolved my issue immediately",positive
+432,Disgusted by the lack of response from support,negative
+433,"Thrilled with my new purchase, exceeded expectations",positive
+434,"Thrilled with my new purchase, exceeded expectations",positive
+435,Disgusted by the lack of response from support,negative
+436,"I love this product, absolutely amazing experience!",positive
+437,Downloaded the latest version of the software,neutral
+438,Feeling motivated and ready to take on the world,positive
+439,"Excellent customer support, resolved my issue immediately",positive
+440,The report will be ready by end of day,neutral
+441,"This is the best day ever, feeling fantastic!",positive
+442,"I love this product, absolutely amazing experience!",positive
+443,The report will be ready by end of day,neutral
+444,Feeling motivated and ready to take on the world,positive
+445,I am going to the store later today,neutral
+446,The meeting is scheduled for 3pm,neutral
+447,Just checked the weather forecast for tomorrow,neutral
+448,"Such a letdown, expected so much more",negative
+449,Very frustrated with the constant delays,negative
+450,So grateful for all the support from my friends,positive
+451,Downloaded the latest version of the software,neutral
+452,"Just had the most wonderful meal, highly recommend",positive
+453,The restaurant opens at noon on weekdays,neutral
+454,Very frustrated with the constant delays,negative
+455,Feeling motivated and ready to take on the world,positive
+456,Downloaded the latest version of the software,neutral
+457,"Never buying from this brand again, awful experience",negative
+458,"This is the best day ever, feeling fantastic!",positive
+459,The conference starts next Monday in Paris,neutral
+460,"The new update is fantastic, so much better now",positive
+461,"Excellent customer support, resolved my issue immediately",positive
+462,The conference starts next Monday in Paris,neutral
+463,"I love this product, absolutely amazing experience!",positive
+464,This is the worst decision I have ever made,negative
+465,Feeling motivated and ready to take on the world,positive
+466,"Terrible experience with customer service, very disappointed",negative
+467,"Great service today, very happy with the results",positive
+468,Best coffee I have ever had this morning,positive
+469,Downloaded the latest version of the software,neutral
+470,"This is the best day ever, feeling fantastic!",positive
+471,Updated my profile information on the platform,neutral
+472,"Excellent customer support, resolved my issue immediately",positive
+473,"Great service today, very happy with the results",positive
+474,Disgusted by the lack of response from support,negative
+475,Very frustrated with the constant delays,negative
+476,"Just had the most wonderful meal, highly recommend",positive
+477,The conference starts next Monday in Paris,neutral
+478,I am going to the store later today,neutral
+479,This product is a complete waste of money,negative
+480,"Beautiful weather today, perfect for a walk",positive
+481,"This update ruined everything, reverting immediately",negative
+482,"I love this product, absolutely amazing experience!",positive
+483,Updated my profile information on the platform,neutral
+484,Outstanding performance today by the whole team,positive
+485,The restaurant opens at noon on weekdays,neutral
+486,My flight departs at 6am tomorrow morning,neutral
+487,Currently reading about machine learning,neutral
+488,"This is the best day ever, feeling fantastic!",positive
+489,Disgusted by the lack of response from support,negative
+490,"Beautiful weather today, perfect for a walk",positive
+491,Currently reading about machine learning,neutral
+492,Disgusted by the lack of response from support,negative
+493,Updated my profile information on the platform,neutral
+494,The restaurant opens at noon on weekdays,neutral
+495,"So angry about the hidden fees, total scam",negative
+496,The package arrived this afternoon,neutral
+497,The event was attended by over 500 people,neutral
+498,"Waited two hours and still no help, unacceptable",negative
+499,Downloaded the latest version of the software,neutral
+500,Updated my profile information on the platform,neutral
+501,This product is a complete waste of money,negative
+502,"This update ruined everything, reverting immediately",negative
+503,"Excellent customer support, resolved my issue immediately",positive
+504,"Never buying from this brand again, awful experience",negative
+505,The restaurant opens at noon on weekdays,neutral
+506,The meeting is scheduled for 3pm,neutral
+507,I am going to the store later today,neutral
+508,"Such a letdown, expected so much more",negative
+509,Watched a documentary about space last night,neutral
+510,"This update ruined everything, reverting immediately",negative
+511,Currently reading about machine learning,neutral
+512,I am going to the store later today,neutral
+513,Currently reading about machine learning,neutral
+514,"Never buying from this brand again, awful experience",negative
+515,Feeling motivated and ready to take on the world,positive
+516,"Horrible quality, broke after just two days",negative
+517,"So angry about the hidden fees, total scam",negative
+518,"Worst flight I have ever taken, never again",negative
+519,The conference starts next Monday in Paris,neutral
+520,"I love this product, absolutely amazing experience!",positive
+521,"Thrilled with my new purchase, exceeded expectations",positive
+522,I am going to the store later today,neutral
+523,"Such a letdown, expected so much more",negative
+524,The event was attended by over 500 people,neutral
+525,The event was attended by over 500 people,neutral
+526,This is the worst decision I have ever made,negative
+527,Happy to announce I got the job! Super excited,positive
+528,Just checked the weather forecast for tomorrow,neutral
+529,"So angry about the hidden fees, total scam",negative
+530,Disgusted by the lack of response from support,negative
+531,The package arrived this afternoon,neutral
+532,This is the worst decision I have ever made,negative
+533,The package arrived this afternoon,neutral
+534,"Never buying from this brand again, awful experience",negative
+535,The meeting is scheduled for 3pm,neutral
+536,Watched a documentary about space last night,neutral
+537,"This is the best day ever, feeling fantastic!",positive
+538,"Extremely disappointed, not what was advertised at all",negative
+539,"So angry about the hidden fees, total scam",negative
+540,The new model was released yesterday,neutral
+541,"Just finished an incredible book, highly recommend",positive
+542,This is the worst decision I have ever made,negative
+543,Outstanding performance today by the whole team,positive
+544,"This update ruined everything, reverting immediately",negative
+545,"Beautiful weather today, perfect for a walk",positive
+546,The event was attended by over 500 people,neutral
+547,The package arrived this afternoon,neutral
+548,"Excellent customer support, resolved my issue immediately",positive
+549,"Terrible experience with customer service, very disappointed",negative
+550,Happy to announce I got the job! Super excited,positive
+551,Happy to announce I got the job! Super excited,positive
+552,Best coffee I have ever had this morning,positive
+553,The new model was released yesterday,neutral
+554,Watched a documentary about space last night,neutral
+555,Very frustrated with the constant delays,negative
+556,"Terrible experience with customer service, very disappointed",negative
+557,Loving the new features in this app,positive
+558,"This is the best day ever, feeling fantastic!",positive
+559,Cannot believe how bad this service has gotten,negative
+560,Loving the new features in this app,positive
+561,The report will be ready by end of day,neutral
+562,"Horrible quality, broke after just two days",negative
+563,This is the worst decision I have ever made,negative
+564,The report will be ready by end of day,neutral
+565,The conference starts next Monday in Paris,neutral
+566,Happy to announce I got the job! Super excited,positive
+567,Very frustrated with the constant delays,negative
+568,Feeling motivated and ready to take on the world,positive
+569,"Horrible quality, broke after just two days",negative
+570,Disgusted by the lack of response from support,negative
+571,The restaurant opens at noon on weekdays,neutral
+572,"Extremely disappointed, not what was advertised at all",negative
+573,"This is the best day ever, feeling fantastic!",positive
+574,Best coffee I have ever had this morning,positive
+575,I am going to the store later today,neutral
+576,"This update ruined everything, reverting immediately",negative
+577,Loving the new features in this app,positive
+578,"Extremely disappointed, not what was advertised at all",negative
+579,Outstanding performance today by the whole team,positive
+580,"Beautiful weather today, perfect for a walk",positive
+581,This product is a complete waste of money,negative
+582,"Great service today, very happy with the results",positive
+583,Currently reading about machine learning,neutral
+584,Cannot believe how bad this service has gotten,negative
+585,"The app crashes constantly, completely unusable",negative
+586,Just checked the weather forecast for tomorrow,neutral
+587,"Beautiful weather today, perfect for a walk",positive
+588,"This update ruined everything, reverting immediately",negative
+589,Downloaded the latest version of the software,neutral
+590,Happy to announce I got the job! Super excited,positive
+591,"This is the best day ever, feeling fantastic!",positive
+592,The team is working on the new feature,neutral
+593,"Great service today, very happy with the results",positive
+594,The meeting is scheduled for 3pm,neutral
+595,Feeling motivated and ready to take on the world,positive
+596,The report will be ready by end of day,neutral
+597,I am going to the store later today,neutral
+598,The restaurant opens at noon on weekdays,neutral
+599,Watched a documentary about space last night,neutral
+600,"Terrible experience with customer service, very disappointed",negative
+601,Watched a documentary about space last night,neutral
+602,"This is the best day ever, feeling fantastic!",positive
+603,"Worst flight I have ever taken, never again",negative
+604,Updated my profile information on the platform,neutral
+605,I am going to the store later today,neutral
+606,"Such a letdown, expected so much more",negative
+607,"Just had the most wonderful meal, highly recommend",positive
+608,"Excellent customer support, resolved my issue immediately",positive
+609,Disgusted by the lack of response from support,negative
+610,"This is the best day ever, feeling fantastic!",positive
+611,The conference starts next Monday in Paris,neutral
+612,Happy to announce I got the job! Super excited,positive
+613,Happy to announce I got the job! Super excited,positive
+614,Currently reading about machine learning,neutral
+615,"Waited two hours and still no help, unacceptable",negative
+616,Currently reading about machine learning,neutral
+617,"Such a letdown, expected so much more",negative
+618,"Extremely disappointed, not what was advertised at all",negative
+619,"Just finished an incredible book, highly recommend",positive
+620,"Just finished an incredible book, highly recommend",positive
+621,"Never buying from this brand again, awful experience",negative
+622,Just checked the weather forecast for tomorrow,neutral
+623,"Great service today, very happy with the results",positive
+624,"Horrible quality, broke after just two days",negative
+625,This product is a complete waste of money,negative
+626,Feeling motivated and ready to take on the world,positive
+627,Downloaded the latest version of the software,neutral
+628,Downloaded the latest version of the software,neutral
+629,"Beautiful weather today, perfect for a walk",positive
+630,The report will be ready by end of day,neutral
+631,This is the worst decision I have ever made,negative
+632,This is the worst decision I have ever made,negative
+633,The conference starts next Monday in Paris,neutral
+634,"I love this product, absolutely amazing experience!",positive
+635,"I love this product, absolutely amazing experience!",positive
+636,"Excellent customer support, resolved my issue immediately",positive
+637,"Great service today, very happy with the results",positive
+638,"The new update is fantastic, so much better now",positive
+639,Best coffee I have ever had this morning,positive
+640,"The new update is fantastic, so much better now",positive
+641,Best coffee I have ever had this morning,positive
+642,"Never buying from this brand again, awful experience",negative
+643,"Waited two hours and still no help, unacceptable",negative
+644,Loving the new features in this app,positive
+645,Disgusted by the lack of response from support,negative
+646,Just checked the weather forecast for tomorrow,neutral
+647,"Great service today, very happy with the results",positive
+648,Watched a documentary about space last night,neutral
+649,The package arrived this afternoon,neutral
+650,"This is the best day ever, feeling fantastic!",positive
+651,I am going to the store later today,neutral
+652,Outstanding performance today by the whole team,positive
+653,"Waited two hours and still no help, unacceptable",negative
+654,"Terrible experience with customer service, very disappointed",negative
+655,"Terrible experience with customer service, very disappointed",negative
+656,The restaurant opens at noon on weekdays,neutral
+657,Happy to announce I got the job! Super excited,positive
+658,"The app crashes constantly, completely unusable",negative
+659,"Terrible experience with customer service, very disappointed",negative
+660,Outstanding performance today by the whole team,positive
+661,The report will be ready by end of day,neutral
+662,The meeting is scheduled for 3pm,neutral
+663,"Great service today, very happy with the results",positive
+664,Watched a documentary about space last night,neutral
+665,The report will be ready by end of day,neutral
+666,"Never buying from this brand again, awful experience",negative
+667,Feeling motivated and ready to take on the world,positive
+668,"The app crashes constantly, completely unusable",negative
+669,The package arrived this afternoon,neutral
+670,The event was attended by over 500 people,neutral
+671,Best coffee I have ever had this morning,positive
+672,Very frustrated with the constant delays,negative
+673,Feeling motivated and ready to take on the world,positive
+674,"Never buying from this brand again, awful experience",negative
+675,Watched a documentary about space last night,neutral
+676,The event was attended by over 500 people,neutral
+677,The meeting is scheduled for 3pm,neutral
+678,The new model was released yesterday,neutral
+679,The new model was released yesterday,neutral
+680,"Worst flight I have ever taken, never again",negative
+681,"The app crashes constantly, completely unusable",negative
+682,"Such a letdown, expected so much more",negative
+683,"I love this product, absolutely amazing experience!",positive
+684,"Beautiful weather today, perfect for a walk",positive
+685,"Worst flight I have ever taken, never again",negative
+686,Outstanding performance today by the whole team,positive
+687,The package arrived this afternoon,neutral
+688,The conference starts next Monday in Paris,neutral
+689,"Such a letdown, expected so much more",negative
+690,"Beautiful weather today, perfect for a walk",positive
+691,Watched a documentary about space last night,neutral
+692,The team is working on the new feature,neutral
+693,"I love this product, absolutely amazing experience!",positive
+694,The restaurant opens at noon on weekdays,neutral
+695,"This update ruined everything, reverting immediately",negative
+696,Disgusted by the lack of response from support,negative
+697,"Excellent customer support, resolved my issue immediately",positive
+698,Watched a documentary about space last night,neutral
+699,The meeting is scheduled for 3pm,neutral
+700,Best coffee I have ever had this morning,positive
+701,The team is working on the new feature,neutral
+702,"Worst flight I have ever taken, never again",negative
+703,"Great service today, very happy with the results",positive
+704,This is the worst decision I have ever made,negative
+705,The event was attended by over 500 people,neutral
+706,"Waited two hours and still no help, unacceptable",negative
+707,"This is the best day ever, feeling fantastic!",positive
+708,"Great service today, very happy with the results",positive
+709,The restaurant opens at noon on weekdays,neutral
+710,"Just had the most wonderful meal, highly recommend",positive
+711,"Extremely disappointed, not what was advertised at all",negative
+712,"Extremely disappointed, not what was advertised at all",negative
+713,The meeting is scheduled for 3pm,neutral
+714,"This is the best day ever, feeling fantastic!",positive
+715,"Beautiful weather today, perfect for a walk",positive
+716,The package arrived this afternoon,neutral
+717,"I love this product, absolutely amazing experience!",positive
+718,"This update ruined everything, reverting immediately",negative
+719,Best coffee I have ever had this morning,positive
+720,The restaurant opens at noon on weekdays,neutral
+721,Just checked the weather forecast for tomorrow,neutral
+722,"Beautiful weather today, perfect for a walk",positive
+723,The event was attended by over 500 people,neutral
+724,The meeting is scheduled for 3pm,neutral
+725,"Thrilled with my new purchase, exceeded expectations",positive
+726,Downloaded the latest version of the software,neutral
+727,Best coffee I have ever had this morning,positive
+728,The report will be ready by end of day,neutral
+729,"Extremely disappointed, not what was advertised at all",negative
+730,"This update ruined everything, reverting immediately",negative
+731,My flight departs at 6am tomorrow morning,neutral
+732,The meeting is scheduled for 3pm,neutral
+733,Loving the new features in this app,positive
+734,"Such a letdown, expected so much more",negative
+735,Disgusted by the lack of response from support,negative
+736,"Terrible experience with customer service, very disappointed",negative
+737,The team is working on the new feature,neutral
+738,Watched a documentary about space last night,neutral
+739,Currently reading about machine learning,neutral
+740,Just checked the weather forecast for tomorrow,neutral
+741,"Great service today, very happy with the results",positive
+742,Best coffee I have ever had this morning,positive
+743,The event was attended by over 500 people,neutral
+744,Cannot believe how bad this service has gotten,negative
+745,"Just finished an incredible book, highly recommend",positive
+746,"This is the best day ever, feeling fantastic!",positive
+747,The meeting is scheduled for 3pm,neutral
+748,Disgusted by the lack of response from support,negative
+749,So grateful for all the support from my friends,positive
+750,"This update ruined everything, reverting immediately",negative
+751,I am going to the store later today,neutral
+752,Currently reading about machine learning,neutral
+753,The team is working on the new feature,neutral
+754,I am going to the store later today,neutral
+755,Feeling motivated and ready to take on the world,positive
+756,"Terrible experience with customer service, very disappointed",negative
+757,I am going to the store later today,neutral
+758,Downloaded the latest version of the software,neutral
+759,"This update ruined everything, reverting immediately",negative
+760,"The new update is fantastic, so much better now",positive
+761,The restaurant opens at noon on weekdays,neutral
+762,"Such a letdown, expected so much more",negative
+763,"Worst flight I have ever taken, never again",negative
+764,"So angry about the hidden fees, total scam",negative
+765,"This is the best day ever, feeling fantastic!",positive
+766,The report will be ready by end of day,neutral
+767,"Beautiful weather today, perfect for a walk",positive
+768,"The app crashes constantly, completely unusable",negative
+769,Very frustrated with the constant delays,negative
+770,"This is the best day ever, feeling fantastic!",positive
+771,"The app crashes constantly, completely unusable",negative
+772,Very frustrated with the constant delays,negative
+773,Disgusted by the lack of response from support,negative
+774,This is the worst decision I have ever made,negative
+775,"Excellent customer support, resolved my issue immediately",positive
+776,The restaurant opens at noon on weekdays,neutral
+777,The event was attended by over 500 people,neutral
+778,"Just finished an incredible book, highly recommend",positive
+779,Feeling motivated and ready to take on the world,positive
+780,The event was attended by over 500 people,neutral
+781,"Thrilled with my new purchase, exceeded expectations",positive
+782,The meeting is scheduled for 3pm,neutral
+783,"Terrible experience with customer service, very disappointed",negative
+784,This product is a complete waste of money,negative
+785,Loving the new features in this app,positive
+786,The report will be ready by end of day,neutral
+787,"This update ruined everything, reverting immediately",negative
+788,Feeling motivated and ready to take on the world,positive
+789,"So angry about the hidden fees, total scam",negative
+790,I am going to the store later today,neutral
+791,The package arrived this afternoon,neutral
+792,Best coffee I have ever had this morning,positive
+793,"I love this product, absolutely amazing experience!",positive
+794,Loving the new features in this app,positive
+795,Just checked the weather forecast for tomorrow,neutral
+796,"The app crashes constantly, completely unusable",negative
+797,Feeling motivated and ready to take on the world,positive
+798,Happy to announce I got the job! Super excited,positive
+799,Just checked the weather forecast for tomorrow,neutral
+800,"I love this product, absolutely amazing experience!",positive
+801,Disgusted by the lack of response from support,negative
+802,"Just finished an incredible book, highly recommend",positive
+803,The conference starts next Monday in Paris,neutral
+804,Outstanding performance today by the whole team,positive
+805,The new model was released yesterday,neutral
+806,"Such a letdown, expected so much more",negative
+807,Happy to announce I got the job! Super excited,positive
+808,Disgusted by the lack of response from support,negative
+809,"Great service today, very happy with the results",positive
+810,"So angry about the hidden fees, total scam",negative
+811,"Never buying from this brand again, awful experience",negative
+812,The conference starts next Monday in Paris,neutral
+813,Updated my profile information on the platform,neutral
+814,"The new update is fantastic, so much better now",positive
+815,"The new update is fantastic, so much better now",positive
+816,Just checked the weather forecast for tomorrow,neutral
+817,The package arrived this afternoon,neutral
+818,Downloaded the latest version of the software,neutral
+819,So grateful for all the support from my friends,positive
+820,This product is a complete waste of money,negative
+821,This product is a complete waste of money,negative
+822,Loving the new features in this app,positive
+823,Outstanding performance today by the whole team,positive
+824,"Horrible quality, broke after just two days",negative
+825,"Such a letdown, expected so much more",negative
+826,"Extremely disappointed, not what was advertised at all",negative
+827,The report will be ready by end of day,neutral
+828,I am going to the store later today,neutral
+829,My flight departs at 6am tomorrow morning,neutral
+830,Outstanding performance today by the whole team,positive
+831,"The app crashes constantly, completely unusable",negative
+832,Best coffee I have ever had this morning,positive
+833,"Never buying from this brand again, awful experience",negative
+834,My flight departs at 6am tomorrow morning,neutral
+835,This is the worst decision I have ever made,negative
+836,Loving the new features in this app,positive
+837,"Never buying from this brand again, awful experience",negative
+838,Feeling motivated and ready to take on the world,positive
+839,Outstanding performance today by the whole team,positive
+840,Very frustrated with the constant delays,negative
+841,The restaurant opens at noon on weekdays,neutral
+842,"Waited two hours and still no help, unacceptable",negative
+843,"The app crashes constantly, completely unusable",negative
+844,My flight departs at 6am tomorrow morning,neutral
+845,Outstanding performance today by the whole team,positive
+846,"So angry about the hidden fees, total scam",negative
+847,Updated my profile information on the platform,neutral
+848,Just checked the weather forecast for tomorrow,neutral
+849,"Beautiful weather today, perfect for a walk",positive
+850,The conference starts next Monday in Paris,neutral
+851,Cannot believe how bad this service has gotten,negative
+852,"Such a letdown, expected so much more",negative
+853,"Beautiful weather today, perfect for a walk",positive
+854,My flight departs at 6am tomorrow morning,neutral
+855,The team is working on the new feature,neutral
+856,So grateful for all the support from my friends,positive
+857,The new model was released yesterday,neutral
+858,The team is working on the new feature,neutral
+859,Best coffee I have ever had this morning,positive
+860,"Worst flight I have ever taken, never again",negative
+861,"Worst flight I have ever taken, never again",negative
+862,"The app crashes constantly, completely unusable",negative
+863,Best coffee I have ever had this morning,positive
+864,The package arrived this afternoon,neutral
+865,So grateful for all the support from my friends,positive
+866,"Horrible quality, broke after just two days",negative
+867,The new model was released yesterday,neutral
+868,"Waited two hours and still no help, unacceptable",negative
+869,"Great service today, very happy with the results",positive
+870,The package arrived this afternoon,neutral
+871,Currently reading about machine learning,neutral
+872,Very frustrated with the constant delays,negative
+873,Disgusted by the lack of response from support,negative
+874,"Terrible experience with customer service, very disappointed",negative
+875,"Such a letdown, expected so much more",negative
+876,Feeling motivated and ready to take on the world,positive
+877,"So angry about the hidden fees, total scam",negative
+878,"Thrilled with my new purchase, exceeded expectations",positive
+879,"Worst flight I have ever taken, never again",negative
+880,Outstanding performance today by the whole team,positive
+881,"This update ruined everything, reverting immediately",negative
+882,"Beautiful weather today, perfect for a walk",positive
+883,I am going to the store later today,neutral
+884,The report will be ready by end of day,neutral
+885,"Just finished an incredible book, highly recommend",positive
+886,Watched a documentary about space last night,neutral
+887,"This is the best day ever, feeling fantastic!",positive
+888,Feeling motivated and ready to take on the world,positive
+889,Disgusted by the lack of response from support,negative
+890,"Horrible quality, broke after just two days",negative
+891,The report will be ready by end of day,neutral
+892,My flight departs at 6am tomorrow morning,neutral
+893,Just checked the weather forecast for tomorrow,neutral
+894,Happy to announce I got the job! Super excited,positive
+895,"The app crashes constantly, completely unusable",negative
+896,"I love this product, absolutely amazing experience!",positive
+897,Just checked the weather forecast for tomorrow,neutral
+898,Best coffee I have ever had this morning,positive
+899,"Beautiful weather today, perfect for a walk",positive
+900,"Terrible experience with customer service, very disappointed",negative
+901,Currently reading about machine learning,neutral
+902,"I love this product, absolutely amazing experience!",positive
+903,"Never buying from this brand again, awful experience",negative
+904,This product is a complete waste of money,negative
+905,"The new update is fantastic, so much better now",positive
+906,The package arrived this afternoon,neutral
+907,Downloaded the latest version of the software,neutral
+908,"Excellent customer support, resolved my issue immediately",positive
+909,"Horrible quality, broke after just two days",negative
+910,"Just had the most wonderful meal, highly recommend",positive
+911,The new model was released yesterday,neutral
+912,Loving the new features in this app,positive
+913,This product is a complete waste of money,negative
+914,The conference starts next Monday in Paris,neutral
+915,"Just had the most wonderful meal, highly recommend",positive
+916,"I love this product, absolutely amazing experience!",positive
+917,"Beautiful weather today, perfect for a walk",positive
+918,This is the worst decision I have ever made,negative
+919,The meeting is scheduled for 3pm,neutral
+920,"This is the best day ever, feeling fantastic!",positive
+921,Happy to announce I got the job! Super excited,positive
+922,My flight departs at 6am tomorrow morning,neutral
+923,The restaurant opens at noon on weekdays,neutral
+924,The conference starts next Monday in Paris,neutral
+925,Loving the new features in this app,positive
+926,This is the worst decision I have ever made,negative
+927,"Just had the most wonderful meal, highly recommend",positive
+928,"Never buying from this brand again, awful experience",negative
+929,Best coffee I have ever had this morning,positive
+930,This product is a complete waste of money,negative
+931,The conference starts next Monday in Paris,neutral
+932,I am going to the store later today,neutral
+933,"Never buying from this brand again, awful experience",negative
+934,"Horrible quality, broke after just two days",negative
+935,Currently reading about machine learning,neutral
+936,Updated my profile information on the platform,neutral
+937,"Just had the most wonderful meal, highly recommend",positive
+938,The restaurant opens at noon on weekdays,neutral
+939,"Never buying from this brand again, awful experience",negative
+940,So grateful for all the support from my friends,positive
+941,"Worst flight I have ever taken, never again",negative
+942,Watched a documentary about space last night,neutral
+943,"Just finished an incredible book, highly recommend",positive
+944,"Great service today, very happy with the results",positive
+945,Outstanding performance today by the whole team,positive
+946,The restaurant opens at noon on weekdays,neutral
+947,"This update ruined everything, reverting immediately",negative
+948,Watched a documentary about space last night,neutral
+949,Happy to announce I got the job! Super excited,positive
+950,"Extremely disappointed, not what was advertised at all",negative
+951,The team is working on the new feature,neutral
+952,Best coffee I have ever had this morning,positive
+953,"The app crashes constantly, completely unusable",negative
+954,"Waited two hours and still no help, unacceptable",negative
+955,So grateful for all the support from my friends,positive
+956,This product is a complete waste of money,negative
+957,My flight departs at 6am tomorrow morning,neutral
+958,Downloaded the latest version of the software,neutral
+959,This is the worst decision I have ever made,negative
+960,Loving the new features in this app,positive
+961,"Just finished an incredible book, highly recommend",positive
+962,Happy to announce I got the job! Super excited,positive
+963,"This is the best day ever, feeling fantastic!",positive
+964,"Great service today, very happy with the results",positive
+965,Updated my profile information on the platform,neutral
+966,Watched a documentary about space last night,neutral
+967,"The app crashes constantly, completely unusable",negative
+968,"The app crashes constantly, completely unusable",negative
+969,The report will be ready by end of day,neutral
+970,"Worst flight I have ever taken, never again",negative
+971,"The new update is fantastic, so much better now",positive
+972,"Such a letdown, expected so much more",negative
+973,Outstanding performance today by the whole team,positive
+974,My flight departs at 6am tomorrow morning,neutral
+975,Outstanding performance today by the whole team,positive
+976,The team is working on the new feature,neutral
+977,Disgusted by the lack of response from support,negative
+978,"Extremely disappointed, not what was advertised at all",negative
+979,The meeting is scheduled for 3pm,neutral
+980,Updated my profile information on the platform,neutral
+981,Disgusted by the lack of response from support,negative
+982,Happy to announce I got the job! Super excited,positive
+983,"Beautiful weather today, perfect for a walk",positive
+984,Cannot believe how bad this service has gotten,negative
+985,"I love this product, absolutely amazing experience!",positive
+986,Outstanding performance today by the whole team,positive
+987,"Worst flight I have ever taken, never again",negative
+988,Outstanding performance today by the whole team,positive
+989,"This is the best day ever, feeling fantastic!",positive
+990,So grateful for all the support from my friends,positive
+991,"This update ruined everything, reverting immediately",negative
+992,The new model was released yesterday,neutral
+993,The team is working on the new feature,neutral
+994,The event was attended by over 500 people,neutral
+995,The team is working on the new feature,neutral
+996,"Great service today, very happy with the results",positive
+997,Downloaded the latest version of the software,neutral
+998,Watched a documentary about space last night,neutral
+999,"Great service today, very happy with the results",positive
+1000,"Beautiful weather today, perfect for a walk",positive
+1001,Downloaded the latest version of the software,neutral
+1002,The conference starts next Monday in Paris,neutral
+1003,This product is a complete waste of money,negative
+1004,I am going to the store later today,neutral
+1005,The event was attended by over 500 people,neutral
+1006,Cannot believe how bad this service has gotten,negative
+1007,Loving the new features in this app,positive
+1008,The report will be ready by end of day,neutral
+1009,"So angry about the hidden fees, total scam",negative
+1010,So grateful for all the support from my friends,positive
+1011,Watched a documentary about space last night,neutral
+1012,Updated my profile information on the platform,neutral
+1013,The meeting is scheduled for 3pm,neutral
+1014,Very frustrated with the constant delays,negative
+1015,Loving the new features in this app,positive
+1016,The package arrived this afternoon,neutral
+1017,Currently reading about machine learning,neutral
+1018,Disgusted by the lack of response from support,negative
+1019,The team is working on the new feature,neutral
+1020,"Beautiful weather today, perfect for a walk",positive
+1021,The new model was released yesterday,neutral
+1022,"Just finished an incredible book, highly recommend",positive
+1023,"Horrible quality, broke after just two days",negative
+1024,Disgusted by the lack of response from support,negative
+1025,The report will be ready by end of day,neutral
+1026,"I love this product, absolutely amazing experience!",positive
+1027,Updated my profile information on the platform,neutral
+1028,The report will be ready by end of day,neutral
+1029,"Excellent customer support, resolved my issue immediately",positive
+1030,"The app crashes constantly, completely unusable",negative
+1031,"Excellent customer support, resolved my issue immediately",positive
+1032,Happy to announce I got the job! Super excited,positive
+1033,"Beautiful weather today, perfect for a walk",positive
+1034,Watched a documentary about space last night,neutral
+1035,Outstanding performance today by the whole team,positive
+1036,"I love this product, absolutely amazing experience!",positive
+1037,Feeling motivated and ready to take on the world,positive
+1038,Disgusted by the lack of response from support,negative
+1039,Outstanding performance today by the whole team,positive
+1040,Watched a documentary about space last night,neutral
+1041,Just checked the weather forecast for tomorrow,neutral
+1042,"Horrible quality, broke after just two days",negative
+1043,The report will be ready by end of day,neutral
+1044,"This update ruined everything, reverting immediately",negative
+1045,Currently reading about machine learning,neutral
+1046,Updated my profile information on the platform,neutral
+1047,Updated my profile information on the platform,neutral
+1048,"This update ruined everything, reverting immediately",negative
+1049,Downloaded the latest version of the software,neutral
+1050,Happy to announce I got the job! Super excited,positive
+1051,Very frustrated with the constant delays,negative
+1052,"I love this product, absolutely amazing experience!",positive
+1053,The team is working on the new feature,neutral
+1054,"Waited two hours and still no help, unacceptable",negative
+1055,The package arrived this afternoon,neutral
+1056,Loving the new features in this app,positive
+1057,Just checked the weather forecast for tomorrow,neutral
+1058,Currently reading about machine learning,neutral
+1059,"I love this product, absolutely amazing experience!",positive
+1060,Very frustrated with the constant delays,negative
+1061,The new model was released yesterday,neutral
+1062,"The app crashes constantly, completely unusable",negative
+1063,Updated my profile information on the platform,neutral
+1064,Feeling motivated and ready to take on the world,positive
+1065,"Horrible quality, broke after just two days",negative
+1066,"Thrilled with my new purchase, exceeded expectations",positive
+1067,"Worst flight I have ever taken, never again",negative
+1068,"Beautiful weather today, perfect for a walk",positive
+1069,The new model was released yesterday,neutral
+1070,The new model was released yesterday,neutral
+1071,I am going to the store later today,neutral
+1072,Currently reading about machine learning,neutral
+1073,"Just had the most wonderful meal, highly recommend",positive
+1074,"The new update is fantastic, so much better now",positive
+1075,Loving the new features in this app,positive
+1076,"Thrilled with my new purchase, exceeded expectations",positive
+1077,"The app crashes constantly, completely unusable",negative
+1078,The event was attended by over 500 people,neutral
+1079,Watched a documentary about space last night,neutral
+1080,"Waited two hours and still no help, unacceptable",negative
+1081,"Such a letdown, expected so much more",negative
+1082,"Thrilled with my new purchase, exceeded expectations",positive
+1083,I am going to the store later today,neutral
+1084,The report will be ready by end of day,neutral
+1085,Feeling motivated and ready to take on the world,positive
+1086,"Worst flight I have ever taken, never again",negative
+1087,Disgusted by the lack of response from support,negative
+1088,"Never buying from this brand again, awful experience",negative
+1089,Outstanding performance today by the whole team,positive
+1090,Just checked the weather forecast for tomorrow,neutral
+1091,Best coffee I have ever had this morning,positive
+1092,"This is the best day ever, feeling fantastic!",positive
+1093,The report will be ready by end of day,neutral
+1094,Very frustrated with the constant delays,negative
+1095,"So angry about the hidden fees, total scam",negative
+1096,This product is a complete waste of money,negative
+1097,Best coffee I have ever had this morning,positive
+1098,My flight departs at 6am tomorrow morning,neutral
+1099,This product is a complete waste of money,negative
+1100,"Never buying from this brand again, awful experience",negative
+1101,Updated my profile information on the platform,neutral
+1102,This is the worst decision I have ever made,negative
+1103,This is the worst decision I have ever made,negative
+1104,"I love this product, absolutely amazing experience!",positive
+1105,"So angry about the hidden fees, total scam",negative
+1106,I am going to the store later today,neutral
+1107,"Excellent customer support, resolved my issue immediately",positive
+1108,"Thrilled with my new purchase, exceeded expectations",positive
+1109,"Worst flight I have ever taken, never again",negative
+1110,Happy to announce I got the job! Super excited,positive
+1111,Just checked the weather forecast for tomorrow,neutral
+1112,Feeling motivated and ready to take on the world,positive
+1113,"I love this product, absolutely amazing experience!",positive
+1114,"Just had the most wonderful meal, highly recommend",positive
+1115,"The app crashes constantly, completely unusable",negative
+1116,"The app crashes constantly, completely unusable",negative
+1117,"This is the best day ever, feeling fantastic!",positive
+1118,Watched a documentary about space last night,neutral
+1119,The restaurant opens at noon on weekdays,neutral
+1120,My flight departs at 6am tomorrow morning,neutral
+1121,"Never buying from this brand again, awful experience",negative
+1122,Disgusted by the lack of response from support,negative
+1123,Outstanding performance today by the whole team,positive
+1124,Best coffee I have ever had this morning,positive
+1125,"I love this product, absolutely amazing experience!",positive
+1126,Watched a documentary about space last night,neutral
+1127,Very frustrated with the constant delays,negative
+1128,My flight departs at 6am tomorrow morning,neutral
+1129,The team is working on the new feature,neutral
+1130,"Just had the most wonderful meal, highly recommend",positive
+1131,The meeting is scheduled for 3pm,neutral
+1132,This is the worst decision I have ever made,negative
+1133,Watched a documentary about space last night,neutral
+1134,The event was attended by over 500 people,neutral
+1135,"The new update is fantastic, so much better now",positive
+1136,"Excellent customer support, resolved my issue immediately",positive
+1137,"This is the best day ever, feeling fantastic!",positive
+1138,"This is the best day ever, feeling fantastic!",positive
+1139,The conference starts next Monday in Paris,neutral
+1140,"Great service today, very happy with the results",positive
+1141,Watched a documentary about space last night,neutral
+1142,"The new update is fantastic, so much better now",positive
+1143,"Extremely disappointed, not what was advertised at all",negative
+1144,"I love this product, absolutely amazing experience!",positive
+1145,"Worst flight I have ever taken, never again",negative
+1146,So grateful for all the support from my friends,positive
+1147,The new model was released yesterday,neutral
+1148,Very frustrated with the constant delays,negative
+1149,Currently reading about machine learning,neutral
+1150,The event was attended by over 500 people,neutral
+1151,I am going to the store later today,neutral
+1152,The event was attended by over 500 people,neutral
+1153,The meeting is scheduled for 3pm,neutral
+1154,"Just finished an incredible book, highly recommend",positive
+1155,Just checked the weather forecast for tomorrow,neutral
+1156,Best coffee I have ever had this morning,positive
+1157,The new model was released yesterday,neutral
+1158,"Thrilled with my new purchase, exceeded expectations",positive
+1159,The package arrived this afternoon,neutral
+1160,So grateful for all the support from my friends,positive
+1161,Watched a documentary about space last night,neutral
+1162,The restaurant opens at noon on weekdays,neutral
+1163,"This update ruined everything, reverting immediately",negative
+1164,"So angry about the hidden fees, total scam",negative
+1165,"Horrible quality, broke after just two days",negative
+1166,"Such a letdown, expected so much more",negative
+1167,"The app crashes constantly, completely unusable",negative
+1168,Updated my profile information on the platform,neutral
+1169,"Waited two hours and still no help, unacceptable",negative
+1170,The event was attended by over 500 people,neutral
+1171,"Such a letdown, expected so much more",negative
+1172,"Excellent customer support, resolved my issue immediately",positive
+1173,The restaurant opens at noon on weekdays,neutral
+1174,"Thrilled with my new purchase, exceeded expectations",positive
+1175,"Beautiful weather today, perfect for a walk",positive
+1176,Cannot believe how bad this service has gotten,negative
+1177,The meeting is scheduled for 3pm,neutral
+1178,Updated my profile information on the platform,neutral
+1179,"The new update is fantastic, so much better now",positive
+1180,"This update ruined everything, reverting immediately",negative
+1181,Feeling motivated and ready to take on the world,positive
+1182,Best coffee I have ever had this morning,positive
+1183,Updated my profile information on the platform,neutral
+1184,The report will be ready by end of day,neutral
+1185,So grateful for all the support from my friends,positive
+1186,"This is the best day ever, feeling fantastic!",positive
+1187,The meeting is scheduled for 3pm,neutral
+1188,Currently reading about machine learning,neutral
+1189,Happy to announce I got the job! Super excited,positive
+1190,"Beautiful weather today, perfect for a walk",positive
+1191,Very frustrated with the constant delays,negative
+1192,"Great service today, very happy with the results",positive
+1193,Watched a documentary about space last night,neutral
+1194,"Terrible experience with customer service, very disappointed",negative
+1195,Disgusted by the lack of response from support,negative
+1196,"Beautiful weather today, perfect for a walk",positive
+1197,The meeting is scheduled for 3pm,neutral
+1198,The restaurant opens at noon on weekdays,neutral
+1199,The team is working on the new feature,neutral
+1200,I am going to the store later today,neutral
+1201,Watched a documentary about space last night,neutral
+1202,Best coffee I have ever had this morning,positive
+1203,Cannot believe how bad this service has gotten,negative
+1204,"The new update is fantastic, so much better now",positive
+1205,"Such a letdown, expected so much more",negative
+1206,Cannot believe how bad this service has gotten,negative
+1207,Watched a documentary about space last night,neutral
+1208,"This is the best day ever, feeling fantastic!",positive
+1209,Watched a documentary about space last night,neutral
+1210,This product is a complete waste of money,negative
+1211,"Extremely disappointed, not what was advertised at all",negative
+1212,I am going to the store later today,neutral
+1213,Downloaded the latest version of the software,neutral
+1214,The team is working on the new feature,neutral
+1215,"This update ruined everything, reverting immediately",negative
+1216,"The app crashes constantly, completely unusable",negative
+1217,Loving the new features in this app,positive
+1218,The team is working on the new feature,neutral
+1219,"Just had the most wonderful meal, highly recommend",positive
+1220,I am going to the store later today,neutral
+1221,The report will be ready by end of day,neutral
+1222,This is the worst decision I have ever made,negative
+1223,"Extremely disappointed, not what was advertised at all",negative
+1224,I am going to the store later today,neutral
+1225,"Excellent customer support, resolved my issue immediately",positive
+1226,Loving the new features in this app,positive
+1227,Disgusted by the lack of response from support,negative
+1228,Very frustrated with the constant delays,negative
+1229,Downloaded the latest version of the software,neutral
+1230,"Worst flight I have ever taken, never again",negative
+1231,The event was attended by over 500 people,neutral
+1232,"Extremely disappointed, not what was advertised at all",negative
+1233,"Thrilled with my new purchase, exceeded expectations",positive
+1234,My flight departs at 6am tomorrow morning,neutral
+1235,My flight departs at 6am tomorrow morning,neutral
+1236,"Thrilled with my new purchase, exceeded expectations",positive
+1237,"This update ruined everything, reverting immediately",negative
+1238,"Just finished an incredible book, highly recommend",positive
+1239,"The new update is fantastic, so much better now",positive
+1240,"Just had the most wonderful meal, highly recommend",positive
+1241,Happy to announce I got the job! Super excited,positive
+1242,"So angry about the hidden fees, total scam",negative
+1243,"The new update is fantastic, so much better now",positive
+1244,"Just had the most wonderful meal, highly recommend",positive
+1245,Very frustrated with the constant delays,negative
+1246,"Extremely disappointed, not what was advertised at all",negative
+1247,The conference starts next Monday in Paris,neutral
+1248,Watched a documentary about space last night,neutral
+1249,"The app crashes constantly, completely unusable",negative
+1250,The restaurant opens at noon on weekdays,neutral
+1251,"Excellent customer support, resolved my issue immediately",positive
+1252,Outstanding performance today by the whole team,positive
+1253,"Horrible quality, broke after just two days",negative
+1254,This product is a complete waste of money,negative
+1255,Downloaded the latest version of the software,neutral
+1256,"Waited two hours and still no help, unacceptable",negative
+1257,This product is a complete waste of money,negative
+1258,This product is a complete waste of money,negative
+1259,"I love this product, absolutely amazing experience!",positive
+1260,"This is the best day ever, feeling fantastic!",positive
+1261,Loving the new features in this app,positive
+1262,Updated my profile information on the platform,neutral
+1263,"Worst flight I have ever taken, never again",negative
+1264,"Terrible experience with customer service, very disappointed",negative
+1265,So grateful for all the support from my friends,positive
+1266,"So angry about the hidden fees, total scam",negative
+1267,Cannot believe how bad this service has gotten,negative
+1268,"Worst flight I have ever taken, never again",negative
+1269,"The new update is fantastic, so much better now",positive
+1270,"Great service today, very happy with the results",positive
+1271,"Such a letdown, expected so much more",negative
+1272,"Just finished an incredible book, highly recommend",positive
+1273,Happy to announce I got the job! Super excited,positive
+1274,The new model was released yesterday,neutral
+1275,"Just finished an incredible book, highly recommend",positive
+1276,This product is a complete waste of money,negative
+1277,"Great service today, very happy with the results",positive
+1278,The report will be ready by end of day,neutral
+1279,Feeling motivated and ready to take on the world,positive
+1280,The team is working on the new feature,neutral
+1281,"Great service today, very happy with the results",positive
+1282,Best coffee I have ever had this morning,positive
+1283,"This is the best day ever, feeling fantastic!",positive
+1284,The package arrived this afternoon,neutral
+1285,Very frustrated with the constant delays,negative
+1286,The meeting is scheduled for 3pm,neutral
+1287,The package arrived this afternoon,neutral
+1288,Very frustrated with the constant delays,negative
+1289,The restaurant opens at noon on weekdays,neutral
+1290,"Horrible quality, broke after just two days",negative
+1291,"The app crashes constantly, completely unusable",negative
+1292,The report will be ready by end of day,neutral
+1293,Outstanding performance today by the whole team,positive
+1294,This product is a complete waste of money,negative
+1295,The team is working on the new feature,neutral
+1296,Just checked the weather forecast for tomorrow,neutral
+1297,Loving the new features in this app,positive
+1298,The report will be ready by end of day,neutral
+1299,The meeting is scheduled for 3pm,neutral
+1300,The event was attended by over 500 people,neutral
+1301,The new model was released yesterday,neutral
+1302,The event was attended by over 500 people,neutral
+1303,The report will be ready by end of day,neutral
+1304,"Never buying from this brand again, awful experience",negative
+1305,I am going to the store later today,neutral
+1306,Currently reading about machine learning,neutral
+1307,Watched a documentary about space last night,neutral
+1308,"This is the best day ever, feeling fantastic!",positive
+1309,Loving the new features in this app,positive
+1310,Currently reading about machine learning,neutral
+1311,The new model was released yesterday,neutral
+1312,So grateful for all the support from my friends,positive
+1313,"Extremely disappointed, not what was advertised at all",negative
+1314,This is the worst decision I have ever made,negative
+1315,Updated my profile information on the platform,neutral
+1316,Very frustrated with the constant delays,negative
+1317,Outstanding performance today by the whole team,positive
+1318,Downloaded the latest version of the software,neutral
+1319,"Extremely disappointed, not what was advertised at all",negative
+1320,Disgusted by the lack of response from support,negative
+1321,"Waited two hours and still no help, unacceptable",negative
+1322,Loving the new features in this app,positive
+1323,"Waited two hours and still no help, unacceptable",negative
+1324,"Beautiful weather today, perfect for a walk",positive
+1325,"Excellent customer support, resolved my issue immediately",positive
+1326,Best coffee I have ever had this morning,positive
+1327,"Waited two hours and still no help, unacceptable",negative
+1328,"This is the best day ever, feeling fantastic!",positive
+1329,Outstanding performance today by the whole team,positive
+1330,The meeting is scheduled for 3pm,neutral
+1331,"Never buying from this brand again, awful experience",negative
+1332,Just checked the weather forecast for tomorrow,neutral
+1333,"Just finished an incredible book, highly recommend",positive
+1334,"So angry about the hidden fees, total scam",negative
+1335,"The new update is fantastic, so much better now",positive
+1336,"Waited two hours and still no help, unacceptable",negative
+1337,Happy to announce I got the job! Super excited,positive
+1338,The restaurant opens at noon on weekdays,neutral
+1339,I am going to the store later today,neutral
+1340,I am going to the store later today,neutral
+1341,"Excellent customer support, resolved my issue immediately",positive
+1342,Just checked the weather forecast for tomorrow,neutral
+1343,Cannot believe how bad this service has gotten,negative
+1344,Very frustrated with the constant delays,negative
+1345,My flight departs at 6am tomorrow morning,neutral
+1346,Currently reading about machine learning,neutral
+1347,The new model was released yesterday,neutral
+1348,"Horrible quality, broke after just two days",negative
+1349,Disgusted by the lack of response from support,negative
+1350,Disgusted by the lack of response from support,negative
+1351,"Beautiful weather today, perfect for a walk",positive
+1352,Outstanding performance today by the whole team,positive
+1353,"Terrible experience with customer service, very disappointed",negative
+1354,"Terrible experience with customer service, very disappointed",negative
+1355,Cannot believe how bad this service has gotten,negative
+1356,"This is the best day ever, feeling fantastic!",positive
+1357,Downloaded the latest version of the software,neutral
+1358,"So angry about the hidden fees, total scam",negative
+1359,I am going to the store later today,neutral
+1360,"Just finished an incredible book, highly recommend",positive
+1361,The report will be ready by end of day,neutral
+1362,I am going to the store later today,neutral
+1363,Cannot believe how bad this service has gotten,negative
+1364,"Never buying from this brand again, awful experience",negative
+1365,The event was attended by over 500 people,neutral
+1366,Disgusted by the lack of response from support,negative
+1367,"Horrible quality, broke after just two days",negative
+1368,The meeting is scheduled for 3pm,neutral
+1369,Watched a documentary about space last night,neutral
+1370,"This is the best day ever, feeling fantastic!",positive
+1371,"Thrilled with my new purchase, exceeded expectations",positive
+1372,"Just had the most wonderful meal, highly recommend",positive
+1373,Disgusted by the lack of response from support,negative
+1374,"Such a letdown, expected so much more",negative
+1375,"Just had the most wonderful meal, highly recommend",positive
+1376,The restaurant opens at noon on weekdays,neutral
+1377,The meeting is scheduled for 3pm,neutral
+1378,Currently reading about machine learning,neutral
+1379,"Just finished an incredible book, highly recommend",positive
+1380,Feeling motivated and ready to take on the world,positive
+1381,The conference starts next Monday in Paris,neutral
+1382,This product is a complete waste of money,negative
+1383,Just checked the weather forecast for tomorrow,neutral
+1384,Happy to announce I got the job! Super excited,positive
+1385,Disgusted by the lack of response from support,negative
+1386,So grateful for all the support from my friends,positive
+1387,The restaurant opens at noon on weekdays,neutral
+1388,So grateful for all the support from my friends,positive
+1389,"The new update is fantastic, so much better now",positive
+1390,I am going to the store later today,neutral
+1391,"Such a letdown, expected so much more",negative
+1392,I am going to the store later today,neutral
+1393,"Worst flight I have ever taken, never again",negative
+1394,"Just finished an incredible book, highly recommend",positive
+1395,"Great service today, very happy with the results",positive
+1396,"Just finished an incredible book, highly recommend",positive
+1397,"Such a letdown, expected so much more",negative
+1398,"The app crashes constantly, completely unusable",negative
+1399,Disgusted by the lack of response from support,negative
+1400,"Thrilled with my new purchase, exceeded expectations",positive
+1401,"I love this product, absolutely amazing experience!",positive
+1402,"Such a letdown, expected so much more",negative
+1403,Loving the new features in this app,positive
+1404,The team is working on the new feature,neutral
+1405,The event was attended by over 500 people,neutral
+1406,Disgusted by the lack of response from support,negative
+1407,Downloaded the latest version of the software,neutral
+1408,"Just had the most wonderful meal, highly recommend",positive
+1409,Downloaded the latest version of the software,neutral
+1410,"This is the best day ever, feeling fantastic!",positive
+1411,"Great service today, very happy with the results",positive
+1412,"Just finished an incredible book, highly recommend",positive
+1413,Just checked the weather forecast for tomorrow,neutral
+1414,"Extremely disappointed, not what was advertised at all",negative
+1415,"Horrible quality, broke after just two days",negative
+1416,Feeling motivated and ready to take on the world,positive
+1417,So grateful for all the support from my friends,positive
+1418,The restaurant opens at noon on weekdays,neutral
+1419,This is the worst decision I have ever made,negative
+1420,"Terrible experience with customer service, very disappointed",negative
+1421,Loving the new features in this app,positive
+1422,"So angry about the hidden fees, total scam",negative
+1423,The new model was released yesterday,neutral
+1424,My flight departs at 6am tomorrow morning,neutral
+1425,"Just finished an incredible book, highly recommend",positive
+1426,Loving the new features in this app,positive
+1427,Downloaded the latest version of the software,neutral
+1428,Best coffee I have ever had this morning,positive
+1429,My flight departs at 6am tomorrow morning,neutral
+1430,Updated my profile information on the platform,neutral
+1431,"Never buying from this brand again, awful experience",negative
+1432,"Just had the most wonderful meal, highly recommend",positive
+1433,The meeting is scheduled for 3pm,neutral
+1434,"Such a letdown, expected so much more",negative
+1435,So grateful for all the support from my friends,positive
+1436,Watched a documentary about space last night,neutral
+1437,Downloaded the latest version of the software,neutral
+1438,Downloaded the latest version of the software,neutral
+1439,The restaurant opens at noon on weekdays,neutral
+1440,The conference starts next Monday in Paris,neutral
+1441,The team is working on the new feature,neutral
+1442,Happy to announce I got the job! Super excited,positive
+1443,"Just had the most wonderful meal, highly recommend",positive
+1444,The team is working on the new feature,neutral
+1445,The conference starts next Monday in Paris,neutral
+1446,Downloaded the latest version of the software,neutral
+1447,"Never buying from this brand again, awful experience",negative
+1448,"The new update is fantastic, so much better now",positive
+1449,The conference starts next Monday in Paris,neutral
+1450,So grateful for all the support from my friends,positive
+1451,Currently reading about machine learning,neutral
+1452,Cannot believe how bad this service has gotten,negative
+1453,"Never buying from this brand again, awful experience",negative
+1454,"Worst flight I have ever taken, never again",negative
+1455,Very frustrated with the constant delays,negative
+1456,Downloaded the latest version of the software,neutral
+1457,Just checked the weather forecast for tomorrow,neutral
+1458,"Just had the most wonderful meal, highly recommend",positive
+1459,Watched a documentary about space last night,neutral
+1460,Just checked the weather forecast for tomorrow,neutral
+1461,I am going to the store later today,neutral
+1462,"This is the best day ever, feeling fantastic!",positive
+1463,Loving the new features in this app,positive
+1464,The package arrived this afternoon,neutral
+1465,The team is working on the new feature,neutral
+1466,"This update ruined everything, reverting immediately",negative
+1467,The new model was released yesterday,neutral
+1468,"Never buying from this brand again, awful experience",negative
+1469,The event was attended by over 500 people,neutral
+1470,"Such a letdown, expected so much more",negative
+1471,"Extremely disappointed, not what was advertised at all",negative
+1472,Happy to announce I got the job! Super excited,positive
+1473,"Just finished an incredible book, highly recommend",positive
+1474,"Just finished an incredible book, highly recommend",positive
+1475,"The app crashes constantly, completely unusable",negative
+1476,Disgusted by the lack of response from support,negative
+1477,The conference starts next Monday in Paris,neutral
+1478,"Worst flight I have ever taken, never again",negative
+1479,"Beautiful weather today, perfect for a walk",positive
+1480,"Excellent customer support, resolved my issue immediately",positive
+1481,"Such a letdown, expected so much more",negative
+1482,Watched a documentary about space last night,neutral
+1483,"Just finished an incredible book, highly recommend",positive
+1484,The new model was released yesterday,neutral
+1485,This product is a complete waste of money,negative
+1486,The conference starts next Monday in Paris,neutral
+1487,Best coffee I have ever had this morning,positive
+1488,I am going to the store later today,neutral
+1489,"Just had the most wonderful meal, highly recommend",positive
+1490,The event was attended by over 500 people,neutral
+1491,I am going to the store later today,neutral
+1492,I am going to the store later today,neutral
+1493,"The new update is fantastic, so much better now",positive
+1494,The event was attended by over 500 people,neutral
+1495,The report will be ready by end of day,neutral
+1496,"This update ruined everything, reverting immediately",negative
+1497,Loving the new features in this app,positive
+1498,The new model was released yesterday,neutral
+1499,"Waited two hours and still no help, unacceptable",negative
+1500,"The app crashes constantly, completely unusable",negative
+1501,"The app crashes constantly, completely unusable",negative
+1502,"The app crashes constantly, completely unusable",negative
+1503,"Just had the most wonderful meal, highly recommend",positive
+1504,Happy to announce I got the job! Super excited,positive
+1505,Updated my profile information on the platform,neutral
+1506,Currently reading about machine learning,neutral
+1507,Cannot believe how bad this service has gotten,negative
+1508,My flight departs at 6am tomorrow morning,neutral
+1509,Watched a documentary about space last night,neutral
+1510,"Excellent customer support, resolved my issue immediately",positive
+1511,Disgusted by the lack of response from support,negative
+1512,"Waited two hours and still no help, unacceptable",negative
+1513,Very frustrated with the constant delays,negative
+1514,Updated my profile information on the platform,neutral
+1515,"Just finished an incredible book, highly recommend",positive
+1516,"Thrilled with my new purchase, exceeded expectations",positive
+1517,"Horrible quality, broke after just two days",negative
+1518,The conference starts next Monday in Paris,neutral
+1519,Just checked the weather forecast for tomorrow,neutral
+1520,"Just had the most wonderful meal, highly recommend",positive
+1521,"Worst flight I have ever taken, never again",negative
+1522,Updated my profile information on the platform,neutral
+1523,"Just finished an incredible book, highly recommend",positive
+1524,My flight departs at 6am tomorrow morning,neutral
+1525,"Extremely disappointed, not what was advertised at all",negative
+1526,"Just had the most wonderful meal, highly recommend",positive
+1527,Happy to announce I got the job! Super excited,positive
+1528,"This is the best day ever, feeling fantastic!",positive
+1529,The new model was released yesterday,neutral
+1530,Feeling motivated and ready to take on the world,positive
+1531,"Waited two hours and still no help, unacceptable",negative
+1532,Loving the new features in this app,positive
+1533,"This update ruined everything, reverting immediately",negative
+1534,Cannot believe how bad this service has gotten,negative
+1535,This is the worst decision I have ever made,negative
+1536,The event was attended by over 500 people,neutral
+1537,"Terrible experience with customer service, very disappointed",negative
+1538,"The new update is fantastic, so much better now",positive
+1539,"The new update is fantastic, so much better now",positive
+1540,The meeting is scheduled for 3pm,neutral
+1541,My flight departs at 6am tomorrow morning,neutral
+1542,"Beautiful weather today, perfect for a walk",positive
+1543,Watched a documentary about space last night,neutral
+1544,Best coffee I have ever had this morning,positive
+1545,Very frustrated with the constant delays,negative
+1546,"Excellent customer support, resolved my issue immediately",positive
+1547,"Horrible quality, broke after just two days",negative
+1548,"I love this product, absolutely amazing experience!",positive
+1549,"The new update is fantastic, so much better now",positive
+1550,"Beautiful weather today, perfect for a walk",positive
+1551,"Great service today, very happy with the results",positive
+1552,Updated my profile information on the platform,neutral
+1553,"Beautiful weather today, perfect for a walk",positive
+1554,The team is working on the new feature,neutral
+1555,Loving the new features in this app,positive
+1556,"Thrilled with my new purchase, exceeded expectations",positive
+1557,The package arrived this afternoon,neutral
+1558,Feeling motivated and ready to take on the world,positive
+1559,"So angry about the hidden fees, total scam",negative
+1560,So grateful for all the support from my friends,positive
+1561,"The app crashes constantly, completely unusable",negative
+1562,This is the worst decision I have ever made,negative
+1563,"Just finished an incredible book, highly recommend",positive
+1564,Downloaded the latest version of the software,neutral
+1565,The meeting is scheduled for 3pm,neutral
+1566,The new model was released yesterday,neutral
+1567,"Great service today, very happy with the results",positive
+1568,This product is a complete waste of money,negative
+1569,The new model was released yesterday,neutral
+1570,The package arrived this afternoon,neutral
+1571,Currently reading about machine learning,neutral
+1572,The team is working on the new feature,neutral
+1573,"This is the best day ever, feeling fantastic!",positive
+1574,"Great service today, very happy with the results",positive
+1575,"Just finished an incredible book, highly recommend",positive
+1576,"This update ruined everything, reverting immediately",negative
+1577,"Worst flight I have ever taken, never again",negative
+1578,Happy to announce I got the job! Super excited,positive
+1579,"Just had the most wonderful meal, highly recommend",positive
+1580,Very frustrated with the constant delays,negative
+1581,"Horrible quality, broke after just two days",negative
+1582,"Waited two hours and still no help, unacceptable",negative
+1583,Best coffee I have ever had this morning,positive
+1584,Loving the new features in this app,positive
+1585,The report will be ready by end of day,neutral
+1586,The meeting is scheduled for 3pm,neutral
+1587,"Extremely disappointed, not what was advertised at all",negative
+1588,Disgusted by the lack of response from support,negative
+1589,So grateful for all the support from my friends,positive
+1590,Updated my profile information on the platform,neutral
+1591,Outstanding performance today by the whole team,positive
+1592,"Never buying from this brand again, awful experience",negative
+1593,The event was attended by over 500 people,neutral
+1594,Cannot believe how bad this service has gotten,negative
+1595,The meeting is scheduled for 3pm,neutral
+1596,The restaurant opens at noon on weekdays,neutral
+1597,The conference starts next Monday in Paris,neutral
+1598,Updated my profile information on the platform,neutral
+1599,The report will be ready by end of day,neutral
+1600,"Just had the most wonderful meal, highly recommend",positive
+1601,Very frustrated with the constant delays,negative
+1602,This product is a complete waste of money,negative
+1603,"Thrilled with my new purchase, exceeded expectations",positive
+1604,"This is the best day ever, feeling fantastic!",positive
+1605,"So angry about the hidden fees, total scam",negative
+1606,The package arrived this afternoon,neutral
+1607,"Worst flight I have ever taken, never again",negative
+1608,"Such a letdown, expected so much more",negative
+1609,The event was attended by over 500 people,neutral
+1610,"The app crashes constantly, completely unusable",negative
+1611,"I love this product, absolutely amazing experience!",positive
+1612,"This is the best day ever, feeling fantastic!",positive
+1613,"Never buying from this brand again, awful experience",negative
+1614,The new model was released yesterday,neutral
+1615,"The new update is fantastic, so much better now",positive
+1616,So grateful for all the support from my friends,positive
+1617,"This is the best day ever, feeling fantastic!",positive
+1618,The restaurant opens at noon on weekdays,neutral
+1619,Outstanding performance today by the whole team,positive
+1620,"Waited two hours and still no help, unacceptable",negative
+1621,"I love this product, absolutely amazing experience!",positive
+1622,The restaurant opens at noon on weekdays,neutral
+1623,The new model was released yesterday,neutral
+1624,I am going to the store later today,neutral
+1625,"This update ruined everything, reverting immediately",negative
+1626,Disgusted by the lack of response from support,negative
+1627,"Waited two hours and still no help, unacceptable",negative
+1628,Best coffee I have ever had this morning,positive
+1629,"Such a letdown, expected so much more",negative
+1630,"This update ruined everything, reverting immediately",negative
+1631,"The app crashes constantly, completely unusable",negative
+1632,"Waited two hours and still no help, unacceptable",negative
+1633,"Beautiful weather today, perfect for a walk",positive
+1634,Currently reading about machine learning,neutral
+1635,The meeting is scheduled for 3pm,neutral
+1636,"Terrible experience with customer service, very disappointed",negative
+1637,So grateful for all the support from my friends,positive
+1638,The report will be ready by end of day,neutral
+1639,The restaurant opens at noon on weekdays,neutral
+1640,My flight departs at 6am tomorrow morning,neutral
+1641,Loving the new features in this app,positive
+1642,This product is a complete waste of money,negative
+1643,"Terrible experience with customer service, very disappointed",negative
+1644,The meeting is scheduled for 3pm,neutral
+1645,Currently reading about machine learning,neutral
+1646,"Such a letdown, expected so much more",negative
+1647,The package arrived this afternoon,neutral
+1648,My flight departs at 6am tomorrow morning,neutral
+1649,"Never buying from this brand again, awful experience",negative
+1650,My flight departs at 6am tomorrow morning,neutral
+1651,The package arrived this afternoon,neutral
+1652,"Terrible experience with customer service, very disappointed",negative
+1653,The team is working on the new feature,neutral
+1654,"Never buying from this brand again, awful experience",negative
+1655,Cannot believe how bad this service has gotten,negative
+1656,The package arrived this afternoon,neutral
+1657,Disgusted by the lack of response from support,negative
+1658,Currently reading about machine learning,neutral
+1659,"Excellent customer support, resolved my issue immediately",positive
+1660,The new model was released yesterday,neutral
+1661,Updated my profile information on the platform,neutral
+1662,The conference starts next Monday in Paris,neutral
+1663,Cannot believe how bad this service has gotten,negative
+1664,This product is a complete waste of money,negative
+1665,Currently reading about machine learning,neutral
+1666,"Waited two hours and still no help, unacceptable",negative
+1667,Cannot believe how bad this service has gotten,negative
+1668,"This is the best day ever, feeling fantastic!",positive
+1669,"This update ruined everything, reverting immediately",negative
+1670,Feeling motivated and ready to take on the world,positive
+1671,Updated my profile information on the platform,neutral
+1672,So grateful for all the support from my friends,positive
+1673,"Waited two hours and still no help, unacceptable",negative
+1674,This is the worst decision I have ever made,negative
+1675,"So angry about the hidden fees, total scam",negative
+1676,"So angry about the hidden fees, total scam",negative
+1677,"The app crashes constantly, completely unusable",negative
+1678,"This is the best day ever, feeling fantastic!",positive
+1679,This is the worst decision I have ever made,negative
+1680,"This is the best day ever, feeling fantastic!",positive
+1681,"Horrible quality, broke after just two days",negative
+1682,The package arrived this afternoon,neutral
+1683,Outstanding performance today by the whole team,positive
+1684,The meeting is scheduled for 3pm,neutral
+1685,The conference starts next Monday in Paris,neutral
+1686,Cannot believe how bad this service has gotten,negative
+1687,The conference starts next Monday in Paris,neutral
+1688,"Thrilled with my new purchase, exceeded expectations",positive
+1689,"The new update is fantastic, so much better now",positive
+1690,"Excellent customer support, resolved my issue immediately",positive
+1691,Best coffee I have ever had this morning,positive
+1692,"Never buying from this brand again, awful experience",negative
+1693,Very frustrated with the constant delays,negative
+1694,Loving the new features in this app,positive
+1695,The report will be ready by end of day,neutral
+1696,"This is the best day ever, feeling fantastic!",positive
+1697,My flight departs at 6am tomorrow morning,neutral
+1698,Loving the new features in this app,positive
+1699,I am going to the store later today,neutral
+1700,The event was attended by over 500 people,neutral
+1701,"I love this product, absolutely amazing experience!",positive
+1702,"So angry about the hidden fees, total scam",negative
+1703,"Excellent customer support, resolved my issue immediately",positive
+1704,The report will be ready by end of day,neutral
+1705,Just checked the weather forecast for tomorrow,neutral
+1706,"Just had the most wonderful meal, highly recommend",positive
+1707,Updated my profile information on the platform,neutral
+1708,The event was attended by over 500 people,neutral
+1709,"Waited two hours and still no help, unacceptable",negative
+1710,I am going to the store later today,neutral
+1711,"Waited two hours and still no help, unacceptable",negative
+1712,The package arrived this afternoon,neutral
+1713,"The new update is fantastic, so much better now",positive
+1714,"Terrible experience with customer service, very disappointed",negative
+1715,I am going to the store later today,neutral
+1716,"Beautiful weather today, perfect for a walk",positive
+1717,Disgusted by the lack of response from support,negative
+1718,"I love this product, absolutely amazing experience!",positive
+1719,The meeting is scheduled for 3pm,neutral
+1720,"This update ruined everything, reverting immediately",negative
+1721,Disgusted by the lack of response from support,negative
+1722,The conference starts next Monday in Paris,neutral
+1723,"Thrilled with my new purchase, exceeded expectations",positive
+1724,The team is working on the new feature,neutral
+1725,"Excellent customer support, resolved my issue immediately",positive
+1726,"Terrible experience with customer service, very disappointed",negative
+1727,I am going to the store later today,neutral
+1728,"Such a letdown, expected so much more",negative
+1729,"Such a letdown, expected so much more",negative
+1730,So grateful for all the support from my friends,positive
+1731,The event was attended by over 500 people,neutral
+1732,"The app crashes constantly, completely unusable",negative
+1733,Best coffee I have ever had this morning,positive
+1734,The meeting is scheduled for 3pm,neutral
+1735,The meeting is scheduled for 3pm,neutral
+1736,Cannot believe how bad this service has gotten,negative
+1737,Happy to announce I got the job! Super excited,positive
+1738,"Excellent customer support, resolved my issue immediately",positive
+1739,The team is working on the new feature,neutral
+1740,So grateful for all the support from my friends,positive
+1741,"So angry about the hidden fees, total scam",negative
+1742,This is the worst decision I have ever made,negative
+1743,Happy to announce I got the job! Super excited,positive
+1744,"Beautiful weather today, perfect for a walk",positive
+1745,"Extremely disappointed, not what was advertised at all",negative
+1746,The new model was released yesterday,neutral
+1747,Feeling motivated and ready to take on the world,positive
+1748,"Great service today, very happy with the results",positive
+1749,"Extremely disappointed, not what was advertised at all",negative
+1750,This product is a complete waste of money,negative
+1751,This product is a complete waste of money,negative
+1752,"Worst flight I have ever taken, never again",negative
+1753,The meeting is scheduled for 3pm,neutral
+1754,The conference starts next Monday in Paris,neutral
+1755,My flight departs at 6am tomorrow morning,neutral
+1756,Happy to announce I got the job! Super excited,positive
+1757,Loving the new features in this app,positive
+1758,"Extremely disappointed, not what was advertised at all",negative
+1759,"The app crashes constantly, completely unusable",negative
+1760,Just checked the weather forecast for tomorrow,neutral
+1761,"The new update is fantastic, so much better now",positive
+1762,The conference starts next Monday in Paris,neutral
+1763,Currently reading about machine learning,neutral
+1764,Cannot believe how bad this service has gotten,negative
+1765,Feeling motivated and ready to take on the world,positive
+1766,"Terrible experience with customer service, very disappointed",negative
+1767,The team is working on the new feature,neutral
+1768,Happy to announce I got the job! Super excited,positive
+1769,Outstanding performance today by the whole team,positive
+1770,My flight departs at 6am tomorrow morning,neutral
+1771,Loving the new features in this app,positive
+1772,The report will be ready by end of day,neutral
+1773,Currently reading about machine learning,neutral
+1774,Downloaded the latest version of the software,neutral
+1775,Watched a documentary about space last night,neutral
+1776,"Terrible experience with customer service, very disappointed",negative
+1777,"This is the best day ever, feeling fantastic!",positive
+1778,The conference starts next Monday in Paris,neutral
+1779,The team is working on the new feature,neutral
+1780,"Worst flight I have ever taken, never again",negative
+1781,"Just had the most wonderful meal, highly recommend",positive
+1782,Outstanding performance today by the whole team,positive
+1783,The meeting is scheduled for 3pm,neutral
+1784,Disgusted by the lack of response from support,negative
+1785,The team is working on the new feature,neutral
+1786,Best coffee I have ever had this morning,positive
+1787,"Worst flight I have ever taken, never again",negative
+1788,"Worst flight I have ever taken, never again",negative
+1789,"Never buying from this brand again, awful experience",negative
+1790,"Extremely disappointed, not what was advertised at all",negative
+1791,The package arrived this afternoon,neutral
+1792,"Terrible experience with customer service, very disappointed",negative
+1793,The package arrived this afternoon,neutral
+1794,"Worst flight I have ever taken, never again",negative
+1795,"Just finished an incredible book, highly recommend",positive
+1796,This is the worst decision I have ever made,negative
+1797,"Never buying from this brand again, awful experience",negative
+1798,Very frustrated with the constant delays,negative
+1799,This is the worst decision I have ever made,negative
+1800,"Thrilled with my new purchase, exceeded expectations",positive
+1801,Loving the new features in this app,positive
+1802,"Beautiful weather today, perfect for a walk",positive
+1803,The event was attended by over 500 people,neutral
+1804,Happy to announce I got the job! Super excited,positive
+1805,The package arrived this afternoon,neutral
+1806,The new model was released yesterday,neutral
+1807,"Great service today, very happy with the results",positive
+1808,"Thrilled with my new purchase, exceeded expectations",positive
+1809,The meeting is scheduled for 3pm,neutral
+1810,"The app crashes constantly, completely unusable",negative
+1811,The meeting is scheduled for 3pm,neutral
+1812,Best coffee I have ever had this morning,positive
+1813,The restaurant opens at noon on weekdays,neutral
+1814,"The app crashes constantly, completely unusable",negative
+1815,"Worst flight I have ever taken, never again",negative
+1816,Very frustrated with the constant delays,negative
+1817,"Extremely disappointed, not what was advertised at all",negative
+1818,Happy to announce I got the job! Super excited,positive
+1819,"Worst flight I have ever taken, never again",negative
+1820,Best coffee I have ever had this morning,positive
+1821,Very frustrated with the constant delays,negative
+1822,"I love this product, absolutely amazing experience!",positive
+1823,Disgusted by the lack of response from support,negative
+1824,Disgusted by the lack of response from support,negative
+1825,"Horrible quality, broke after just two days",negative
+1826,"Terrible experience with customer service, very disappointed",negative
+1827,"Extremely disappointed, not what was advertised at all",negative
+1828,"I love this product, absolutely amazing experience!",positive
+1829,"This update ruined everything, reverting immediately",negative
+1830,Currently reading about machine learning,neutral
+1831,So grateful for all the support from my friends,positive
+1832,"Great service today, very happy with the results",positive
+1833,Cannot believe how bad this service has gotten,negative
+1834,"Terrible experience with customer service, very disappointed",negative
+1835,"Excellent customer support, resolved my issue immediately",positive
+1836,"Great service today, very happy with the results",positive
+1837,Disgusted by the lack of response from support,negative
+1838,Very frustrated with the constant delays,negative
+1839,The event was attended by over 500 people,neutral
+1840,"Thrilled with my new purchase, exceeded expectations",positive
+1841,This is the worst decision I have ever made,negative
+1842,"Excellent customer support, resolved my issue immediately",positive
+1843,Currently reading about machine learning,neutral
+1844,Loving the new features in this app,positive
+1845,"Terrible experience with customer service, very disappointed",negative
+1846,"Extremely disappointed, not what was advertised at all",negative
+1847,"Excellent customer support, resolved my issue immediately",positive
+1848,"Terrible experience with customer service, very disappointed",negative
+1849,Best coffee I have ever had this morning,positive
+1850,The conference starts next Monday in Paris,neutral
+1851,"Excellent customer support, resolved my issue immediately",positive
+1852,Watched a documentary about space last night,neutral
+1853,"Never buying from this brand again, awful experience",negative
+1854,The conference starts next Monday in Paris,neutral
+1855,"Such a letdown, expected so much more",negative
+1856,So grateful for all the support from my friends,positive
+1857,Loving the new features in this app,positive
+1858,"Horrible quality, broke after just two days",negative
+1859,Cannot believe how bad this service has gotten,negative
+1860,The report will be ready by end of day,neutral
+1861,Outstanding performance today by the whole team,positive
+1862,Just checked the weather forecast for tomorrow,neutral
+1863,"Just had the most wonderful meal, highly recommend",positive
+1864,"Thrilled with my new purchase, exceeded expectations",positive
+1865,The report will be ready by end of day,neutral
+1866,Updated my profile information on the platform,neutral
+1867,"Beautiful weather today, perfect for a walk",positive
+1868,Outstanding performance today by the whole team,positive
+1869,Downloaded the latest version of the software,neutral
+1870,"Extremely disappointed, not what was advertised at all",negative
+1871,The meeting is scheduled for 3pm,neutral
+1872,"Just had the most wonderful meal, highly recommend",positive
+1873,The conference starts next Monday in Paris,neutral
+1874,This product is a complete waste of money,negative
+1875,"Excellent customer support, resolved my issue immediately",positive
+1876,"Waited two hours and still no help, unacceptable",negative
+1877,Cannot believe how bad this service has gotten,negative
+1878,Very frustrated with the constant delays,negative
+1879,"The new update is fantastic, so much better now",positive
+1880,"Worst flight I have ever taken, never again",negative
+1881,"Great service today, very happy with the results",positive
+1882,"This is the best day ever, feeling fantastic!",positive
+1883,Very frustrated with the constant delays,negative
+1884,The meeting is scheduled for 3pm,neutral
+1885,"The new update is fantastic, so much better now",positive
+1886,The package arrived this afternoon,neutral
+1887,Watched a documentary about space last night,neutral
+1888,"This update ruined everything, reverting immediately",negative
+1889,"Such a letdown, expected so much more",negative
+1890,Disgusted by the lack of response from support,negative
+1891,"Worst flight I have ever taken, never again",negative
+1892,"Great service today, very happy with the results",positive
+1893,The package arrived this afternoon,neutral
+1894,The package arrived this afternoon,neutral
+1895,"Just had the most wonderful meal, highly recommend",positive
+1896,"Waited two hours and still no help, unacceptable",negative
+1897,"The new update is fantastic, so much better now",positive
+1898,Happy to announce I got the job! Super excited,positive
+1899,Very frustrated with the constant delays,negative
+1900,My flight departs at 6am tomorrow morning,neutral
+1901,Feeling motivated and ready to take on the world,positive
+1902,The report will be ready by end of day,neutral
+1903,"Excellent customer support, resolved my issue immediately",positive
+1904,"Waited two hours and still no help, unacceptable",negative
+1905,"Great service today, very happy with the results",positive
+1906,The report will be ready by end of day,neutral
+1907,"So angry about the hidden fees, total scam",negative
+1908,"The new update is fantastic, so much better now",positive
+1909,"Just had the most wonderful meal, highly recommend",positive
+1910,This is the worst decision I have ever made,negative
+1911,The restaurant opens at noon on weekdays,neutral
+1912,"Waited two hours and still no help, unacceptable",negative
+1913,The restaurant opens at noon on weekdays,neutral
+1914,This product is a complete waste of money,negative
+1915,"Worst flight I have ever taken, never again",negative
+1916,"I love this product, absolutely amazing experience!",positive
+1917,"Beautiful weather today, perfect for a walk",positive
+1918,The event was attended by over 500 people,neutral
+1919,Cannot believe how bad this service has gotten,negative
+1920,"Horrible quality, broke after just two days",negative
+1921,"Worst flight I have ever taken, never again",negative
+1922,Feeling motivated and ready to take on the world,positive
+1923,So grateful for all the support from my friends,positive
+1924,Cannot believe how bad this service has gotten,negative
+1925,My flight departs at 6am tomorrow morning,neutral
+1926,"Excellent customer support, resolved my issue immediately",positive
+1927,The conference starts next Monday in Paris,neutral
+1928,Happy to announce I got the job! Super excited,positive
+1929,Outstanding performance today by the whole team,positive
+1930,"The app crashes constantly, completely unusable",negative
+1931,My flight departs at 6am tomorrow morning,neutral
+1932,Loving the new features in this app,positive
+1933,"This update ruined everything, reverting immediately",negative
+1934,"I love this product, absolutely amazing experience!",positive
+1935,"Horrible quality, broke after just two days",negative
+1936,"Worst flight I have ever taken, never again",negative
+1937,Just checked the weather forecast for tomorrow,neutral
+1938,"This is the best day ever, feeling fantastic!",positive
+1939,Watched a documentary about space last night,neutral
+1940,The package arrived this afternoon,neutral
+1941,Outstanding performance today by the whole team,positive
+1942,"Such a letdown, expected so much more",negative
+1943,"Just had the most wonderful meal, highly recommend",positive
+1944,"Great service today, very happy with the results",positive
+1945,"Waited two hours and still no help, unacceptable",negative
+1946,Best coffee I have ever had this morning,positive
+1947,"This update ruined everything, reverting immediately",negative
+1948,Very frustrated with the constant delays,negative
+1949,Downloaded the latest version of the software,neutral
+1950,Watched a documentary about space last night,neutral
+1951,"This is the best day ever, feeling fantastic!",positive
+1952,The event was attended by over 500 people,neutral
+1953,Updated my profile information on the platform,neutral
+1954,"The app crashes constantly, completely unusable",negative
+1955,So grateful for all the support from my friends,positive
+1956,"Beautiful weather today, perfect for a walk",positive
+1957,"Thrilled with my new purchase, exceeded expectations",positive
+1958,So grateful for all the support from my friends,positive
+1959,The conference starts next Monday in Paris,neutral
+1960,The report will be ready by end of day,neutral
+1961,Disgusted by the lack of response from support,negative
+1962,"I love this product, absolutely amazing experience!",positive
+1963,Loving the new features in this app,positive
+1964,Loving the new features in this app,positive
+1965,"This update ruined everything, reverting immediately",negative
+1966,"So angry about the hidden fees, total scam",negative
+1967,"This update ruined everything, reverting immediately",negative
+1968,The new model was released yesterday,neutral
+1969,The new model was released yesterday,neutral
+1970,Very frustrated with the constant delays,negative
+1971,Outstanding performance today by the whole team,positive
+1972,"Terrible experience with customer service, very disappointed",negative
+1973,"Great service today, very happy with the results",positive
+1974,"Great service today, very happy with the results",positive
+1975,This product is a complete waste of money,negative
+1976,"Waited two hours and still no help, unacceptable",negative
+1977,The package arrived this afternoon,neutral
+1978,"Thrilled with my new purchase, exceeded expectations",positive
+1979,Updated my profile information on the platform,neutral
+1980,"So angry about the hidden fees, total scam",negative
+1981,The meeting is scheduled for 3pm,neutral
+1982,The team is working on the new feature,neutral
+1983,"Thrilled with my new purchase, exceeded expectations",positive
+1984,"Waited two hours and still no help, unacceptable",negative
+1985,"So angry about the hidden fees, total scam",negative
+1986,My flight departs at 6am tomorrow morning,neutral
+1987,This product is a complete waste of money,negative
+1988,"Just finished an incredible book, highly recommend",positive
+1989,"Great service today, very happy with the results",positive
+1990,"Terrible experience with customer service, very disappointed",negative
+1991,Just checked the weather forecast for tomorrow,neutral
+1992,"Never buying from this brand again, awful experience",negative
+1993,Outstanding performance today by the whole team,positive
+1994,"Terrible experience with customer service, very disappointed",negative
+1995,"Just finished an incredible book, highly recommend",positive
+1996,Updated my profile information on the platform,neutral
+1997,This is the worst decision I have ever made,negative
+1998,The report will be ready by end of day,neutral
+1999,Best coffee I have ever had this morning,positive
+2000,Watched a documentary about space last night,neutral
+2001,"Terrible experience with customer service, very disappointed",negative
+2002,Feeling motivated and ready to take on the world,positive
+2003,The conference starts next Monday in Paris,neutral
+2004,The package arrived this afternoon,neutral
+2005,Downloaded the latest version of the software,neutral
+2006,The new model was released yesterday,neutral
+2007,Watched a documentary about space last night,neutral
+2008,Watched a documentary about space last night,neutral
+2009,"Horrible quality, broke after just two days",negative
+2010,Loving the new features in this app,positive
+2011,The restaurant opens at noon on weekdays,neutral
+2012,"Excellent customer support, resolved my issue immediately",positive
+2013,Currently reading about machine learning,neutral
+2014,"Just finished an incredible book, highly recommend",positive
+2015,The restaurant opens at noon on weekdays,neutral
+2016,The package arrived this afternoon,neutral
+2017,"The new update is fantastic, so much better now",positive
+2018,"Terrible experience with customer service, very disappointed",negative
+2019,The new model was released yesterday,neutral
+2020,Very frustrated with the constant delays,negative
+2021,"Extremely disappointed, not what was advertised at all",negative
+2022,"Just had the most wonderful meal, highly recommend",positive
+2023,Feeling motivated and ready to take on the world,positive
+2024,The event was attended by over 500 people,neutral
+2025,"Waited two hours and still no help, unacceptable",negative
+2026,Cannot believe how bad this service has gotten,negative
+2027,Loving the new features in this app,positive
+2028,"Thrilled with my new purchase, exceeded expectations",positive
+2029,"Beautiful weather today, perfect for a walk",positive
+2030,The report will be ready by end of day,neutral
+2031,"So angry about the hidden fees, total scam",negative
+2032,"Great service today, very happy with the results",positive
+2033,Just checked the weather forecast for tomorrow,neutral
+2034,"This is the best day ever, feeling fantastic!",positive
+2035,So grateful for all the support from my friends,positive
+2036,"The app crashes constantly, completely unusable",negative
+2037,The restaurant opens at noon on weekdays,neutral
+2038,"The app crashes constantly, completely unusable",negative
+2039,"Thrilled with my new purchase, exceeded expectations",positive
+2040,"Terrible experience with customer service, very disappointed",negative
+2041,Best coffee I have ever had this morning,positive
+2042,The restaurant opens at noon on weekdays,neutral
+2043,The conference starts next Monday in Paris,neutral
+2044,"Waited two hours and still no help, unacceptable",negative
+2045,My flight departs at 6am tomorrow morning,neutral
+2046,"So angry about the hidden fees, total scam",negative
+2047,"Excellent customer support, resolved my issue immediately",positive
+2048,My flight departs at 6am tomorrow morning,neutral
+2049,Loving the new features in this app,positive
+2050,"Beautiful weather today, perfect for a walk",positive
+2051,The team is working on the new feature,neutral
+2052,The event was attended by over 500 people,neutral
+2053,Downloaded the latest version of the software,neutral
+2054,"Beautiful weather today, perfect for a walk",positive
+2055,Cannot believe how bad this service has gotten,negative
+2056,"This update ruined everything, reverting immediately",negative
+2057,Loving the new features in this app,positive
+2058,Just checked the weather forecast for tomorrow,neutral
+2059,The team is working on the new feature,neutral
+2060,Feeling motivated and ready to take on the world,positive
+2061,"This is the best day ever, feeling fantastic!",positive
+2062,"Great service today, very happy with the results",positive
+2063,"Thrilled with my new purchase, exceeded expectations",positive
+2064,"So angry about the hidden fees, total scam",negative
+2065,"Beautiful weather today, perfect for a walk",positive
+2066,"Just had the most wonderful meal, highly recommend",positive
+2067,"Such a letdown, expected so much more",negative
+2068,The restaurant opens at noon on weekdays,neutral
+2069,Downloaded the latest version of the software,neutral
+2070,Updated my profile information on the platform,neutral
+2071,"Never buying from this brand again, awful experience",negative
+2072,Best coffee I have ever had this morning,positive
+2073,Updated my profile information on the platform,neutral
+2074,The meeting is scheduled for 3pm,neutral
+2075,"Beautiful weather today, perfect for a walk",positive
+2076,Currently reading about machine learning,neutral
+2077,"The app crashes constantly, completely unusable",negative
+2078,Watched a documentary about space last night,neutral
+2079,Updated my profile information on the platform,neutral
+2080,"Waited two hours and still no help, unacceptable",negative
+2081,This is the worst decision I have ever made,negative
+2082,Happy to announce I got the job! Super excited,positive
+2083,Disgusted by the lack of response from support,negative
+2084,I am going to the store later today,neutral
+2085,Best coffee I have ever had this morning,positive
+2086,The package arrived this afternoon,neutral
+2087,Downloaded the latest version of the software,neutral
+2088,"Terrible experience with customer service, very disappointed",negative
+2089,Cannot believe how bad this service has gotten,negative
+2090,"Terrible experience with customer service, very disappointed",negative
+2091,"Horrible quality, broke after just two days",negative
+2092,"Excellent customer support, resolved my issue immediately",positive
+2093,"I love this product, absolutely amazing experience!",positive
+2094,This product is a complete waste of money,negative
+2095,"Just finished an incredible book, highly recommend",positive
+2096,My flight departs at 6am tomorrow morning,neutral
+2097,Feeling motivated and ready to take on the world,positive
+2098,"Such a letdown, expected so much more",negative
+2099,"Great service today, very happy with the results",positive
+2100,The meeting is scheduled for 3pm,neutral
+2101,"Just had the most wonderful meal, highly recommend",positive
+2102,Cannot believe how bad this service has gotten,negative
+2103,The new model was released yesterday,neutral
+2104,The package arrived this afternoon,neutral
+2105,The new model was released yesterday,neutral
+2106,The report will be ready by end of day,neutral
+2107,"So angry about the hidden fees, total scam",negative
+2108,So grateful for all the support from my friends,positive
+2109,"I love this product, absolutely amazing experience!",positive
+2110,"Just finished an incredible book, highly recommend",positive
+2111,Just checked the weather forecast for tomorrow,neutral
+2112,"Horrible quality, broke after just two days",negative
+2113,So grateful for all the support from my friends,positive
+2114,"Terrible experience with customer service, very disappointed",negative
+2115,Updated my profile information on the platform,neutral
+2116,Happy to announce I got the job! Super excited,positive
+2117,I am going to the store later today,neutral
+2118,This product is a complete waste of money,negative
+2119,This is the worst decision I have ever made,negative
+2120,Cannot believe how bad this service has gotten,negative
+2121,This is the worst decision I have ever made,negative
+2122,The restaurant opens at noon on weekdays,neutral
+2123,My flight departs at 6am tomorrow morning,neutral
+2124,"Waited two hours and still no help, unacceptable",negative
+2125,"Never buying from this brand again, awful experience",negative
+2126,"So angry about the hidden fees, total scam",negative
+2127,Outstanding performance today by the whole team,positive
+2128,"Excellent customer support, resolved my issue immediately",positive
+2129,"Never buying from this brand again, awful experience",negative
+2130,The new model was released yesterday,neutral
+2131,Downloaded the latest version of the software,neutral
+2132,"The app crashes constantly, completely unusable",negative
+2133,Downloaded the latest version of the software,neutral
+2134,The report will be ready by end of day,neutral
+2135,I am going to the store later today,neutral
+2136,So grateful for all the support from my friends,positive
+2137,"Extremely disappointed, not what was advertised at all",negative
+2138,"Waited two hours and still no help, unacceptable",negative
+2139,Feeling motivated and ready to take on the world,positive
+2140,Updated my profile information on the platform,neutral
+2141,Updated my profile information on the platform,neutral
+2142,Outstanding performance today by the whole team,positive
+2143,The restaurant opens at noon on weekdays,neutral
+2144,This product is a complete waste of money,negative
+2145,"Such a letdown, expected so much more",negative
+2146,Loving the new features in this app,positive
+2147,So grateful for all the support from my friends,positive
+2148,"Just had the most wonderful meal, highly recommend",positive
+2149,The package arrived this afternoon,neutral
+2150,"Just had the most wonderful meal, highly recommend",positive
+2151,"Extremely disappointed, not what was advertised at all",negative
+2152,Outstanding performance today by the whole team,positive
+2153,The team is working on the new feature,neutral
+2154,The meeting is scheduled for 3pm,neutral
+2155,Cannot believe how bad this service has gotten,negative
+2156,This is the worst decision I have ever made,negative
+2157,"So angry about the hidden fees, total scam",negative
+2158,This is the worst decision I have ever made,negative
+2159,"This is the best day ever, feeling fantastic!",positive
+2160,"Beautiful weather today, perfect for a walk",positive
+2161,The new model was released yesterday,neutral
+2162,Downloaded the latest version of the software,neutral
+2163,The team is working on the new feature,neutral
+2164,This is the worst decision I have ever made,negative
+2165,Loving the new features in this app,positive
+2166,"Never buying from this brand again, awful experience",negative
+2167,"So angry about the hidden fees, total scam",negative
+2168,"Terrible experience with customer service, very disappointed",negative
+2169,"Thrilled with my new purchase, exceeded expectations",positive
+2170,Feeling motivated and ready to take on the world,positive
+2171,The new model was released yesterday,neutral
+2172,"Thrilled with my new purchase, exceeded expectations",positive
+2173,Happy to announce I got the job! Super excited,positive
+2174,"This update ruined everything, reverting immediately",negative
+2175,"Worst flight I have ever taken, never again",negative
+2176,The report will be ready by end of day,neutral
+2177,My flight departs at 6am tomorrow morning,neutral
+2178,The new model was released yesterday,neutral
+2179,"Excellent customer support, resolved my issue immediately",positive
+2180,Currently reading about machine learning,neutral
+2181,"Great service today, very happy with the results",positive
+2182,Feeling motivated and ready to take on the world,positive
+2183,Feeling motivated and ready to take on the world,positive
+2184,The restaurant opens at noon on weekdays,neutral
+2185,"Horrible quality, broke after just two days",negative
+2186,The package arrived this afternoon,neutral
+2187,"Just had the most wonderful meal, highly recommend",positive
+2188,"Beautiful weather today, perfect for a walk",positive
+2189,The conference starts next Monday in Paris,neutral
+2190,"Extremely disappointed, not what was advertised at all",negative
+2191,Very frustrated with the constant delays,negative
+2192,The new model was released yesterday,neutral
+2193,This product is a complete waste of money,negative
+2194,"Extremely disappointed, not what was advertised at all",negative
+2195,Downloaded the latest version of the software,neutral
+2196,My flight departs at 6am tomorrow morning,neutral
+2197,The team is working on the new feature,neutral
+2198,The event was attended by over 500 people,neutral
+2199,Updated my profile information on the platform,neutral
+2200,Outstanding performance today by the whole team,positive
+2201,Loving the new features in this app,positive
+2202,The report will be ready by end of day,neutral
+2203,"This update ruined everything, reverting immediately",negative
+2204,Best coffee I have ever had this morning,positive
+2205,Happy to announce I got the job! Super excited,positive
+2206,Very frustrated with the constant delays,negative
+2207,Happy to announce I got the job! Super excited,positive
+2208,The conference starts next Monday in Paris,neutral
+2209,"Beautiful weather today, perfect for a walk",positive
+2210,The new model was released yesterday,neutral
+2211,Watched a documentary about space last night,neutral
+2212,"Excellent customer support, resolved my issue immediately",positive
+2213,The team is working on the new feature,neutral
+2214,The new model was released yesterday,neutral
+2215,"This is the best day ever, feeling fantastic!",positive
+2216,"I love this product, absolutely amazing experience!",positive
+2217,The new model was released yesterday,neutral
+2218,This is the worst decision I have ever made,negative
+2219,"Excellent customer support, resolved my issue immediately",positive
+2220,The meeting is scheduled for 3pm,neutral
+2221,"Never buying from this brand again, awful experience",negative
+2222,"Worst flight I have ever taken, never again",negative
+2223,"Horrible quality, broke after just two days",negative
+2224,Cannot believe how bad this service has gotten,negative
+2225,"Thrilled with my new purchase, exceeded expectations",positive
+2226,"Horrible quality, broke after just two days",negative
+2227,I am going to the store later today,neutral
+2228,"Worst flight I have ever taken, never again",negative
+2229,"Such a letdown, expected so much more",negative
+2230,My flight departs at 6am tomorrow morning,neutral
+2231,The team is working on the new feature,neutral
+2232,"This update ruined everything, reverting immediately",negative
+2233,"Terrible experience with customer service, very disappointed",negative
+2234,"Thrilled with my new purchase, exceeded expectations",positive
+2235,"Never buying from this brand again, awful experience",negative
+2236,The new model was released yesterday,neutral
+2237,Just checked the weather forecast for tomorrow,neutral
+2238,"Extremely disappointed, not what was advertised at all",negative
+2239,"Horrible quality, broke after just two days",negative
+2240,"Such a letdown, expected so much more",negative
+2241,The package arrived this afternoon,neutral
+2242,Updated my profile information on the platform,neutral
+2243,Happy to announce I got the job! Super excited,positive
+2244,Downloaded the latest version of the software,neutral
+2245,"Worst flight I have ever taken, never again",negative
+2246,Happy to announce I got the job! Super excited,positive
+2247,Best coffee I have ever had this morning,positive
+2248,"I love this product, absolutely amazing experience!",positive
+2249,This product is a complete waste of money,negative
+2250,My flight departs at 6am tomorrow morning,neutral
+2251,Outstanding performance today by the whole team,positive
+2252,Outstanding performance today by the whole team,positive
+2253,"Such a letdown, expected so much more",negative
+2254,"Just had the most wonderful meal, highly recommend",positive
+2255,Currently reading about machine learning,neutral
+2256,The conference starts next Monday in Paris,neutral
+2257,"The app crashes constantly, completely unusable",negative
+2258,"The app crashes constantly, completely unusable",negative
+2259,"The app crashes constantly, completely unusable",negative
+2260,So grateful for all the support from my friends,positive
+2261,"Extremely disappointed, not what was advertised at all",negative
+2262,My flight departs at 6am tomorrow morning,neutral
+2263,"Terrible experience with customer service, very disappointed",negative
+2264,"Waited two hours and still no help, unacceptable",negative
+2265,"The app crashes constantly, completely unusable",negative
+2266,"Horrible quality, broke after just two days",negative
+2267,The restaurant opens at noon on weekdays,neutral
+2268,"The app crashes constantly, completely unusable",negative
+2269,"Beautiful weather today, perfect for a walk",positive
+2270,"Just finished an incredible book, highly recommend",positive
+2271,"The new update is fantastic, so much better now",positive
+2272,"Never buying from this brand again, awful experience",negative
+2273,Just checked the weather forecast for tomorrow,neutral
+2274,"The new update is fantastic, so much better now",positive
+2275,The event was attended by over 500 people,neutral
+2276,"Terrible experience with customer service, very disappointed",negative
+2277,"This update ruined everything, reverting immediately",negative
+2278,"This update ruined everything, reverting immediately",negative
+2279,The new model was released yesterday,neutral
+2280,Best coffee I have ever had this morning,positive
+2281,This is the worst decision I have ever made,negative
+2282,The conference starts next Monday in Paris,neutral
+2283,"Never buying from this brand again, awful experience",negative
+2284,"I love this product, absolutely amazing experience!",positive
+2285,This is the worst decision I have ever made,negative
+2286,"Just had the most wonderful meal, highly recommend",positive
+2287,"I love this product, absolutely amazing experience!",positive
+2288,"Just finished an incredible book, highly recommend",positive
+2289,"Never buying from this brand again, awful experience",negative
+2290,Currently reading about machine learning,neutral
+2291,The report will be ready by end of day,neutral
+2292,The team is working on the new feature,neutral
+2293,So grateful for all the support from my friends,positive
+2294,"The app crashes constantly, completely unusable",negative
+2295,"I love this product, absolutely amazing experience!",positive
+2296,So grateful for all the support from my friends,positive
+2297,The new model was released yesterday,neutral
+2298,The team is working on the new feature,neutral
+2299,"Thrilled with my new purchase, exceeded expectations",positive
+2300,Downloaded the latest version of the software,neutral
+2301,Cannot believe how bad this service has gotten,negative
+2302,"Excellent customer support, resolved my issue immediately",positive
+2303,The restaurant opens at noon on weekdays,neutral
+2304,Cannot believe how bad this service has gotten,negative
+2305,"Terrible experience with customer service, very disappointed",negative
+2306,"So angry about the hidden fees, total scam",negative
+2307,"The app crashes constantly, completely unusable",negative
+2308,Downloaded the latest version of the software,neutral
+2309,"Just had the most wonderful meal, highly recommend",positive
+2310,So grateful for all the support from my friends,positive
+2311,"Never buying from this brand again, awful experience",negative
+2312,Updated my profile information on the platform,neutral
+2313,"Beautiful weather today, perfect for a walk",positive
+2314,"This is the best day ever, feeling fantastic!",positive
+2315,So grateful for all the support from my friends,positive
+2316,"Terrible experience with customer service, very disappointed",negative
+2317,"Excellent customer support, resolved my issue immediately",positive
+2318,"Just had the most wonderful meal, highly recommend",positive
+2319,The team is working on the new feature,neutral
+2320,"This update ruined everything, reverting immediately",negative
+2321,Happy to announce I got the job! Super excited,positive
+2322,"This update ruined everything, reverting immediately",negative
+2323,"Extremely disappointed, not what was advertised at all",negative
+2324,Feeling motivated and ready to take on the world,positive
+2325,Updated my profile information on the platform,neutral
+2326,"The new update is fantastic, so much better now",positive
+2327,"Great service today, very happy with the results",positive
+2328,I am going to the store later today,neutral
+2329,"Such a letdown, expected so much more",negative
+2330,Very frustrated with the constant delays,negative
+2331,This product is a complete waste of money,negative
+2332,Best coffee I have ever had this morning,positive
+2333,I am going to the store later today,neutral
+2334,Downloaded the latest version of the software,neutral
+2335,"The new update is fantastic, so much better now",positive
+2336,"Beautiful weather today, perfect for a walk",positive
+2337,"Beautiful weather today, perfect for a walk",positive
+2338,Watched a documentary about space last night,neutral
+2339,"Terrible experience with customer service, very disappointed",negative
+2340,I am going to the store later today,neutral
+2341,"Horrible quality, broke after just two days",negative
+2342,Outstanding performance today by the whole team,positive
+2343,"Thrilled with my new purchase, exceeded expectations",positive
+2344,"Beautiful weather today, perfect for a walk",positive
+2345,"Thrilled with my new purchase, exceeded expectations",positive
+2346,The report will be ready by end of day,neutral
+2347,"So angry about the hidden fees, total scam",negative
+2348,"I love this product, absolutely amazing experience!",positive
+2349,Downloaded the latest version of the software,neutral
+2350,Cannot believe how bad this service has gotten,negative
+2351,Watched a documentary about space last night,neutral
+2352,Watched a documentary about space last night,neutral
+2353,"Extremely disappointed, not what was advertised at all",negative
+2354,"Such a letdown, expected so much more",negative
+2355,So grateful for all the support from my friends,positive
+2356,Just checked the weather forecast for tomorrow,neutral
+2357,"Beautiful weather today, perfect for a walk",positive
+2358,The meeting is scheduled for 3pm,neutral
+2359,Cannot believe how bad this service has gotten,negative
+2360,Loving the new features in this app,positive
+2361,"Never buying from this brand again, awful experience",negative
+2362,"Waited two hours and still no help, unacceptable",negative
+2363,Currently reading about machine learning,neutral
+2364,"So angry about the hidden fees, total scam",negative
+2365,The team is working on the new feature,neutral
+2366,The report will be ready by end of day,neutral
+2367,Best coffee I have ever had this morning,positive
+2368,"Just had the most wonderful meal, highly recommend",positive
+2369,The meeting is scheduled for 3pm,neutral
+2370,So grateful for all the support from my friends,positive
+2371,Disgusted by the lack of response from support,negative
+2372,Just checked the weather forecast for tomorrow,neutral
+2373,Watched a documentary about space last night,neutral
+2374,Just checked the weather forecast for tomorrow,neutral
+2375,The event was attended by over 500 people,neutral
+2376,The new model was released yesterday,neutral
+2377,Cannot believe how bad this service has gotten,negative
+2378,"Great service today, very happy with the results",positive
+2379,"Great service today, very happy with the results",positive
+2380,Loving the new features in this app,positive
+2381,"The new update is fantastic, so much better now",positive
+2382,My flight departs at 6am tomorrow morning,neutral
+2383,"Extremely disappointed, not what was advertised at all",negative
+2384,Outstanding performance today by the whole team,positive
+2385,My flight departs at 6am tomorrow morning,neutral
+2386,The team is working on the new feature,neutral
+2387,"Great service today, very happy with the results",positive
+2388,"This update ruined everything, reverting immediately",negative
+2389,Very frustrated with the constant delays,negative
+2390,"This is the best day ever, feeling fantastic!",positive
+2391,"Such a letdown, expected so much more",negative
+2392,The report will be ready by end of day,neutral
+2393,Updated my profile information on the platform,neutral
+2394,This is the worst decision I have ever made,negative
+2395,So grateful for all the support from my friends,positive
+2396,"Beautiful weather today, perfect for a walk",positive
+2397,Just checked the weather forecast for tomorrow,neutral
+2398,Loving the new features in this app,positive
+2399,"Never buying from this brand again, awful experience",negative
+2400,"Terrible experience with customer service, very disappointed",negative
+2401,"So angry about the hidden fees, total scam",negative
+2402,Watched a documentary about space last night,neutral
+2403,Cannot believe how bad this service has gotten,negative
+2404,My flight departs at 6am tomorrow morning,neutral
+2405,"This update ruined everything, reverting immediately",negative
+2406,The meeting is scheduled for 3pm,neutral
+2407,The conference starts next Monday in Paris,neutral
+2408,Watched a documentary about space last night,neutral
+2409,The event was attended by over 500 people,neutral
+2410,"Such a letdown, expected so much more",negative
+2411,So grateful for all the support from my friends,positive
+2412,The report will be ready by end of day,neutral
+2413,Just checked the weather forecast for tomorrow,neutral
+2414,"Thrilled with my new purchase, exceeded expectations",positive
+2415,"Never buying from this brand again, awful experience",negative
+2416,The event was attended by over 500 people,neutral
+2417,Updated my profile information on the platform,neutral
+2418,"Just finished an incredible book, highly recommend",positive
+2419,"Beautiful weather today, perfect for a walk",positive
+2420,Happy to announce I got the job! Super excited,positive
+2421,This is the worst decision I have ever made,negative
+2422,"Beautiful weather today, perfect for a walk",positive
+2423,The conference starts next Monday in Paris,neutral
+2424,The restaurant opens at noon on weekdays,neutral
+2425,Cannot believe how bad this service has gotten,negative
+2426,"Just had the most wonderful meal, highly recommend",positive
+2427,The report will be ready by end of day,neutral
+2428,The new model was released yesterday,neutral
+2429,"Great service today, very happy with the results",positive
+2430,"Extremely disappointed, not what was advertised at all",negative
+2431,This product is a complete waste of money,negative
+2432,Just checked the weather forecast for tomorrow,neutral
+2433,"Thrilled with my new purchase, exceeded expectations",positive
+2434,"Great service today, very happy with the results",positive
+2435,Updated my profile information on the platform,neutral
+2436,"So angry about the hidden fees, total scam",negative
+2437,Outstanding performance today by the whole team,positive
+2438,"Never buying from this brand again, awful experience",negative
+2439,"So angry about the hidden fees, total scam",negative
+2440,Loving the new features in this app,positive
+2441,"Waited two hours and still no help, unacceptable",negative
+2442,The conference starts next Monday in Paris,neutral
+2443,"Thrilled with my new purchase, exceeded expectations",positive
+2444,The new model was released yesterday,neutral
+2445,"Thrilled with my new purchase, exceeded expectations",positive
+2446,"Terrible experience with customer service, very disappointed",negative
+2447,Outstanding performance today by the whole team,positive
+2448,"Worst flight I have ever taken, never again",negative
+2449,The new model was released yesterday,neutral
+2450,Watched a documentary about space last night,neutral
+2451,"This update ruined everything, reverting immediately",negative
+2452,"Just finished an incredible book, highly recommend",positive
+2453,"Thrilled with my new purchase, exceeded expectations",positive
+2454,"Just finished an incredible book, highly recommend",positive
+2455,Happy to announce I got the job! Super excited,positive
+2456,The team is working on the new feature,neutral
+2457,Watched a documentary about space last night,neutral
+2458,"Waited two hours and still no help, unacceptable",negative
+2459,"Extremely disappointed, not what was advertised at all",negative
+2460,The package arrived this afternoon,neutral
+2461,"Thrilled with my new purchase, exceeded expectations",positive
+2462,"Just had the most wonderful meal, highly recommend",positive
+2463,Very frustrated with the constant delays,negative
+2464,"Extremely disappointed, not what was advertised at all",negative
+2465,The meeting is scheduled for 3pm,neutral
+2466,The meeting is scheduled for 3pm,neutral
+2467,"Terrible experience with customer service, very disappointed",negative
+2468,"The new update is fantastic, so much better now",positive
+2469,The team is working on the new feature,neutral
+2470,The package arrived this afternoon,neutral
+2471,"Waited two hours and still no help, unacceptable",negative
+2472,"Extremely disappointed, not what was advertised at all",negative
+2473,"Never buying from this brand again, awful experience",negative
+2474,Very frustrated with the constant delays,negative
+2475,"The new update is fantastic, so much better now",positive
+2476,The restaurant opens at noon on weekdays,neutral
+2477,The meeting is scheduled for 3pm,neutral
+2478,Currently reading about machine learning,neutral
+2479,"This update ruined everything, reverting immediately",negative
+2480,I am going to the store later today,neutral
+2481,Best coffee I have ever had this morning,positive
+2482,"Just had the most wonderful meal, highly recommend",positive
+2483,The package arrived this afternoon,neutral
+2484,Cannot believe how bad this service has gotten,negative
+2485,The restaurant opens at noon on weekdays,neutral
+2486,Downloaded the latest version of the software,neutral
+2487,Cannot believe how bad this service has gotten,negative
+2488,"Just had the most wonderful meal, highly recommend",positive
+2489,Loving the new features in this app,positive
+2490,Currently reading about machine learning,neutral
+2491,Cannot believe how bad this service has gotten,negative
+2492,Downloaded the latest version of the software,neutral
+2493,"The app crashes constantly, completely unusable",negative
+2494,"So angry about the hidden fees, total scam",negative
+2495,This is the worst decision I have ever made,negative
+2496,"This update ruined everything, reverting immediately",negative
+2497,"Thrilled with my new purchase, exceeded expectations",positive
+2498,"Extremely disappointed, not what was advertised at all",negative
+2499,Very frustrated with the constant delays,negative
+2500,"I love this product, absolutely amazing experience!",positive
+2501,"The app crashes constantly, completely unusable",negative
+2502,"The new update is fantastic, so much better now",positive
+2503,My flight departs at 6am tomorrow morning,neutral
+2504,The team is working on the new feature,neutral
+2505,"This update ruined everything, reverting immediately",negative
+2506,I am going to the store later today,neutral
+2507,"Just finished an incredible book, highly recommend",positive
+2508,The report will be ready by end of day,neutral
+2509,"Just had the most wonderful meal, highly recommend",positive
+2510,"Worst flight I have ever taken, never again",negative
+2511,My flight departs at 6am tomorrow morning,neutral
+2512,"So angry about the hidden fees, total scam",negative
+2513,So grateful for all the support from my friends,positive
+2514,"Excellent customer support, resolved my issue immediately",positive
+2515,The meeting is scheduled for 3pm,neutral
+2516,The meeting is scheduled for 3pm,neutral
+2517,"Horrible quality, broke after just two days",negative
+2518,Loving the new features in this app,positive
+2519,Just checked the weather forecast for tomorrow,neutral
+2520,Outstanding performance today by the whole team,positive
+2521,Loving the new features in this app,positive
+2522,Cannot believe how bad this service has gotten,negative
+2523,Disgusted by the lack of response from support,negative
+2524,This product is a complete waste of money,negative
+2525,The report will be ready by end of day,neutral
+2526,"Worst flight I have ever taken, never again",negative
+2527,"Beautiful weather today, perfect for a walk",positive
+2528,The meeting is scheduled for 3pm,neutral
+2529,This is the worst decision I have ever made,negative
+2530,"Horrible quality, broke after just two days",negative
+2531,"Waited two hours and still no help, unacceptable",negative
+2532,Just checked the weather forecast for tomorrow,neutral
+2533,The report will be ready by end of day,neutral
+2534,"I love this product, absolutely amazing experience!",positive
+2535,"Never buying from this brand again, awful experience",negative
+2536,Downloaded the latest version of the software,neutral
+2537,So grateful for all the support from my friends,positive
+2538,This product is a complete waste of money,negative
+2539,"Waited two hours and still no help, unacceptable",negative
+2540,"Horrible quality, broke after just two days",negative
+2541,"Worst flight I have ever taken, never again",negative
+2542,My flight departs at 6am tomorrow morning,neutral
+2543,The new model was released yesterday,neutral
+2544,Best coffee I have ever had this morning,positive
+2545,This product is a complete waste of money,negative
+2546,The package arrived this afternoon,neutral
+2547,Feeling motivated and ready to take on the world,positive
+2548,The event was attended by over 500 people,neutral
+2549,This product is a complete waste of money,negative
+2550,This is the worst decision I have ever made,negative
+2551,"I love this product, absolutely amazing experience!",positive
+2552,My flight departs at 6am tomorrow morning,neutral
+2553,"Such a letdown, expected so much more",negative
+2554,Best coffee I have ever had this morning,positive
+2555,This product is a complete waste of money,negative
+2556,"Worst flight I have ever taken, never again",negative
+2557,Happy to announce I got the job! Super excited,positive
+2558,"Beautiful weather today, perfect for a walk",positive
+2559,The report will be ready by end of day,neutral
+2560,"Worst flight I have ever taken, never again",negative
+2561,"I love this product, absolutely amazing experience!",positive
+2562,Feeling motivated and ready to take on the world,positive
+2563,"Great service today, very happy with the results",positive
+2564,"Just finished an incredible book, highly recommend",positive
+2565,The conference starts next Monday in Paris,neutral
+2566,Updated my profile information on the platform,neutral
+2567,The restaurant opens at noon on weekdays,neutral
+2568,"Worst flight I have ever taken, never again",negative
+2569,This is the worst decision I have ever made,negative
+2570,My flight departs at 6am tomorrow morning,neutral
+2571,"Just finished an incredible book, highly recommend",positive
+2572,Just checked the weather forecast for tomorrow,neutral
+2573,Very frustrated with the constant delays,negative
+2574,The report will be ready by end of day,neutral
+2575,Best coffee I have ever had this morning,positive
+2576,"Terrible experience with customer service, very disappointed",negative
+2577,Happy to announce I got the job! Super excited,positive
+2578,"Excellent customer support, resolved my issue immediately",positive
+2579,Just checked the weather forecast for tomorrow,neutral
+2580,Disgusted by the lack of response from support,negative
+2581,"Terrible experience with customer service, very disappointed",negative
+2582,Happy to announce I got the job! Super excited,positive
+2583,The conference starts next Monday in Paris,neutral
+2584,"The new update is fantastic, so much better now",positive
+2585,"Horrible quality, broke after just two days",negative
+2586,"Excellent customer support, resolved my issue immediately",positive
+2587,"Excellent customer support, resolved my issue immediately",positive
+2588,"The new update is fantastic, so much better now",positive
+2589,Watched a documentary about space last night,neutral
+2590,The new model was released yesterday,neutral
+2591,"So angry about the hidden fees, total scam",negative
+2592,"Great service today, very happy with the results",positive
+2593,"Excellent customer support, resolved my issue immediately",positive
+2594,"Excellent customer support, resolved my issue immediately",positive
+2595,I am going to the store later today,neutral
+2596,Very frustrated with the constant delays,negative
+2597,This is the worst decision I have ever made,negative
+2598,"Worst flight I have ever taken, never again",negative
+2599,"The app crashes constantly, completely unusable",negative
+2600,Currently reading about machine learning,neutral
+2601,Very frustrated with the constant delays,negative
+2602,"So angry about the hidden fees, total scam",negative
+2603,"Terrible experience with customer service, very disappointed",negative
+2604,So grateful for all the support from my friends,positive
+2605,This product is a complete waste of money,negative
+2606,"The new update is fantastic, so much better now",positive
+2607,"Great service today, very happy with the results",positive
+2608,"Thrilled with my new purchase, exceeded expectations",positive
+2609,"The app crashes constantly, completely unusable",negative
+2610,Outstanding performance today by the whole team,positive
+2611,Outstanding performance today by the whole team,positive
+2612,"Extremely disappointed, not what was advertised at all",negative
+2613,The package arrived this afternoon,neutral
+2614,"Just had the most wonderful meal, highly recommend",positive
+2615,"This is the best day ever, feeling fantastic!",positive
+2616,The event was attended by over 500 people,neutral
+2617,"The app crashes constantly, completely unusable",negative
+2618,"This is the best day ever, feeling fantastic!",positive
+2619,So grateful for all the support from my friends,positive
+2620,Feeling motivated and ready to take on the world,positive
+2621,"I love this product, absolutely amazing experience!",positive
+2622,"This is the best day ever, feeling fantastic!",positive
+2623,"Great service today, very happy with the results",positive
+2624,Best coffee I have ever had this morning,positive
+2625,"Horrible quality, broke after just two days",negative
+2626,Outstanding performance today by the whole team,positive
+2627,"Extremely disappointed, not what was advertised at all",negative
+2628,"Thrilled with my new purchase, exceeded expectations",positive
+2629,The new model was released yesterday,neutral
+2630,"Extremely disappointed, not what was advertised at all",negative
+2631,I am going to the store later today,neutral
+2632,My flight departs at 6am tomorrow morning,neutral
+2633,The package arrived this afternoon,neutral
+2634,"Waited two hours and still no help, unacceptable",negative
+2635,"Great service today, very happy with the results",positive
+2636,"Beautiful weather today, perfect for a walk",positive
+2637,I am going to the store later today,neutral
+2638,So grateful for all the support from my friends,positive
+2639,Happy to announce I got the job! Super excited,positive
+2640,"Great service today, very happy with the results",positive
+2641,"Waited two hours and still no help, unacceptable",negative
+2642,The restaurant opens at noon on weekdays,neutral
+2643,"Excellent customer support, resolved my issue immediately",positive
+2644,The meeting is scheduled for 3pm,neutral
+2645,Watched a documentary about space last night,neutral
+2646,"Never buying from this brand again, awful experience",negative
+2647,"Thrilled with my new purchase, exceeded expectations",positive
+2648,"Just had the most wonderful meal, highly recommend",positive
+2649,"Terrible experience with customer service, very disappointed",negative
+2650,The event was attended by over 500 people,neutral
+2651,"This update ruined everything, reverting immediately",negative
+2652,My flight departs at 6am tomorrow morning,neutral
+2653,The event was attended by over 500 people,neutral
+2654,The event was attended by over 500 people,neutral
+2655,Watched a documentary about space last night,neutral
+2656,"Never buying from this brand again, awful experience",negative
+2657,The meeting is scheduled for 3pm,neutral
+2658,"Just had the most wonderful meal, highly recommend",positive
+2659,"The new update is fantastic, so much better now",positive
+2660,Cannot believe how bad this service has gotten,negative
+2661,"Such a letdown, expected so much more",negative
+2662,Very frustrated with the constant delays,negative
+2663,Watched a documentary about space last night,neutral
+2664,"This is the best day ever, feeling fantastic!",positive
+2665,Feeling motivated and ready to take on the world,positive
+2666,"Such a letdown, expected so much more",negative
+2667,"So angry about the hidden fees, total scam",negative
+2668,"This update ruined everything, reverting immediately",negative
+2669,"Thrilled with my new purchase, exceeded expectations",positive
+2670,This is the worst decision I have ever made,negative
+2671,"Terrible experience with customer service, very disappointed",negative
+2672,Downloaded the latest version of the software,neutral
+2673,"So angry about the hidden fees, total scam",negative
+2674,"Never buying from this brand again, awful experience",negative
+2675,"I love this product, absolutely amazing experience!",positive
+2676,The event was attended by over 500 people,neutral
+2677,Outstanding performance today by the whole team,positive
+2678,"Excellent customer support, resolved my issue immediately",positive
+2679,"So angry about the hidden fees, total scam",negative
+2680,Outstanding performance today by the whole team,positive
+2681,My flight departs at 6am tomorrow morning,neutral
+2682,So grateful for all the support from my friends,positive
+2683,"Excellent customer support, resolved my issue immediately",positive
+2684,"So angry about the hidden fees, total scam",negative
+2685,"Great service today, very happy with the results",positive
+2686,I am going to the store later today,neutral
+2687,"The app crashes constantly, completely unusable",negative
+2688,The restaurant opens at noon on weekdays,neutral
+2689,Just checked the weather forecast for tomorrow,neutral
+2690,The restaurant opens at noon on weekdays,neutral
+2691,"Horrible quality, broke after just two days",negative
+2692,"Terrible experience with customer service, very disappointed",negative
+2693,"So angry about the hidden fees, total scam",negative
+2694,"Terrible experience with customer service, very disappointed",negative
+2695,"I love this product, absolutely amazing experience!",positive
+2696,Feeling motivated and ready to take on the world,positive
+2697,I am going to the store later today,neutral
+2698,The team is working on the new feature,neutral
+2699,"Horrible quality, broke after just two days",negative
+2700,This product is a complete waste of money,negative
+2701,"Such a letdown, expected so much more",negative
+2702,Cannot believe how bad this service has gotten,negative
+2703,Watched a documentary about space last night,neutral
+2704,Cannot believe how bad this service has gotten,negative
+2705,The conference starts next Monday in Paris,neutral
+2706,The team is working on the new feature,neutral
+2707,"Thrilled with my new purchase, exceeded expectations",positive
+2708,The report will be ready by end of day,neutral
+2709,Happy to announce I got the job! Super excited,positive
+2710,"The new update is fantastic, so much better now",positive
+2711,Outstanding performance today by the whole team,positive
+2712,Just checked the weather forecast for tomorrow,neutral
+2713,Cannot believe how bad this service has gotten,negative
+2714,"Never buying from this brand again, awful experience",negative
+2715,"The app crashes constantly, completely unusable",negative
+2716,This product is a complete waste of money,negative
+2717,Very frustrated with the constant delays,negative
+2718,My flight departs at 6am tomorrow morning,neutral
+2719,Feeling motivated and ready to take on the world,positive
+2720,"This is the best day ever, feeling fantastic!",positive
+2721,The event was attended by over 500 people,neutral
+2722,"Just finished an incredible book, highly recommend",positive
+2723,"Thrilled with my new purchase, exceeded expectations",positive
+2724,"I love this product, absolutely amazing experience!",positive
+2725,Very frustrated with the constant delays,negative
+2726,"I love this product, absolutely amazing experience!",positive
+2727,"Such a letdown, expected so much more",negative
+2728,"Extremely disappointed, not what was advertised at all",negative
+2729,Just checked the weather forecast for tomorrow,neutral
+2730,The package arrived this afternoon,neutral
+2731,Downloaded the latest version of the software,neutral
+2732,Very frustrated with the constant delays,negative
+2733,So grateful for all the support from my friends,positive
+2734,"Thrilled with my new purchase, exceeded expectations",positive
+2735,"Excellent customer support, resolved my issue immediately",positive
+2736,"Horrible quality, broke after just two days",negative
+2737,Loving the new features in this app,positive
+2738,Downloaded the latest version of the software,neutral
+2739,Very frustrated with the constant delays,negative
+2740,"I love this product, absolutely amazing experience!",positive
+2741,"Just finished an incredible book, highly recommend",positive
+2742,The conference starts next Monday in Paris,neutral
+2743,"Excellent customer support, resolved my issue immediately",positive
+2744,Cannot believe how bad this service has gotten,negative
+2745,"Terrible experience with customer service, very disappointed",negative
+2746,The event was attended by over 500 people,neutral
+2747,"So angry about the hidden fees, total scam",negative
+2748,The report will be ready by end of day,neutral
+2749,My flight departs at 6am tomorrow morning,neutral
+2750,"The new update is fantastic, so much better now",positive
+2751,Happy to announce I got the job! Super excited,positive
+2752,"Horrible quality, broke after just two days",negative
+2753,Very frustrated with the constant delays,negative
+2754,"Worst flight I have ever taken, never again",negative
+2755,Cannot believe how bad this service has gotten,negative
+2756,"Just finished an incredible book, highly recommend",positive
+2757,The event was attended by over 500 people,neutral
+2758,"The new update is fantastic, so much better now",positive
+2759,Disgusted by the lack of response from support,negative
+2760,I am going to the store later today,neutral
+2761,Outstanding performance today by the whole team,positive
+2762,"Just had the most wonderful meal, highly recommend",positive
+2763,Loving the new features in this app,positive
+2764,"This update ruined everything, reverting immediately",negative
+2765,"This update ruined everything, reverting immediately",negative
+2766,"Worst flight I have ever taken, never again",negative
+2767,Feeling motivated and ready to take on the world,positive
+2768,I am going to the store later today,neutral
+2769,Updated my profile information on the platform,neutral
+2770,Loving the new features in this app,positive
+2771,"Worst flight I have ever taken, never again",negative
+2772,"Worst flight I have ever taken, never again",negative
+2773,"Excellent customer support, resolved my issue immediately",positive
+2774,The package arrived this afternoon,neutral
+2775,"Waited two hours and still no help, unacceptable",negative
+2776,"Never buying from this brand again, awful experience",negative
+2777,This product is a complete waste of money,negative
+2778,This is the worst decision I have ever made,negative
+2779,Just checked the weather forecast for tomorrow,neutral
+2780,Currently reading about machine learning,neutral
+2781,The new model was released yesterday,neutral
+2782,"Terrible experience with customer service, very disappointed",negative
+2783,This is the worst decision I have ever made,negative
+2784,"Such a letdown, expected so much more",negative
+2785,"Horrible quality, broke after just two days",negative
+2786,Currently reading about machine learning,neutral
+2787,So grateful for all the support from my friends,positive
+2788,This is the worst decision I have ever made,negative
+2789,Cannot believe how bad this service has gotten,negative
+2790,Outstanding performance today by the whole team,positive
+2791,The meeting is scheduled for 3pm,neutral
+2792,"I love this product, absolutely amazing experience!",positive
+2793,"I love this product, absolutely amazing experience!",positive
+2794,"Worst flight I have ever taken, never again",negative
+2795,Happy to announce I got the job! Super excited,positive
+2796,Happy to announce I got the job! Super excited,positive
+2797,"So angry about the hidden fees, total scam",negative
+2798,Very frustrated with the constant delays,negative
+2799,"Waited two hours and still no help, unacceptable",negative
+2800,"The new update is fantastic, so much better now",positive
+2801,"Just finished an incredible book, highly recommend",positive
+2802,Just checked the weather forecast for tomorrow,neutral
+2803,Happy to announce I got the job! Super excited,positive
+2804,Loving the new features in this app,positive
+2805,Happy to announce I got the job! Super excited,positive
+2806,Currently reading about machine learning,neutral
+2807,This product is a complete waste of money,negative
+2808,"Waited two hours and still no help, unacceptable",negative
+2809,The meeting is scheduled for 3pm,neutral
+2810,"Never buying from this brand again, awful experience",negative
+2811,"Great service today, very happy with the results",positive
+2812,Updated my profile information on the platform,neutral
+2813,Cannot believe how bad this service has gotten,negative
+2814,"Beautiful weather today, perfect for a walk",positive
+2815,Disgusted by the lack of response from support,negative
+2816,"Thrilled with my new purchase, exceeded expectations",positive
+2817,"Just finished an incredible book, highly recommend",positive
+2818,"Just had the most wonderful meal, highly recommend",positive
+2819,The package arrived this afternoon,neutral
+2820,"The new update is fantastic, so much better now",positive
+2821,Disgusted by the lack of response from support,negative
+2822,"Waited two hours and still no help, unacceptable",negative
+2823,The event was attended by over 500 people,neutral
+2824,The new model was released yesterday,neutral
+2825,The team is working on the new feature,neutral
+2826,"Excellent customer support, resolved my issue immediately",positive
+2827,"Thrilled with my new purchase, exceeded expectations",positive
+2828,Disgusted by the lack of response from support,negative
+2829,"This is the best day ever, feeling fantastic!",positive
+2830,"Waited two hours and still no help, unacceptable",negative
+2831,The team is working on the new feature,neutral
+2832,The report will be ready by end of day,neutral
+2833,The conference starts next Monday in Paris,neutral
+2834,"Thrilled with my new purchase, exceeded expectations",positive
+2835,Just checked the weather forecast for tomorrow,neutral
+2836,This is the worst decision I have ever made,negative
+2837,"So angry about the hidden fees, total scam",negative
+2838,Disgusted by the lack of response from support,negative
+2839,The team is working on the new feature,neutral
+2840,"The new update is fantastic, so much better now",positive
+2841,Downloaded the latest version of the software,neutral
+2842,"Worst flight I have ever taken, never again",negative
+2843,"Waited two hours and still no help, unacceptable",negative
+2844,Very frustrated with the constant delays,negative
+2845,Cannot believe how bad this service has gotten,negative
+2846,I am going to the store later today,neutral
+2847,The restaurant opens at noon on weekdays,neutral
+2848,The conference starts next Monday in Paris,neutral
+2849,Best coffee I have ever had this morning,positive
+2850,Best coffee I have ever had this morning,positive
+2851,Currently reading about machine learning,neutral
+2852,"Extremely disappointed, not what was advertised at all",negative
+2853,"This update ruined everything, reverting immediately",negative
+2854,"Never buying from this brand again, awful experience",negative
+2855,Currently reading about machine learning,neutral
+2856,My flight departs at 6am tomorrow morning,neutral
+2857,Updated my profile information on the platform,neutral
+2858,"Horrible quality, broke after just two days",negative
+2859,"Such a letdown, expected so much more",negative
+2860,Feeling motivated and ready to take on the world,positive
+2861,Feeling motivated and ready to take on the world,positive
+2862,Cannot believe how bad this service has gotten,negative
+2863,The new model was released yesterday,neutral
+2864,"Such a letdown, expected so much more",negative
+2865,I am going to the store later today,neutral
+2866,Happy to announce I got the job! Super excited,positive
+2867,"Just finished an incredible book, highly recommend",positive
+2868,Feeling motivated and ready to take on the world,positive
+2869,"Thrilled with my new purchase, exceeded expectations",positive
+2870,The conference starts next Monday in Paris,neutral
+2871,Feeling motivated and ready to take on the world,positive
+2872,The event was attended by over 500 people,neutral
+2873,"Terrible experience with customer service, very disappointed",negative
+2874,"The new update is fantastic, so much better now",positive
+2875,The restaurant opens at noon on weekdays,neutral
+2876,Happy to announce I got the job! Super excited,positive
+2877,"This update ruined everything, reverting immediately",negative
+2878,"Worst flight I have ever taken, never again",negative
+2879,The restaurant opens at noon on weekdays,neutral
+2880,Best coffee I have ever had this morning,positive
+2881,Updated my profile information on the platform,neutral
+2882,Feeling motivated and ready to take on the world,positive
+2883,Loving the new features in this app,positive
+2884,Cannot believe how bad this service has gotten,negative
+2885,"I love this product, absolutely amazing experience!",positive
+2886,"This is the best day ever, feeling fantastic!",positive
+2887,The conference starts next Monday in Paris,neutral
+2888,"Great service today, very happy with the results",positive
+2889,"I love this product, absolutely amazing experience!",positive
+2890,This is the worst decision I have ever made,negative
+2891,"I love this product, absolutely amazing experience!",positive
+2892,This is the worst decision I have ever made,negative
+2893,Currently reading about machine learning,neutral
+2894,"So angry about the hidden fees, total scam",negative
+2895,"The new update is fantastic, so much better now",positive
+2896,The event was attended by over 500 people,neutral
+2897,The report will be ready by end of day,neutral
+2898,"Thrilled with my new purchase, exceeded expectations",positive
+2899,Downloaded the latest version of the software,neutral
+2900,The conference starts next Monday in Paris,neutral
+2901,The team is working on the new feature,neutral
+2902,Updated my profile information on the platform,neutral
+2903,The event was attended by over 500 people,neutral
+2904,"This update ruined everything, reverting immediately",negative
+2905,Feeling motivated and ready to take on the world,positive
+2906,Disgusted by the lack of response from support,negative
+2907,"Excellent customer support, resolved my issue immediately",positive
+2908,"Just finished an incredible book, highly recommend",positive
+2909,"The new update is fantastic, so much better now",positive
+2910,"This update ruined everything, reverting immediately",negative
+2911,"This update ruined everything, reverting immediately",negative
+2912,"Waited two hours and still no help, unacceptable",negative
+2913,"Horrible quality, broke after just two days",negative
+2914,"Such a letdown, expected so much more",negative
+2915,The team is working on the new feature,neutral
+2916,"Beautiful weather today, perfect for a walk",positive
+2917,"Thrilled with my new purchase, exceeded expectations",positive
+2918,Loving the new features in this app,positive
+2919,The team is working on the new feature,neutral
+2920,My flight departs at 6am tomorrow morning,neutral
+2921,Currently reading about machine learning,neutral
+2922,"Beautiful weather today, perfect for a walk",positive
+2923,"Just had the most wonderful meal, highly recommend",positive
+2924,Just checked the weather forecast for tomorrow,neutral
+2925,"Waited two hours and still no help, unacceptable",negative
+2926,"Horrible quality, broke after just two days",negative
+2927,"Just finished an incredible book, highly recommend",positive
+2928,Best coffee I have ever had this morning,positive
+2929,The restaurant opens at noon on weekdays,neutral
+2930,My flight departs at 6am tomorrow morning,neutral
+2931,The meeting is scheduled for 3pm,neutral
+2932,"Just had the most wonderful meal, highly recommend",positive
+2933,This product is a complete waste of money,negative
+2934,"Such a letdown, expected so much more",negative
+2935,"Never buying from this brand again, awful experience",negative
+2936,"Great service today, very happy with the results",positive
+2937,Downloaded the latest version of the software,neutral
+2938,So grateful for all the support from my friends,positive
+2939,"Extremely disappointed, not what was advertised at all",negative
+2940,"Just had the most wonderful meal, highly recommend",positive
+2941,The package arrived this afternoon,neutral
+2942,This is the worst decision I have ever made,negative
+2943,Disgusted by the lack of response from support,negative
+2944,Best coffee I have ever had this morning,positive
+2945,Updated my profile information on the platform,neutral
+2946,"The app crashes constantly, completely unusable",negative
+2947,The team is working on the new feature,neutral
+2948,Happy to announce I got the job! Super excited,positive
+2949,Just checked the weather forecast for tomorrow,neutral
+2950,"Excellent customer support, resolved my issue immediately",positive
+2951,"Horrible quality, broke after just two days",negative
+2952,"So angry about the hidden fees, total scam",negative
+2953,My flight departs at 6am tomorrow morning,neutral
+2954,Very frustrated with the constant delays,negative
+2955,"Such a letdown, expected so much more",negative
+2956,My flight departs at 6am tomorrow morning,neutral
+2957,I am going to the store later today,neutral
+2958,This is the worst decision I have ever made,negative
+2959,"Such a letdown, expected so much more",negative
+2960,Best coffee I have ever had this morning,positive
+2961,This is the worst decision I have ever made,negative
+2962,"Just finished an incredible book, highly recommend",positive
+2963,The report will be ready by end of day,neutral
+2964,Outstanding performance today by the whole team,positive
+2965,The new model was released yesterday,neutral
+2966,Happy to announce I got the job! Super excited,positive
+2967,"Extremely disappointed, not what was advertised at all",negative
+2968,This is the worst decision I have ever made,negative
+2969,The new model was released yesterday,neutral
+2970,Very frustrated with the constant delays,negative
+2971,Best coffee I have ever had this morning,positive
+2972,"Horrible quality, broke after just two days",negative
+2973,My flight departs at 6am tomorrow morning,neutral
+2974,Happy to announce I got the job! Super excited,positive
+2975,"Horrible quality, broke after just two days",negative
+2976,"Horrible quality, broke after just two days",negative
+2977,The conference starts next Monday in Paris,neutral
+2978,Disgusted by the lack of response from support,negative
+2979,"Never buying from this brand again, awful experience",negative
+2980,Currently reading about machine learning,neutral
+2981,"Thrilled with my new purchase, exceeded expectations",positive
+2982,"Such a letdown, expected so much more",negative
+2983,"This update ruined everything, reverting immediately",negative
+2984,Downloaded the latest version of the software,neutral
+2985,"Just finished an incredible book, highly recommend",positive
+2986,The event was attended by over 500 people,neutral
+2987,Feeling motivated and ready to take on the world,positive
+2988,Cannot believe how bad this service has gotten,negative
+2989,The package arrived this afternoon,neutral
+2990,"I love this product, absolutely amazing experience!",positive
+2991,"The app crashes constantly, completely unusable",negative
+2992,The event was attended by over 500 people,neutral
+2993,"The new update is fantastic, so much better now",positive
+2994,Currently reading about machine learning,neutral
+2995,The package arrived this afternoon,neutral
+2996,Cannot believe how bad this service has gotten,negative
+2997,Just checked the weather forecast for tomorrow,neutral
+2998,"Just finished an incredible book, highly recommend",positive
+2999,Currently reading about machine learning,neutral
+3000,"Just finished an incredible book, highly recommend",positive

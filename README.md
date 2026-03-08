@@ -1,78 +1,32 @@
-docker compose up -d --build
+<div align="center">
+  <h1>🚀 Real-Time Reddit Data Engineering Pipeline</h1>
+  
+  <p>
+    An end-to-end Big Data pipeline for ingesting, processing, and storing real-time Reddit posts and comments.
+    <br />
+    <strong>Developed by <a href="https://github.com/BozIAymane">Aymane Bozian</a> & <a href="https://github.com/OussamaHaimour">Oussama Haimour</a></strong>
+  </p>
+</div>
 
+## 📖 About The Project
 
-docker compose ps
+This project demonstrates a fully functional **Big Data architecture** capable of handling real-time streaming data from Reddit. The pipeline is designed to collect data using the Reddit API (PRAW), push it through a distributed message broker (Apache Kafka), process and clean the data on the fly (Apache Flink), and finally store the structured data in a distributed file system (HDFS) in Parquet format.
 
+A companion Data Science cluster is also included for advanced analytics and machine learning.
 
-docker compose run --rm fetch-comments
+## 🛠️ Built With
 
+* **Orchestration:** Docker & Docker Compose
+* **Ingestion:** Python & PRAW (Reddit API)
+* **Message Broker:** Apache Kafka & Zookeeper
+* **Stream Processing:** Apache Flink
+* **Distributed Storage:** HDFS (Hadoop)
+* **Data Format:** Parquet + Snappy 
+* **Data Science:** PySpark, Jupyter
 
+## 🏗️ Architecture
 
-
-
-
-
-
-# Watch posts f real-time
-docker compose logs -f reddit-producer
-
-# Chouf sh7al d data
-docker compose exec namenode hdfs dfs -du -h /data/reddit
-
-# Chouf fichiers
-docker compose exec namenode hdfs dfs -ls -R /data/reddit/posts
-docker compose exec namenode hdfs dfs -ls -R /data/reddit/images
-
-# Stop kolchi (keep data)
-docker compose down
-
-# Stop kolchi (delete data)  
-docker compose down -v
-
-
-
-# 1. Assure que Data Engineering cluster kaykhdm
-cd c:\Users\youss\Desktop\reddit
-docker compose ps
-
-# 2. Lance Data Science cluster
-cd data-science
-
-# GPU version (ila 3ndek NVIDIA GPU):
-docker compose up -d --build
-
-# CPU version (ila ma3ndekch GPU):
-docker compose --profile cpu-only up -d --build jupyter-cpu spark-master spark-worker-1 spark-worker-2
-
-# 3. Fth Jupyter
-# → http://localhost:8888 (token: reddit)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Real-Time Reddit Data Engineering Pipeline
-
-**Authors:** Aymane Bozian, Oussama Haimour
-
-
-## Architecture
-
-```
+```text
 Reddit API (PRAW)  ──►  Kafka  ──►  Flink Processor  ──►  HDFS (Parquet)
      │                    ▲            (Cleaning)
      │                    │
@@ -83,228 +37,113 @@ Reddit API (PRAW)  ──►  Kafka  ──►  Flink Processor  ──►  HDFS
   Comments (manual)
 ```
 
----
+## 🚀 Getting Started
 
-## Step-by-Step Guide
+Follow these steps to deploy the data engineering pipeline on your local machine.
 
-### Step 1 — Verify Docker is installed
+### Prerequisites
 
-```bash
-docker --version
-docker compose version
-```
+* [Docker](https://docs.docker.com/get-docker/) installed and running.
+* [Docker Compose](https://docs.docker.com/compose/install/) installed.
+* Reddit API Credentials (create an app at [Reddit Prefs](https://www.reddit.com/prefs/apps/)).
 
-Make sure both commands return a version number. If not, install Docker first.
+### Step 1: Configuration
 
----
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Open `.env` and fill in your Reddit API credentials:
+   ```env
+   REDDIT_CLIENT_ID=your_client_id
+   REDDIT_CLIENT_SECRET=your_client_secret
+   REDDIT_USER_AGENT=your-app-name
+   TARGET_SUBREDDITS=all
+   ```
 
-### Step 2 — Configure Reddit API credentials
+### Step 2: Start the Pipeline
 
-Edit the `.env` file in the project root:
-
-```bash
-REDDIT_CLIENT_ID=your_client_id
-REDDIT_CLIENT_SECRET=your_client_secret
-REDDIT_USER_AGENT=your-app-name
-TARGET_SUBREDDITS=all
-```
-
-To get credentials, create an app at: https://www.reddit.com/prefs/apps/
-
----
-
-### Step 3 — Build and start all services
+Instantiate all services (Zookeeper, Kafka, HDFS, Reddit Producer, Flink, and HDFS Writer) with Docker Compose:
 
 ```bash
 docker compose up -d --build
 ```
+*Note: The first build might take a few minutes as it downloads the required images.*
 
-This will build and start: Zookeeper, Kafka, HDFS (NameNode + DataNode), Reddit Producer, Flink Processor, and HDFS Writer.
-
-The first build may take a few minutes to download images and install dependencies.
-
----
-
-### Step 4 — Verify all services are running
-
+Verify all services are running:
 ```bash
 docker compose ps
 ```
 
-Wait until all services show as **running** or **healthy**.
+### Step 3: Monitor Data Ingestion
 
----
-
-### Step 5 — Watch the producer collecting posts in real-time
+The `reddit-producer` will automatically start fetching posts in real-time. You can watch the logs:
 
 ```bash
 docker compose logs -f reddit-producer
 ```
 
-You should see posts being streamed from Reddit. Press `Ctrl+C` to exit the logs (the producer keeps running in the background).
-
-To watch other services:
-
-```bash
-docker compose logs -f flink-processor
-docker compose logs -f hdfs-writer
-```
-
----
-
-### Step 6 — Let the producer collect posts
-
-Leave the pipeline running. The longer it runs, the more posts are collected.
-
-- A few minutes = tens of posts
-- A few hours = hundreds to thousands of posts
-
----
-
-### Step 7 — Fetch comments for collected posts (manual)
-
-When you are ready, run:
-
+To fetch comments for the collected posts (this is a deliberate manual step to prevent rate limiting), run:
 ```bash
 docker compose run --rm fetch-comments
 ```
 
-This will:
+### Step 4: Verify Data in HDFS
 
-1. Read all posts collected so far from Kafka
-2. Skip any posts already processed in a previous run
-3. Fetch ALL comments for each post from the Reddit API
-4. Publish comments to Kafka (linked to their parent post)
-5. Save progress to a checkpoint file
-
-You can safely press `Ctrl+C` to stop — progress is saved after each post. Run the same command again later to continue where you left off.
-
----
-
-### Step 8 — Verify Kafka topics
+You can interact with HDFS to see the stored Parquet files:
 
 ```bash
-docker compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
-```
-
-Expected topics:
-
-- `reddit.posts`
-- `reddit.comments`
-- `reddit.posts.processed`
-- `reddit.comments.processed`
-
----
-
-### Step 9 — Check data stored in HDFS
-
-```bash
-# List all files
+# List all files in the HDFS directory
 docker compose exec namenode hdfs dfs -ls -R /data/reddit
 
-# Check total data size
+# Check total size of the stored data
 docker compose exec namenode hdfs dfs -du -h /data/reddit
 ```
 
----
+* **HDFS NameNode UI:** [http://localhost:9870](http://localhost:9870)
+* **HDFS DataNode UI:** [http://localhost:9864](http://localhost:9864)
 
-### Step 10 — Access HDFS Web UI
+### Step 5: Shutting Down
 
-Open in your browser:
-
-- **HDFS NameNode**: http://localhost:9870
-- **HDFS DataNode**: http://localhost:9864
-
----
-
-### Step 11 — Stop the pipeline
-
+To stop the pipeline while keeping the collected data:
 ```bash
-# Stop all services (data is preserved)
 docker compose down
+```
 
-# Stop and delete ALL data (clean reset)
+To stop the pipeline and **delete all data**:
+```bash
 docker compose down -v
 ```
 
----
-
-## Quick Reference
-
-```bash
-docker compose up -d --build                  # Start everything
-docker compose ps                             # Check status
-docker compose logs -f reddit-producer        # Watch post collection
-docker compose run --rm fetch-comments        # Fetch comments (manual)
-docker compose exec namenode hdfs dfs -ls -R /data/reddit   # Check HDFS
-docker compose down                           # Stop (keep data)
-docker compose down -v                        # Stop (delete data)
-```
-
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 reddit/
-├── .env                          # Reddit API credentials
-├── docker-compose.yml            # Service orchestration
-├── reddit-producer/              # Streams posts (automatic, 24/7)
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   ├── producer.py
-│   └── config.py
-├── fetch-comments/               # Fetches comments (manual)
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── fetch_comments.py
-├── flink-processor/              # Cleans and transforms data
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── processor.py
-├── hdfs-writer/                  # Writes Parquet to HDFS
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── writer.py
-├── config/hadoop/                # Hadoop configuration
-│   ├── core-site.xml
-│   └── hdfs-site.xml
-└── scripts/                      # Utility scripts
-    ├── init-hdfs.sh
-    └── check-health.sh
+├── .env.example                  # API credentials template
+├── docker-compose.yml            # Services architecture orchestration
+├── reddit-producer/              # Real-time post ingestion (Auto)
+├── fetch-comments/               # Comment fetching logic (Manual)
+├── flink-processor/              # Stream processing and data cleaning
+├── hdfs-writer/                  # Writes structured data to HDFS
+├── config/hadoop/                # Core Hadoop configs
+├── data-science/                 # Analytics and ML pipeline
+└── scripts/                      # Startup and health check utilities
 ```
 
----
+## 💡 Data Science Cluster (Optional)
 
-## Technologies
-
-| Technology | Role |
-|------------|------|
-| Docker & Docker Compose | Containerization & orchestration |
-| Apache Kafka | Distributed streaming |
-| Apache Zookeeper | Kafka coordination |
-| HDFS (Hadoop) | Distributed storage |
-| Flink Processor (Python) | Stream processing & cleaning |
-| PRAW | Reddit API client |
-| Parquet + Snappy | Columnar storage format |
-| PyArrow & Pandas | Data processing |
-
----
-
-## Troubleshooting
+Once your Data Engineering cluster is running and data is flowing, you can launch the Data Science environment.
 
 ```bash
-# Rebuild a specific service
-docker compose build --no-cache reddit-producer
+cd data-science
 
-# Restart a service
-docker compose restart flink-processor
+# If you have an NVIDIA GPU:
+docker compose up -d --build
 
-# Check Kafka consumer lag
-docker compose exec kafka kafka-consumer-groups \
-  --bootstrap-server localhost:9092 \
-  --describe --all-groups
-
-# View HDFS health report
-docker compose exec namenode hdfs dfsadmin -report
+# For CPU only:
+docker compose --profile cpu-only up -d --build jupyter-cpu spark-master spark-worker-1 spark-worker-2
 ```
+Access Jupyter Notebooks at `http://localhost:8888` (password/token: `reddit`).
+
+---
+**CMC - Big Data Project**

@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Big Data Pipeline — Présentation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FF4500;
+      --orange-glow: rgba(255, 69, 0, .3);
+      --blue: #0ea5e9;
+      --purple: #8b5cf6;
+      --green: #10b981;
+      --yellow: #f59e0b;
+      --cyan: #06b6d4;
+      --bg: #0a0a0f;
+      --card: rgba(255, 255, 255, .04);
+      --border: rgba(255, 255, 255, .08);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --dim: #475569
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text)
+    }
+
+    .slides {
+      width: 100%;
+      height: 100%;
+      position: relative
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 60px 40px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .6s, transform .6s;
+      pointer-events: none;
+      overflow-y: auto
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all
+    }
+
+    .slide.exit {
+      opacity: 0;
+      transform: translateY(-40px)
+    }
+
+    .slide>* {
+      position: relative;
+      z-index: 1
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image: linear-gradient(rgba(255, 69, 0, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 69, 0, .04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gp 8s ease-in-out infinite
+    }
+
+    @keyframes gp {
+
+      0%,
+      100% {
+        opacity: .6
+      }
+
+      50% {
+        opacity: 1
+      }
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      animation: of 10s ease-in-out infinite
+    }
+
+    .orb1 {
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 69, 0, .12);
+      top: -150px;
+      right: -100px
+    }
+
+    .orb2 {
+      width: 400px;
+      height: 400px;
+      background: rgba(139, 92, 246, .1);
+      bottom: -100px;
+      left: -100px;
+      animation-delay: -4s
+    }
+
+    @keyframes of {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-30px) scale(1.05)
+      }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 40px;
+      background: rgba(10, 10, 15, .85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border)
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14px
+    }
+
+    .nav-logo span {
+      color: var(--orange)
+    }
+
+    .nav-section {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: .5px
+    }
+
+    .nav-section.de {
+      background: rgba(255, 69, 0, .15);
+      border: 1px solid rgba(255, 69, 0, .3);
+      color: var(--orange)
+    }
+
+    .nav-section.ds {
+      background: rgba(139, 92, 246, .15);
+      border: 1px solid rgba(139, 92, 246, .3);
+      color: var(--purple)
+    }
+
+    .nav-section.gen {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid var(--border);
+      color: var(--muted)
+    }
+
+    .nav-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dim);
+      cursor: pointer;
+      transition: all .3s;
+      border: none
+    }
+
+    .nav-dot.active {
+      background: var(--orange);
+      box-shadow: 0 0 8px var(--orange);
+      transform: scale(1.3)
+    }
+
+    .nav-sep {
+      width: 2px;
+      height: 16px;
+      background: var(--dim);
+      margin: 0 4px;
+      border-radius: 1px
+    }
+
+    .nav-counter {
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace
+    }
+
+    .arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: all .3s;
+      color: var(--text)
+    }
+
+    .arrow:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      box-shadow: 0 0 20px var(--orange-glow)
+    }
+
+    .arrow-prev {
+      left: 20px
+    }
+
+    .arrow-next {
+      right: 20px
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .badge-orange {
+      background: rgba(255, 69, 0, .15);
+      border: 1px solid rgba(255, 69, 0, .3);
+      color: var(--orange)
+    }
+
+    .badge-blue {
+      background: rgba(14, 165, 233, .15);
+      border: 1px solid rgba(14, 165, 233, .3);
+      color: var(--blue)
+    }
+
+    .badge-purple {
+      background: rgba(139, 92, 246, .15);
+      border: 1px solid rgba(139, 92, 246, .3);
+      color: var(--purple)
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, .15);
+      border: 1px solid rgba(16, 185, 129, .3);
+      color: var(--green)
+    }
+
+    h1.mega {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px
+    }
+
+    h2.slide-title {
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--orange), #ff8c42, var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .gradient-purple {
+      background: linear-gradient(135deg, var(--purple), #c084fc, var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all .3s
+    }
+
+    .card:hover {
+      border-color: rgba(255, 69, 0, .3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4)
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 1100px
+    }
+
+    .cover-content {
+      text-align: center;
+      position: relative;
+      z-index: 1
+    }
+
+    .cover-icon {
+      font-size: 80px;
+      margin-bottom: 24px;
+      animation: ib 3s ease-in-out infinite;
+      display: block
+    }
+
+    @keyframes ib {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-12px)
+      }
+    }
+
+    .cover-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 16px 0 40px;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .team-box {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      padding: 24px 40px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      backdrop-filter: blur(10px)
+    }
+
+    .team-item {
+      text-align: center
+    }
+
+    .team-label {
+      font-size: 11px;
+      color: var(--orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px
+    }
+
+    .team-name {
+      font-size: 15px;
+      font-weight: 600
+    }
+
+    .team-divider {
+      width: 1px;
+      background: var(--border)
+    }
+
+    .flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      max-width: 1100px;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .flow-node {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-align: center;
+      min-width: 120px;
+      transition: all .3s;
+      cursor: default
+    }
+
+    .flow-node:hover {
+      transform: translateY(-6px)
+    }
+
+    .flow-node .fn-icon {
+      font-size: 26px;
+      margin-bottom: 6px;
+      display: block
+    }
+
+    .flow-node .fn-title {
+      font-size: 12px;
+      font-weight: 700
+    }
+
+    .flow-node .fn-sub {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 3px
+    }
+
+    .flow-arrow {
+      padding: 0 6px;
+      font-size: 20px;
+      color: var(--orange);
+      flex-shrink: 0;
+      animation: ap 2s ease-in-out infinite
+    }
+
+    @keyframes ap {
+
+      0%,
+      100% {
+        opacity: .5;
+        transform: scaleX(.8)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleX(1)
+      }
+    }
+
+    .fn-orange {
+      border-color: rgba(255, 69, 0, .4)
+    }
+
+    .fn-blue {
+      border-color: rgba(14, 165, 233, .4)
+    }
+
+    .fn-purple {
+      border-color: rgba(139, 92, 246, .4)
+    }
+
+    .fn-green {
+      border-color: rgba(16, 185, 129, .4)
+    }
+
+    .fn-yellow {
+      border-color: rgba(245, 158, 11, .4)
+    }
+
+    .tool-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px
+    }
+
+    .tool-icon {
+      font-size: 32px;
+      flex-shrink: 0
+    }
+
+    .tool-name {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px
+    }
+
+    .tool-role {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5
+    }
+
+    .tool-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 8px
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 900px
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all .3s
+    }
+
+    .step-item:hover {
+      border-color: rgba(255, 69, 0, .3)
+    }
+
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--orange);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 0 12px var(--orange-glow)
+    }
+
+    .step-text h4 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 3px
+    }
+
+    .step-text p {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .ml-bar {
+      height: 4px;
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .08)
+    }
+
+    .ml-fill {
+      height: 100%;
+      border-radius: 2px;
+      animation: fb 2s ease-out forwards;
+      width: 0
+    }
+
+    .t1 .ml-fill {
+      background: linear-gradient(90deg, var(--orange), #ff8c42);
+      animation-delay: .3s;
+      --w: 75%
+    }
+
+    .t2 .ml-fill {
+      background: linear-gradient(90deg, var(--blue), #67e8f9);
+      animation-delay: .5s;
+      --w: 65%
+    }
+
+    .t3 .ml-fill {
+      background: linear-gradient(90deg, var(--purple), #c4b5fd);
+      animation-delay: .7s;
+      --w: 60%
+    }
+
+    .t4 .ml-fill {
+      background: linear-gradient(90deg, var(--green), #6ee7b7);
+      animation-delay: .9s;
+      --w: 80%
+    }
+
+    @keyframes fb {
+      to {
+        width: var(--w)
+      }
+    }
+
+    .hdfs-tree {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 2;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px
+    }
+
+    .tree-dir {
+      color: var(--blue)
+    }
+
+    .tree-file {
+      color: var(--green)
+    }
+
+    .tree-dim {
+      color: var(--dim)
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px
+    }
+
+    .check-item .ci-icon {
+      font-size: 18px
+    }
+
+    .check-item p {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    .check-item p strong {
+      color: var(--text)
+    }
+
+    .progress-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--purple));
+      transition: width .5s ease;
+      z-index: 200
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .slide.active .anim {
+      animation: fadeUp .6s ease forwards;
+      opacity: 0
+    }
+
+    .slide.active .anim:nth-child(1) {
+      animation-delay: .1s
+    }
+
+    .slide.active .anim:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    .slide.active .anim:nth-child(3) {
+      animation-delay: .3s
+    }
+
+    .slide.active .anim:nth-child(4) {
+      animation-delay: .4s
+    }
+
+    .slide.active .anim:nth-child(5) {
+      animation-delay: .5s
+    }
+
+    .slide.active .anim:nth-child(6) {
+      animation-delay: .6s
+    }
+
+    /* Transition slides */
+    .transition-slide {
+      justify-content: center;
+      align-items: center;
+      text-align: center
+    }
+
+    .part-num {
+      font-size: clamp(5rem, 10vw, 10rem);
+      font-weight: 900;
+      opacity: .1;
+      line-height: 1;
+      margin-bottom: -30px
+    }
+
+    .part-label {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 12px
+    }
+
+    .part-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.7
+    }
+
+    /* Slide BGs */
+    #s1 {
+      background: radial-gradient(ellipse at 70% 30%, rgba(255, 69, 0, .15) 0%, transparent 60%)
+    }
+
+    #s2 {
+      background: radial-gradient(ellipse at 20% 80%, rgba(14, 165, 233, .1) 0%, transparent 60%)
+    }
+
+    #s3 {
+      background: radial-gradient(ellipse at 50% 50%, rgba(255, 69, 0, .1) 0%, transparent 50%)
+    }
+
+    #s4 {
+      background: radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, .1) 0%, transparent 60%)
+    }
+
+    #s5 {
+      background: radial-gradient(ellipse at 30% 70%, rgba(16, 185, 129, .08) 0%, transparent 60%)
+    }
+
+    #s6 {
+      background: radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, .08) 0%, transparent 60%)
+    }
+
+    #s7 {
+      background: radial-gradient(ellipse at 20% 20%, rgba(255, 69, 0, .12) 0%, transparent 60%)
+    }
+
+    #s8 {
+      background: radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, .12) 0%, transparent 50%)
+    }
+
+    #s9 {
+      background: radial-gradient(ellipse at 30% 70%, rgba(139, 92, 246, .1) 0%, transparent 60%)
+    }
+
+    #s10 {
+      background: radial-gradient(ellipse at 80% 20%, rgba(14, 165, 233, .08) 0%, transparent 60%)
+    }
+
+    #s11 {
+      background: radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, .1) 0%, transparent 60%)
+    }
+
+    #s12 {
+      background: radial-gradient(ellipse at 70% 50%, rgba(255, 69, 0, .1) 0%, transparent 60%)
+    }
+
+    @media(max-width:900px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr
+      }
+
+      .flow-node {
+        min-width: 90px;
+        padding: 10px
+      }
+
+      h1.mega {
+        font-size: 2.2rem
+      }
+
+      .slide {
+        padding: 60px 30px 30px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <nav>
+    <div class="nav-logo">🔴 <span>Reddit</span> Pipeline</div>
+    <div class="nav-section gen" id="navSection">Présentation</div>
+    <div class="nav-dots" id="navDots"></div>
+    <div class="nav-counter" id="navCounter">01 / 12</div>
+  </nav>
+
+  <div class="progress-bar" id="progressBar"></div>
+  <button class="arrow arrow-prev" onclick="changeSlide(-1)">‹</button>
+  <button class="arrow arrow-next" onclick="changeSlide(1)">›</button>
+
+  <div class="slides" id="slidesContainer">
+
+    <!-- ====== SLIDE 1 — COVER ====== -->
+    <div class="slide active" id="s1" data-section="gen" data-label="Présentation">
+      <div class="cover-content">
+        <span class="cover-icon">🚀</span>
+        <div class="badge badge-orange anim">📡 Big Data Project</div>
+        <h1 class="mega anim">Real-Time <span class="gradient-text">Reddit</span><br>Data Pipeline</h1>
+        <p class="cover-sub anim">Collecte, Traitement & Stockage distribué en temps réel<br>+ Analyse Machine Learning
+          avec Kafka, Flink, HDFS & Spark</p>
+        <div class="team-box anim">
+          <div class="team-item">
+            <div class="team-label">Réalisé par</div>
+            <div class="team-name">Oussama Haimour</div>
+          </div>
+          <div class="team-divider"></div>
+          <div class="team-item">
+            <div class="team-label">Réalisé par</div>
+            <div class="team-name">Aymane Bozian</div>
+          </div>
+          <div class="team-divider"></div>
+          <div class="team-item">
+            <div class="team-label">Formateur</div>
+            <div class="team-name" style="color:var(--orange)">Omar Kella</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 2 — INTRODUCTION ====== -->
+    <div class="slide" id="s2" data-section="gen" data-label="Présentation">
+      <div class="badge badge-blue anim">01 — Introduction</div>
+      <h2 class="slide-title anim">Contexte & Objectifs</h2>
+      <div class="grid-2 anim" style="margin-top:24px;max-width:1000px">
+        <div class="card">
+          <div style="font-size:30px;margin-bottom:10px">🎯</div>
+          <h3 style="font-size:15px;font-weight:700;margin-bottom:8px">Problématique</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7">Reddit génère des millions de posts/commentaires
+            par jour. Comment les collecter, nettoyer et stocker en <strong style="color:var(--text)">temps
+              réel</strong> pour le Machine Learning ?</p>
+        </div>
+        <div class="card">
+          <div style="font-size:30px;margin-bottom:10px">💡</div>
+          <h3 style="font-size:15px;font-weight:700;margin-bottom:8px">Notre Solution</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7">Un pipeline <strong
+              style="color:var(--text)">100% containerisé</strong> sur Docker : streaming temps réel, traitement
+            distribué, stockage Parquet et analyse Spark + ML.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:30px;margin-bottom:10px">📊</div>
+          <h3 style="font-size:15px;font-weight:700;margin-bottom:8px">Données Collectées</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7">Posts Reddit en temps réel avec commentaires,
+            métadonnées, scores, upvote ratios et timestamps.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:30px;margin-bottom:10px">🏗️</div>
+          <h3 style="font-size:15px;font-weight:700;margin-bottom:8px">2 Parties</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7"><strong style="color:var(--orange)">Partie 1 —
+              Data Engineering</strong> : Pipeline temps réel<br><strong style="color:var(--purple)">Partie 2 — Data
+              Science</strong> : Analyse & ML</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- ====== SLIDE 3 — TRANSITION PARTIE 1 =================== -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <div class="slide transition-slide" id="s3" data-section="de" data-label="Data Engineering">
+      <div class="part-num anim" style="color:var(--orange)">01</div>
+      <div class="part-label anim"><span class="gradient-text">Data Engineering</span></div>
+      <div class="badge badge-orange anim">⚙️ Pipeline temps réel</div>
+      <p class="part-desc anim">Collecte automatisée des données Reddit, nettoyage en streaming et stockage distribué
+        sur HDFS — entièrement orchestré par Docker.</p>
+    </div>
+
+    <!-- ====== SLIDE 4 — ARCHITECTURE DE ====== -->
+    <div class="slide" id="s4" data-section="de" data-label="Data Engineering">
+      <div class="badge badge-orange anim">DE — Architecture</div>
+      <h2 class="slide-title anim">Architecture Data Engineering</h2>
+      <div class="flow anim" style="margin-top:24px">
+        <div class="flow-node fn-orange"><span class="fn-icon">🌐</span>
+          <div class="fn-title">Reddit API</div>
+          <div class="fn-sub">PRAW · Stream</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node fn-orange"><span class="fn-icon">📤</span>
+          <div class="fn-title">Producer</div>
+          <div class="fn-sub">Python · 24/7</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node fn-blue"><span class="fn-icon">📨</span>
+          <div class="fn-title">Kafka</div>
+          <div class="fn-sub">4 Topics</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node fn-purple"><span class="fn-icon">⚡</span>
+          <div class="fn-title">Flink</div>
+          <div class="fn-sub">Nettoyage</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node fn-green"><span class="fn-icon">💾</span>
+          <div class="fn-title">HDFS Writer</div>
+          <div class="fn-sub">Parquet</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node fn-yellow"><span class="fn-icon">🗄️</span>
+          <div class="fn-title">HDFS</div>
+          <div class="fn-sub">Hadoop</div>
+        </div>
+      </div>
+      <div class="anim" style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <div
+          style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(255,69,0,.1);border:1px solid rgba(255,69,0,.2);border-radius:50px;font-size:12px">
+          🔄 <strong style="color:var(--orange)">Automatique</strong> — Producer + Flink + Writer 24/7</div>
+        <div
+          style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);border-radius:50px;font-size:12px">
+          👆 <strong style="color:var(--blue)">Manuel</strong> — Comment Fetcher à la demande</div>
+        <div
+          style="display:flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:50px;font-size:12px">
+          🐳 <strong style="color:var(--green)">Docker</strong> — 1 commande</div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 5 — COMPOSANTS DE ====== -->
+    <div class="slide" id="s5" data-section="de" data-label="Data Engineering">
+      <div class="badge badge-orange anim">DE — Composants</div>
+      <h2 class="slide-title anim">Les 4 Composants du Pipeline</h2>
+      <div class="grid-2 anim" style="margin-top:16px;max-width:1100px">
+        <div class="card tool-card">
+          <div class="tool-icon">📤</div>
+          <div>
+            <div class="tool-name">Reddit Producer</div>
+            <div class="tool-role">Connecte à l'API Reddit via PRAW, stream les posts en temps réel 24/7. Publie sur
+              <code style="color:var(--orange)">reddit.posts</code>. Retry + backoff intégré.</div><span
+              class="tool-tag" style="background:rgba(255,69,0,.15);color:var(--orange)">Automatique</span>
+          </div>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon">💬</div>
+          <div>
+            <div class="tool-name">Comment Fetcher</div>
+            <div class="tool-role">Récupère l'arborescence complète des commentaires. Système de checkpoint — reprend où
+              il s'était arrêté après un stop.</div><span class="tool-tag"
+              style="background:rgba(14,165,233,.15);color:var(--blue)">Manuel</span>
+          </div>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon">⚡</div>
+          <div>
+            <div class="tool-name">Flink Processor</div>
+            <div class="tool-role">Nettoyage temps réel : suppression URLs, décodage HTML, normalisation whitespace,
+              validation types, détection contenu supprimé.</div><span class="tool-tag"
+              style="background:rgba(139,92,246,.15);color:var(--purple)">Stream Processing</span>
+          </div>
+        </div>
+        <div class="card tool-card">
+          <div class="tool-icon">💾</div>
+          <div>
+            <div class="tool-name">HDFS Writer</div>
+            <div class="tool-role">Consomme les topics processed, buffer 500 records ou 60s, écrit en Parquet + Snappy
+              compressé, partitionnement par date.</div><span class="tool-tag"
+              style="background:rgba(16,185,129,.15);color:var(--green)">Storage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 6 — KAFKA DE ====== -->
+    <div class="slide" id="s6" data-section="de" data-label="Data Engineering">
+      <div class="badge badge-orange anim">DE — Kafka</div>
+      <h2 class="slide-title anim">Apache Kafka — Streaming Backbone</h2>
+      <div class="anim" style="display:flex;gap:20px;width:100%;max-width:1100px;margin-top:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px">
+          <div class="card">
+            <h4
+              style="margin-bottom:14px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">
+              4 Topics Kafka</h4>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,69,0,.08);border-radius:8px;border-left:3px solid var(--orange)">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:12px">reddit.posts</span><span
+                  style="font-size:11px;color:var(--muted)">Posts bruts</span></div>
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(14,165,233,.08);border-radius:8px;border-left:3px solid var(--blue)">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:12px">reddit.comments</span><span
+                  style="font-size:11px;color:var(--muted)">Comments bruts</span></div>
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(16,185,129,.08);border-radius:8px;border-left:3px solid var(--green)">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:12px">reddit.posts.processed</span><span
+                  style="font-size:11px;color:var(--muted)">Posts nettoyés</span></div>
+              <div
+                style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(139,92,246,.08);border-radius:8px;border-left:3px solid var(--purple)">
+                <span
+                  style="font-family:'JetBrains Mono',monospace;font-size:12px">reddit.comments.processed</span><span
+                  style="font-size:11px;color:var(--muted)">Comments nettoyés</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <div style="font-size:2rem;font-weight:900;color:var(--orange)">3</div>
+            <div style="font-size:12px;color:var(--muted)">Partitions par topic</div>
+          </div>
+          <div class="card">
+            <div style="font-size:2rem;font-weight:900;color:var(--blue)">7</div>
+            <div style="font-size:12px;color:var(--muted)">Jours de rétention</div>
+          </div>
+          <div class="card">
+            <div style="font-size:1rem;font-weight:700;color:var(--green)">Snappy</div>
+            <div style="font-size:12px;color:var(--muted)">Compression messages</div>
+          </div>
+          <div class="card">
+            <div style="font-size:1rem;font-weight:700;color:var(--purple)">Confluent 7.7.1</div>
+            <div style="font-size:12px;color:var(--muted)">Version + Zookeeper</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 7 — HDFS + STACK DE ====== -->
+    <div class="slide" id="s7" data-section="de" data-label="Data Engineering">
+      <div class="badge badge-orange anim">DE — Stockage & Outils</div>
+      <h2 class="slide-title anim">HDFS & Stack Technique</h2>
+      <div class="anim" style="display:flex;gap:20px;width:100%;max-width:1100px;margin-top:16px;flex-wrap:wrap">
+        <div class="hdfs-tree" style="flex:1;min-width:280px">
+          <div class="tree-dim">/data/reddit/</div>
+          <div style="padding-left:20px">
+            <div class="tree-dir">├── posts/</div>
+            <div style="padding-left:20px">
+              <div class="tree-dir">└── year=2026/month=02/day=18/</div>
+              <div style="padding-left:20px">
+                <div class="tree-file">├── batch_abc123.parquet</div>
+                <div class="tree-file">└── batch_def456.parquet</div>
+              </div>
+            </div>
+            <div class="tree-dir">└── comments/</div>
+            <div style="padding-left:20px">
+              <div class="tree-dir">└── year=2026/month=02/day=18/</div>
+              <div style="padding-left:20px">
+                <div class="tree-file">└── batch_ghi789.parquet</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <h4
+              style="font-size:12px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">
+              Stack Data Engineering</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🐳 <strong>Docker</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                📨 <strong>Kafka</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                ⚡ <strong>Flink</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🗄️ <strong>HDFS</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🐍 <strong>Python 3.12</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🔌 <strong>PRAW</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                📦 <strong>Parquet</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🔧 <strong>PyArrow</strong></div>
+            </div>
+          </div>
+          <div class="card">
+            <h4
+              style="font-size:12px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">
+              Pourquoi Parquet ?</h4>
+            <div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+              <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--green)">✓</span> Format
+                colonnaire → requêtes rapides</div>
+              <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--green)">✓</span> Compression
+                Snappy → 60-80% réduction</div>
+              <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--green)">✓</span> Schema
+                enforcement via PyArrow</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- ====== SLIDE 8 — TRANSITION PARTIE 2 =================== -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <div class="slide transition-slide" id="s8" data-section="ds" data-label="Data Science">
+      <div class="part-num anim" style="color:var(--purple)">02</div>
+      <div class="part-label anim"><span class="gradient-purple">Data Science</span></div>
+      <div class="badge badge-purple anim">🧠 Machine Learning & NLP</div>
+      <p class="part-desc anim">Analyse exploratoire, traitement NLP avec BERT, topic modeling avec BERTopic, et
+        prédiction de l'engagement via Spark & ML — le tout alimenté par le pipeline DE.</p>
+    </div>
+
+    <!-- ====== SLIDE 9 — ARCHITECTURE DS ====== -->
+    <div class="slide" id="s9" data-section="ds" data-label="Data Science">
+      <div class="badge badge-purple anim">DS — Architecture</div>
+      <h2 class="slide-title anim">Architecture Data Science</h2>
+      <div class="anim" style="display:flex;gap:20px;width:100%;max-width:1100px;margin-top:16px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:300px">
+          <h4 style="font-size:12px;color:var(--muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px">
+            Cluster Data Science (Docker)</h4>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div
+              style="padding:10px 14px;background:rgba(255,69,0,.08);border-radius:8px;font-size:13px;border-left:3px solid var(--orange)">
+              🔬 <strong>Jupyter Lab</strong> — Interface d'analyse interactive</div>
+            <div
+              style="padding:10px 14px;background:rgba(14,165,233,.08);border-radius:8px;font-size:13px;border-left:3px solid var(--blue)">
+              ⚡ <strong>Spark Master</strong> + 2 Workers — Traitement distribué</div>
+            <div
+              style="padding:10px 14px;background:rgba(139,92,246,.08);border-radius:8px;font-size:13px;border-left:3px solid var(--purple)">
+              🧠 <strong>PyTorch + BERT</strong> — Analyse NLP sur GPU/CPU</div>
+            <div
+              style="padding:10px 14px;background:rgba(16,185,129,.08);border-radius:8px;font-size:13px;border-left:3px solid var(--green)">
+              📊 <strong>BERTopic</strong> — Topic Modeling automatique</div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <h4
+              style="font-size:12px;color:var(--muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px">
+              Flux de la couche DS</h4>
+            <div class="flow" style="max-width:100%;gap:4px">
+              <div class="flow-node fn-yellow" style="min-width:70px;padding:10px"><span class="fn-icon"
+                  style="font-size:20px">🗄️</span>
+                <div class="fn-title" style="font-size:11px">HDFS</div>
+              </div>
+              <div class="flow-arrow" style="font-size:16px;color:var(--purple)">→</div>
+              <div class="flow-node fn-blue" style="min-width:70px;padding:10px"><span class="fn-icon"
+                  style="font-size:20px">⚡</span>
+                <div class="fn-title" style="font-size:11px">Spark</div>
+              </div>
+              <div class="flow-arrow" style="font-size:16px;color:var(--purple)">→</div>
+              <div class="flow-node fn-purple" style="min-width:70px;padding:10px"><span class="fn-icon"
+                  style="font-size:20px">🧠</span>
+                <div class="fn-title" style="font-size:11px">BERT</div>
+              </div>
+              <div class="flow-arrow" style="font-size:16px;color:var(--purple)">→</div>
+              <div class="flow-node fn-green" style="min-width:70px;padding:10px"><span class="fn-icon"
+                  style="font-size:20px">🤖</span>
+                <div class="fn-title" style="font-size:11px">ML</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h4
+              style="font-size:12px;color:var(--muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px">
+              Stack Data Science</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                ⚡ <strong>PySpark</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🧠 <strong>PyTorch</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                📝 <strong>BERT</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                📊 <strong>BERTopic</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                🌲 <strong>XGBoost</strong></div>
+              <div
+                style="padding:8px;background:rgba(255,255,255,.03);border-radius:8px;text-align:center;font-size:12px">
+                📓 <strong>Jupyter</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 10 — ÉTAPES DS ====== -->
+    <div class="slide" id="s10" data-section="ds" data-label="Data Science">
+      <div class="badge badge-purple anim">DS — Pipeline ML</div>
+      <h2 class="slide-title anim">Étapes du Pipeline Data Science</h2>
+      <div class="steps anim" style="margin-top:16px">
+        <div class="step-item">
+          <div class="step-num" style="background:var(--blue);box-shadow:0 0 12px rgba(14,165,233,.5)">1</div>
+          <div class="step-text">
+            <h4>Data Extraction — Spark ← HDFS</h4>
+            <p>PySpark charge les fichiers Parquet (posts, comments, post_updates) depuis HDFS. Join posts + updated
+              metrics.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:var(--purple);box-shadow:0 0 12px rgba(139,92,246,.5)">2</div>
+          <div class="step-text">
+            <h4>EDA — Analyse Exploratoire</h4>
+            <p>Distributions, top subreddits, analyse engagement, corrélations, breakdown media types dans Jupyter.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:var(--orange)">3</div>
+          <div class="step-text">
+            <h4>NLP — Sentiment, Émotion & Toxicité</h4>
+            <p>BERT analyse chaque post : sentiment score, émotion dominante, toxicité. Génération des embeddings
+              textuels.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:var(--green);box-shadow:0 0 12px rgba(16,185,129,.5)">4</div>
+          <div class="step-text">
+            <h4>Topic Modeling — BERTopic</h4>
+            <p>Découverte automatique des topics avec BERTopic en utilisant les embeddings pré-calculés. Visualisation
+              interactive.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num" style="background:var(--yellow);box-shadow:0 0 12px rgba(245,158,11,.5)">5</div>
+          <div class="step-text">
+            <h4>ML Training — 4 Modèles Prédictifs</h4>
+            <p>Random Forest, Gradient Boosted Trees & XGBoost. Features : text embeddings + image features + metadata
+              Reddit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 11 — CIBLES ML ====== -->
+    <div class="slide" id="s11" data-section="ds" data-label="Data Science">
+      <div class="badge badge-purple anim">DS — Cibles ML</div>
+      <h2 class="slide-title anim">4 Cibles de Prédiction</h2>
+      <div class="grid-2 anim" style="margin-top:16px;max-width:1000px">
+        <div class="card t1"><span
+            style="display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(255,69,0,.2);color:var(--orange);margin-bottom:8px">T1
+            — Classification</span>
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">popularity_class</div>
+          <div style="font-size:12px;color:var(--muted)">Prédit la classe de popularité : Low / Medium / High / Viral
+          </div>
+          <div class="ml-bar">
+            <div class="ml-fill"></div>
+          </div>
+        </div>
+        <div class="card t2"><span
+            style="display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(14,165,233,.2);color:var(--blue);margin-bottom:8px">T2
+            — Régression</span>
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">predicted_score</div>
+          <div style="font-size:12px;color:var(--muted)">Prédit le score exact (upvotes) d'un post Reddit</div>
+          <div class="ml-bar">
+            <div class="ml-fill"></div>
+          </div>
+        </div>
+        <div class="card t3"><span
+            style="display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(139,92,246,.2);color:var(--purple);margin-bottom:8px">T3
+            — Régression</span>
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">predicted_comments</div>
+          <div style="font-size:12px;color:var(--muted)">Prédit le nombre de commentaires attendu</div>
+          <div class="ml-bar">
+            <div class="ml-fill"></div>
+          </div>
+        </div>
+        <div class="card t4"><span
+            style="display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(16,185,129,.2);color:var(--green);margin-bottom:8px">T4
+            — Classification</span>
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">dominant_emotion</div>
+          <div style="font-size:12px;color:var(--muted)">Prédit l'émotion dominante des commentaires via BERT</div>
+          <div class="ml-bar">
+            <div class="ml-fill"></div>
+          </div>
+        </div>
+      </div>
+      <div class="anim"
+        style="margin-top:16px;padding:12px 24px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:12px;font-size:13px;color:var(--yellow);text-align:center">
+        ⚠️ <strong>Note :</strong> La partie ML est en cours de développement — le chargement Spark ← HDFS est en
+        développement.
+      </div>
+    </div>
+
+    <!-- ====== SLIDE 12 — CONCLUSION ====== -->
+    <div class="slide" id="s12" data-section="gen" data-label="Conclusion">
+      <div class="badge badge-orange anim">Conclusion</div>
+      <h2 class="slide-title anim">Bilan & Perspectives</h2>
+      <div class="anim" style="display:flex;gap:16px;max-width:1100px;width:100%;margin-top:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px">
+          <div class="card" style="margin-bottom:12px;border-color:rgba(255,69,0,.2)">
+            <h4
+              style="font-size:12px;color:var(--orange);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">
+              ✅ Partie 1 — Data Engineering (Terminé)</h4>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div class="check-item"><span class="ci-icon">✅</span>
+                <p>Pipeline <strong>Reddit → Kafka → Flink → HDFS</strong> opérationnel</p>
+              </div>
+              <div class="check-item"><span class="ci-icon">✅</span>
+                <p>Nettoyage automatique + validation de données</p>
+              </div>
+              <div class="check-item"><span class="ci-icon">✅</span>
+                <p>Stockage Parquet partitionné par date sur HDFS</p>
+              </div>
+              <div class="check-item"><span class="ci-icon">✅</span>
+                <p>Infrastructure Docker 100% containerisée</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:280px">
+          <div class="card" style="margin-bottom:12px;border-color:rgba(139,92,246,.2)">
+            <h4
+              style="font-size:12px;color:var(--purple);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">
+              ⏳ Partie 2 — Data Science (En cours)</h4>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div class="check-item" style="border-color:rgba(245,158,11,.3)"><span class="ci-icon">⏳</span>
+                <p><strong>Spark ← HDFS</strong> — Chargement données en cours</p>
+              </div>
+              <div class="check-item" style="border-color:rgba(245,158,11,.3)"><span class="ci-icon">⏳</span>
+                <p><strong>BERT NLP</strong> — Sentiment + Émotion + Topics</p>
+              </div>
+              <div class="check-item" style="border-color:rgba(245,158,11,.3)"><span class="ci-icon">⏳</span>
+                <p><strong>Modèles ML</strong> — RF / GBT / XGBoost</p>
+              </div>
+              <div class="check-item" style="border-color:rgba(245,158,11,.3)"><span class="ci-icon">⏳</span>
+                <p><strong>Dashboard</strong> — Visualisation prédictions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="anim"
+        style="display:flex;justify-content:space-around;max-width:600px;width:100%;margin-top:16px;text-align:center">
+        <div>
+          <div style="font-size:2rem;font-weight:900;color:var(--orange)">6+</div>
+          <div style="font-size:12px;color:var(--muted)">Services Docker</div>
+        </div>
+        <div>
+          <div style="font-size:2rem;font-weight:900;color:var(--blue)">4</div>
+          <div style="font-size:12px;color:var(--muted)">Topics Kafka</div>
+        </div>
+        <div>
+          <div style="font-size:2rem;font-weight:900;color:var(--purple)">4</div>
+          <div style="font-size:12px;color:var(--muted)">Cibles ML</div>
+        </div>
+        <div>
+          <div style="font-size:2rem;font-weight:900;color:var(--green)">∞</div>
+          <div style="font-size:12px;color:var(--muted)">Scalable</div>
+        </div>
+      </div>
+      <div class="anim" style="margin-top:16px;text-align:center;font-size:1.1rem;color:var(--muted)">
+        Merci pour votre attention — <strong style="color:var(--orange)">Questions ?</strong> 🙌
+      </div>
+    </div>
+
+  </div><!-- /slides -->
+
+  <script>
+    const TOTAL = 12;
+    let current = 0, animating = false;
+    const slides = document.querySelectorAll('.slide');
+    const navDots = document.getElementById('navDots');
+    const navCounter = document.getElementById('navCounter');
+    const progressBar = document.getElementById('progressBar');
+    const navSection = document.getElementById('navSection');
+
+    // Section config: [startSlide, endSlide] (0-indexed)
+    const sections = [
+      { start: 0, end: 1, cls: 'gen' },   // Cover + Intro
+      { start: 2, end: 6, cls: 'de' },    // Part 1: Data Engineering
+      { start: 7, end: 10, cls: 'ds' },   // Part 2: Data Science
+      { start: 11, end: 11, cls: 'gen' }  // Conclusion
+    ];
+
+    // Build nav dots with separators
+    let lastSection = '';
+    for (let i = 0; i < TOTAL; i++) {
+      const s = slides[i].dataset.section;
+      if (i > 0 && s !== lastSection) {
+        const sep = document.createElement('div');
+        sep.className = 'nav-sep';
+        navDots.appendChild(sep);
+      }
+      lastSection = s;
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      navDots.appendChild(dot);
+    }
+
+    function updateUI() {
+      navCounter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(TOTAL).padStart(2, '0');
+      progressBar.style.width = ((current + 1) / TOTAL * 100) + '%';
+      document.querySelectorAll('.nav-dot').forEach((d, i) => {
+        // Find the index among only dot elements (skip separators)
+        d.classList.toggle('active', false);
+      });
+      // Properly set active dot
+      const dots = navDots.querySelectorAll('.nav-dot');
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      // Update section label
+      const sec = slides[current].dataset.section;
+      const label = slides[current].dataset.label;
+      navSection.textContent = label;
+      navSection.className = 'nav-section ' + sec;
+    }
+
+    function goTo(idx) {
+      if (animating || idx === current || idx < 0 || idx >= TOTAL) return;
+      animating = true;
+      slides[current].classList.add('exit');
+      slides[current].classList.remove('active');
+      setTimeout(() => {
+        slides[current].classList.remove('exit');
+        current = idx;
+        slides[current].classList.add('active');
+        updateUI();
+        setTimeout(() => { animating = false }, 650);
+      }, 300);
+    }
+
+    function changeSlide(dir) { goTo(current + dir) }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') changeSlide(1);
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+    });
+
+    let touchX = 0;
+    document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX }, { passive: true });
+    document.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) changeSlide(dx < 0 ? 1 : -1);
+    });
+
+    updateUI();
+  </script>
+</body>
+
+</html>

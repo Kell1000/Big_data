@@ -1,0 +1,153 @@
+# ── Data Science Cluster ──────────────────────────────────────────────────────
+# Separate cluster for distributed data science processing.
+# Reads data from the Data Engineering HDFS cluster via shared network.
+#
+# Start: docker compose up -d --build
+# Jupyter: http://localhost:8888
+# Spark UI: http://localhost:8080
+# ──────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ─── Spark Master ──────────────────────────────────────────────────────────
+  spark-master:
+    image: apache/spark:3.5.4-java17
+    container_name: spark-master
+    hostname: spark-master
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.master.Master", "--host", "spark-master", "--port", "7077", "--webui-port", "8080"]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    volumes:
+      - spark_logs:/opt/spark/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/ || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - ds-cluster
+      - reddit-pipeline
+
+  # ─── Spark Worker 1 ────────────────────────────────────────────────────────
+  spark-worker-1:
+    image: apache/spark:3.5.4-java17
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://spark-master:7077", "--cores", "2", "--memory", "2g", "--webui-port", "8081"]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    networks:
+      - ds-cluster
+      - reddit-pipeline
+
+  # ─── Spark Worker 2 ────────────────────────────────────────────────────────
+  spark-worker-2:
+    image: apache/spark:3.5.4-java17
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://spark-master:7077", "--cores", "2", "--memory", "2g", "--webui-port", "8082"]
+    environment:
+      SPARK_NO_DAEMONIZE: "true"
+    ports:
+      - "8082:8082"
+    restart: unless-stopped
+    networks:
+      - ds-cluster
+      - reddit-pipeline
+
+  # ─── Jupyter Lab + PySpark + GPU ───────────────────────────────────────────
+  jupyter:
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    container_name: jupyter-ds
+    hostname: jupyter-ds
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    environment:
+      SPARK_MASTER_URL: local[*]
+      HDFS_NAMENODE: hdfs://namenode:9000
+      HDFS_WEBHDFS: http://namenode:9870
+      PYSPARK_PYTHON: /opt/venv/bin/python
+      PYSPARK_DRIVER_PYTHON: /opt/venv/bin/python
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ../data-science/notebooks:/home/jovyan/notebooks
+      - ../data-science/src:/home/jovyan/src
+      - ../data-science/data:/home/jovyan/data
+      - ../data-science/models:/home/jovyan/models
+      - ../data-science/outputs:/home/jovyan/outputs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    networks:
+      - ds-cluster
+      - reddit-pipeline
+
+  # ─── Jupyter Lab (CPU-only fallback) ───────────────────────────────────────
+  jupyter-cpu:
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    container_name: jupyter-ds-cpu
+    hostname: jupyter-ds-cpu
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    environment:
+      SPARK_MASTER_URL: local[*]
+      HDFS_NAMENODE: hdfs://namenode:9000
+      HDFS_WEBHDFS: http://namenode:9870
+      PYSPARK_PYTHON: /opt/venv/bin/python
+      PYSPARK_DRIVER_PYTHON: /opt/venv/bin/python
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ../data-science/notebooks:/home/jovyan/notebooks
+      - ../data-science/src:/home/jovyan/src
+      - ../data-science/data:/home/jovyan/data
+      - ../data-science/models:/home/jovyan/models
+      - ../data-science/outputs:/home/jovyan/outputs
+    profiles:
+      - cpu-only
+    restart: unless-stopped
+    networks:
+      - ds-cluster
+      - reddit-pipeline
+
+# ─── Volumes ──────────────────────────────────────────────────────────────────
+volumes:
+  spark_logs:
+    driver: local
+
+# ─── Networks ─────────────────────────────────────────────────────────────────
+networks:
+  ds-cluster:
+    driver: bridge
+    name: ds-cluster
+  reddit-pipeline:
+    external: true
+    name: reddit-pipeline

@@ -1,0 +1,200 @@
+    INFO: 2026-02-18 23:15:15,353:               log.py:   20: Logging to /home/oussama/Desktop/reddit/mdpdf.log
+   DEBUG: 2026-02-18 23:15:15,354:               cli.py:  103: /home/oussama/Desktop/reddit/README.md
+    INFO: 2026-02-18 23:15:15,355:         converter.py:   14: /home/oussama/Desktop/reddit/README.md
+   DEBUG: 2026-02-18 23:15:15,369:      pdf_renderer.py:  470: printSegment: Real-Time Reddit Data Engineering Pipeline
+   DEBUG: 2026-02-18 23:15:15,375:      pdf_renderer.py:  470: printSegment: Architecture
+   DEBUG: 2026-02-18 23:15:15,379:      pdf_renderer.py:  470: printSegment: Reddit API (PRAW)  ──►  Kafka  ──►  Flink Processor  ──►  HDFS (Parquet)
+   DEBUG: 2026-02-18 23:15:15,417:      pdf_renderer.py:  470: printSegment:      │                    ▲            (Cleaning)
+   DEBUG: 2026-02-18 23:15:15,420:      pdf_renderer.py:  470: printSegment:      │                    │
+   DEBUG: 2026-02-18 23:15:15,422:      pdf_renderer.py:  470: printSegment:      │              fetch-comments
+   DEBUG: 2026-02-18 23:15:15,423:      pdf_renderer.py:  470: printSegment:      │              (manual run)
+   DEBUG: 2026-02-18 23:15:15,425:      pdf_renderer.py:  470: printSegment:      ▼
+   DEBUG: 2026-02-18 23:15:15,451:      pdf_renderer.py:  470: printSegment:   Posts (auto)
+   DEBUG: 2026-02-18 23:15:15,452:      pdf_renderer.py:  470: printSegment:   Comments (manual)
+   DEBUG: 2026-02-18 23:15:15,454:      pdf_renderer.py:  470: printSegment: Step-by-Step Guide
+   DEBUG: 2026-02-18 23:15:15,456:      pdf_renderer.py:  470: printSegment: Step 1 — Verify Docker is installed
+   DEBUG: 2026-02-18 23:15:15,479:      pdf_renderer.py:  470: printSegment: docker --version
+   DEBUG: 2026-02-18 23:15:15,481:      pdf_renderer.py:  470: printSegment: docker compose version
+   DEBUG: 2026-02-18 23:15:15,484:      pdf_renderer.py:  470: printSegment: Make sure both commands return a version number. If not, install Docker first.
+   DEBUG: 2026-02-18 23:15:15,489:      pdf_renderer.py:  470: printSegment: Step 2 — Configure Reddit API credentials
+   DEBUG: 2026-02-18 23:15:15,490:      pdf_renderer.py:  470: printSegment: Edit the 
+   DEBUG: 2026-02-18 23:15:15,491:      pdf_renderer.py:  470: printSegment: .env
+   DEBUG: 2026-02-18 23:15:15,493:      pdf_renderer.py:  470: printSegment:  file in the project root:
+   DEBUG: 2026-02-18 23:15:15,495:      pdf_renderer.py:  470: printSegment: REDDIT_CLIENT_ID=your_client_id
+   DEBUG: 2026-02-18 23:15:15,496:      pdf_renderer.py:  470: printSegment: REDDIT_CLIENT_SECRET=your_client_secret
+   DEBUG: 2026-02-18 23:15:15,498:      pdf_renderer.py:  470: printSegment: REDDIT_USER_AGENT=your-app-name
+   DEBUG: 2026-02-18 23:15:15,499:      pdf_renderer.py:  470: printSegment: TARGET_SUBREDDITS=all
+   DEBUG: 2026-02-18 23:15:15,502:      pdf_renderer.py:  470: printSegment: To get credentials, create an app at: https://www.reddit.com/prefs/apps/
+   DEBUG: 2026-02-18 23:15:15,504:      pdf_renderer.py:  470: printSegment: Step 3 — Build and start all services
+   DEBUG: 2026-02-18 23:15:15,506:      pdf_renderer.py:  470: printSegment: docker compose up -d --build
+   DEBUG: 2026-02-18 23:15:15,510:      pdf_renderer.py:  470: printSegment: This will build and start: Zookeeper, Kafka, HDFS (NameNode + DataNode), Reddit Producer, Flink Processor, and
+   DEBUG: 2026-02-18 23:15:15,512:      pdf_renderer.py:  470: printSegment: HDFS Writer.
+   DEBUG: 2026-02-18 23:15:15,514:      pdf_renderer.py:  470: printSegment: The first build may take a few minutes to download images and install dependencies.
+   DEBUG: 2026-02-18 23:15:15,518:      pdf_renderer.py:  470: printSegment: Step 4 — Verify all services are running
+   DEBUG: 2026-02-18 23:15:15,519:      pdf_renderer.py:  470: printSegment: docker compose ps
+   DEBUG: 2026-02-18 23:15:15,521:      pdf_renderer.py:  470: printSegment: Wait until all services show as 
+   DEBUG: 2026-02-18 23:15:15,523:      pdf_renderer.py:  470: printSegment: running
+   DEBUG: 2026-02-18 23:15:15,526:      pdf_renderer.py:  470: printSegment:  or 
+   DEBUG: 2026-02-18 23:15:15,529:      pdf_renderer.py:  470: printSegment: healthy
+   DEBUG: 2026-02-18 23:15:15,530:      pdf_renderer.py:  470: printSegment: .
+   DEBUG: 2026-02-18 23:15:15,533:      pdf_renderer.py:  470: printSegment: Step 5 — Watch the producer collecting posts in real-time
+   DEBUG: 2026-02-18 23:15:15,536:      pdf_renderer.py:  470: printSegment: docker compose logs -f reddit-producer
+   DEBUG: 2026-02-18 23:15:15,538:      pdf_renderer.py:  470: printSegment: You should see posts being streamed from Reddit. Press 
+   DEBUG: 2026-02-18 23:15:15,539:      pdf_renderer.py:  470: printSegment: Ctrl+C
+   DEBUG: 2026-02-18 23:15:15,542:      pdf_renderer.py:  470: printSegment:  to exit the logs (the producer keeps running in the
+   DEBUG: 2026-02-18 23:15:15,543:      pdf_renderer.py:  470: printSegment: background).
+   DEBUG: 2026-02-18 23:15:15,544:      pdf_renderer.py:  470: printSegment: To watch other services:
+   DEBUG: 2026-02-18 23:15:15,546:      pdf_renderer.py:  470: printSegment: docker compose logs -f flink-processor
+   DEBUG: 2026-02-18 23:15:15,548:      pdf_renderer.py:  470: printSegment: docker compose logs -f hdfs-writer
+   DEBUG: 2026-02-18 23:15:15,551:      pdf_renderer.py:  470: printSegment: Step 6 — Let the producer collect posts
+   DEBUG: 2026-02-18 23:15:15,553:      pdf_renderer.py:  470: printSegment: Leave the pipeline running. The longer it runs, the more posts are collected.
+   DEBUG: 2026-02-18 23:15:15,554:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,556:      pdf_renderer.py:  470: printSegment: A few minutes = tens of posts
+   DEBUG: 2026-02-18 23:15:15,559:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,560:      pdf_renderer.py:  470: printSegment: A few hours = hundreds to thousands of posts
+   DEBUG: 2026-02-18 23:15:15,563:      pdf_renderer.py:  470: printSegment: Step 7 — Fetch comments for collected posts (manual)
+   DEBUG: 2026-02-18 23:15:15,565:      pdf_renderer.py:  470: printSegment: When you are ready, run:
+   DEBUG: 2026-02-18 23:15:15,567:      pdf_renderer.py:  470: printSegment: docker compose run --rm fetch-comments
+   DEBUG: 2026-02-18 23:15:15,568:      pdf_renderer.py:  470: printSegment: This will:
+   DEBUG: 2026-02-18 23:15:15,570:      pdf_renderer.py:  470: printSegment:  1 
+   DEBUG: 2026-02-18 23:15:15,572:      pdf_renderer.py:  470: printSegment: Read all posts collected so far from Kafka
+   DEBUG: 2026-02-18 23:15:15,573:      pdf_renderer.py:  470: printSegment:  2 
+   DEBUG: 2026-02-18 23:15:15,575:      pdf_renderer.py:  470: printSegment: Skip any posts already processed in a previous run
+   DEBUG: 2026-02-18 23:15:15,576:      pdf_renderer.py:  470: printSegment:  3 
+   DEBUG: 2026-02-18 23:15:15,578:      pdf_renderer.py:  470: printSegment: Fetch ALL comments for each post from the Reddit API
+   DEBUG: 2026-02-18 23:15:15,580:      pdf_renderer.py:  470: printSegment:  4 
+   DEBUG: 2026-02-18 23:15:15,582:      pdf_renderer.py:  470: printSegment: Publish comments to Kafka (linked to their parent post)
+   DEBUG: 2026-02-18 23:15:15,584:      pdf_renderer.py:  470: printSegment:  5 
+   DEBUG: 2026-02-18 23:15:15,586:      pdf_renderer.py:  470: printSegment: Save progress to a checkpoint file
+   DEBUG: 2026-02-18 23:15:15,587:      pdf_renderer.py:  470: printSegment: You can safely press 
+   DEBUG: 2026-02-18 23:15:15,589:      pdf_renderer.py:  470: printSegment: Ctrl+C
+   DEBUG: 2026-02-18 23:15:15,595:      pdf_renderer.py:  470: printSegment:  to stop — progress is saved after each post. Run the same command again later to
+   DEBUG: 2026-02-18 23:15:15,615:      pdf_renderer.py:  470: printSegment: continue where you left off.
+   DEBUG: 2026-02-18 23:15:15,618:      pdf_renderer.py:  470: printSegment: Step 8 — Verify Kafka topics
+   DEBUG: 2026-02-18 23:15:15,620:      pdf_renderer.py:  470: printSegment: docker compose exec kafka kafka-topics --list --bootstrap-server
+   DEBUG: 2026-02-18 23:15:15,622:      pdf_renderer.py:  470: printSegment: localhost:9092
+   DEBUG: 2026-02-18 23:15:15,624:      pdf_renderer.py:  470: printSegment: Expected topics:
+   DEBUG: 2026-02-18 23:15:15,625:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,626:      pdf_renderer.py:  470: printSegment: reddit.posts
+   DEBUG: 2026-02-18 23:15:15,628:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,629:      pdf_renderer.py:  470: printSegment: reddit.comments
+   DEBUG: 2026-02-18 23:15:15,631:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,633:      pdf_renderer.py:  470: printSegment: reddit.posts.processed
+   DEBUG: 2026-02-18 23:15:15,634:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,636:      pdf_renderer.py:  470: printSegment: reddit.comments.processed
+   DEBUG: 2026-02-18 23:15:15,639:      pdf_renderer.py:  470: printSegment: Step 9 — Check data stored in HDFS
+   DEBUG: 2026-02-18 23:15:15,641:      pdf_renderer.py:  470: printSegment: # List all files
+   DEBUG: 2026-02-18 23:15:15,644:      pdf_renderer.py:  470: printSegment: docker compose exec namenode hdfs dfs -ls -R /data/reddit
+   DEBUG: 2026-02-18 23:15:15,646:      pdf_renderer.py:  470: printSegment: # Check total data size
+   DEBUG: 2026-02-18 23:15:15,648:      pdf_renderer.py:  470: printSegment: docker compose exec namenode hdfs dfs -du -h /data/reddit
+   DEBUG: 2026-02-18 23:15:15,651:      pdf_renderer.py:  470: printSegment: Step 10 — Access HDFS Web UI
+   DEBUG: 2026-02-18 23:15:15,653:      pdf_renderer.py:  470: printSegment: Open in your browser:
+   DEBUG: 2026-02-18 23:15:15,655:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,657:      pdf_renderer.py:  470: printSegment: HDFS NameNode
+   DEBUG: 2026-02-18 23:15:15,659:      pdf_renderer.py:  470: printSegment: : http://localhost:9870
+   DEBUG: 2026-02-18 23:15:15,662:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-02-18 23:15:15,663:      pdf_renderer.py:  470: printSegment: HDFS DataNode
+   DEBUG: 2026-02-18 23:15:15,666:      pdf_renderer.py:  470: printSegment: : http://localhost:9864
+   DEBUG: 2026-02-18 23:15:15,669:      pdf_renderer.py:  470: printSegment: Step 11 — Stop the pipeline
+   DEBUG: 2026-02-18 23:15:15,672:      pdf_renderer.py:  470: printSegment: # Stop all services (data is preserved)
+   DEBUG: 2026-02-18 23:15:15,673:      pdf_renderer.py:  470: printSegment: docker compose down
+   DEBUG: 2026-02-18 23:15:15,675:      pdf_renderer.py:  470: printSegment: # Stop and delete ALL data (clean reset)
+   DEBUG: 2026-02-18 23:15:15,677:      pdf_renderer.py:  470: printSegment: docker compose down -v
+   DEBUG: 2026-02-18 23:15:15,679:      pdf_renderer.py:  470: printSegment: Quick Reference
+   DEBUG: 2026-02-18 23:15:15,682:      pdf_renderer.py:  470: printSegment: docker compose up -d --build                  # Start everything
+   DEBUG: 2026-02-18 23:15:15,685:      pdf_renderer.py:  470: printSegment: docker compose ps                             # Check status
+   DEBUG: 2026-02-18 23:15:15,688:      pdf_renderer.py:  470: printSegment: docker compose logs -f reddit-producer        # Watch post
+   DEBUG: 2026-02-18 23:15:15,689:      pdf_renderer.py:  470: printSegment: collection
+   DEBUG: 2026-02-18 23:15:15,692:      pdf_renderer.py:  470: printSegment: docker compose run --rm fetch-comments        # Fetch comments
+   DEBUG: 2026-02-18 23:15:15,693:      pdf_renderer.py:  470: printSegment: (manual)
+   DEBUG: 2026-02-18 23:15:15,696:      pdf_renderer.py:  470: printSegment: docker compose exec namenode hdfs dfs -ls -R /data/reddit   # Check
+   DEBUG: 2026-02-18 23:15:15,697:      pdf_renderer.py:  470: printSegment: HDFS
+   DEBUG: 2026-02-18 23:15:15,699:      pdf_renderer.py:  470: printSegment: docker compose down                           # Stop (keep data)
+   DEBUG: 2026-02-18 23:15:15,701:      pdf_renderer.py:  470: printSegment: docker compose down -v                        # Stop (delete data)
+   DEBUG: 2026-02-18 23:15:15,704:      pdf_renderer.py:  470: printSegment: Project Structure
+   DEBUG: 2026-02-18 23:15:15,705:      pdf_renderer.py:  470: printSegment: reddit/
+   DEBUG: 2026-02-18 23:15:15,708:      pdf_renderer.py:  470: printSegment: ├── .env                          # Reddit API credentials
+   DEBUG: 2026-02-18 23:15:15,709:      pdf_renderer.py:  470: printSegment: ├── docker-compose.yml            # Service orchestration
+   DEBUG: 2026-02-18 23:15:15,712:      pdf_renderer.py:  470: printSegment: ├── reddit-producer/              # Streams posts (automatic, 24/7)
+   DEBUG: 2026-02-18 23:15:15,713:      pdf_renderer.py:  470: printSegment: │   ├── Dockerfile
+   DEBUG: 2026-02-18 23:15:15,715:      pdf_renderer.py:  470: printSegment: │   ├── requirements.txt
+   DEBUG: 2026-02-18 23:15:15,717:      pdf_renderer.py:  470: printSegment: │   ├── producer.py
+   DEBUG: 2026-02-18 23:15:15,718:      pdf_renderer.py:  470: printSegment: │   └── config.py
+   DEBUG: 2026-02-18 23:15:15,720:      pdf_renderer.py:  470: printSegment: ├── fetch-comments/               # Fetches comments (manual)
+   DEBUG: 2026-02-18 23:15:15,722:      pdf_renderer.py:  470: printSegment: │   ├── Dockerfile
+   DEBUG: 2026-02-18 23:15:15,724:      pdf_renderer.py:  470: printSegment: │   ├── requirements.txt
+   DEBUG: 2026-02-18 23:15:15,725:      pdf_renderer.py:  470: printSegment: │   └── fetch_comments.py
+   DEBUG: 2026-02-18 23:15:15,727:      pdf_renderer.py:  470: printSegment: ├── flink-processor/              # Cleans and transforms data
+   DEBUG: 2026-02-18 23:15:15,729:      pdf_renderer.py:  470: printSegment: │   ├── Dockerfile
+   DEBUG: 2026-02-18 23:15:15,730:      pdf_renderer.py:  470: printSegment: │   ├── requirements.txt
+   DEBUG: 2026-02-18 23:15:15,732:      pdf_renderer.py:  470: printSegment: │   └── processor.py
+   DEBUG: 2026-02-18 23:15:15,734:      pdf_renderer.py:  470: printSegment: ├── hdfs-writer/                  # Writes Parquet to HDFS
+   DEBUG: 2026-02-18 23:15:15,736:      pdf_renderer.py:  470: printSegment: │   ├── Dockerfile
+   DEBUG: 2026-02-18 23:15:15,737:      pdf_renderer.py:  470: printSegment: │   ├── requirements.txt
+   DEBUG: 2026-02-18 23:15:15,738:      pdf_renderer.py:  470: printSegment: │   └── writer.py
+   DEBUG: 2026-02-18 23:15:15,740:      pdf_renderer.py:  470: printSegment: ├── config/hadoop/                # Hadoop configuration
+   DEBUG: 2026-02-18 23:15:15,741:      pdf_renderer.py:  470: printSegment: │   ├── core-site.xml
+   DEBUG: 2026-02-18 23:15:15,743:      pdf_renderer.py:  470: printSegment: │   └── hdfs-site.xml
+   DEBUG: 2026-02-18 23:15:15,744:      pdf_renderer.py:  470: printSegment: └── scripts/                      # Utility scripts
+   DEBUG: 2026-02-18 23:15:15,745:      pdf_renderer.py:  470: printSegment:     ├── init-hdfs.sh
+   DEBUG: 2026-02-18 23:15:15,747:      pdf_renderer.py:  470: printSegment:     └── check-health.sh
+   DEBUG: 2026-02-18 23:15:15,749:      pdf_renderer.py:  470: printSegment: Technologies
+   DEBUG: 2026-02-18 23:15:15,751:      pdf_renderer.py:  470: printSegment: | Technology | Role |
+   DEBUG: 2026-02-18 23:15:15,752:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,754:      pdf_renderer.py:  470: printSegment: |------------|------|
+   DEBUG: 2026-02-18 23:15:15,755:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,756:      pdf_renderer.py:  470: printSegment: | Docker 
+   DEBUG: 2026-02-18 23:15:15,757:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-02-18 23:15:15,759:      pdf_renderer.py:  470: printSegment:  Docker Compose | Containerization 
+   DEBUG: 2026-02-18 23:15:15,760:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-02-18 23:15:15,762:      pdf_renderer.py:  470: printSegment:  orchestration |
+   DEBUG: 2026-02-18 23:15:15,763:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,765:      pdf_renderer.py:  470: printSegment: | Apache
+   DEBUG: 2026-02-18 23:15:15,766:      pdf_renderer.py:  470: printSegment: Kafka | Distributed streaming |
+   DEBUG: 2026-02-18 23:15:15,768:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,769:      pdf_renderer.py:  470: printSegment: | Apache Zookeeper | Kafka coordination |
+   DEBUG: 2026-02-18 23:15:15,770:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,772:      pdf_renderer.py:  470: printSegment: | HDFS (Hadoop) | Distributed storage |
+   DEBUG: 2026-02-18 23:15:15,774:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,776:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-02-18 23:15:15,778:      pdf_renderer.py:  470: printSegment: Flink Processor (Python) | Stream processing 
+   DEBUG: 2026-02-18 23:15:15,779:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-02-18 23:15:15,780:      pdf_renderer.py:  470: printSegment:  cleaning |
+   DEBUG: 2026-02-18 23:15:15,782:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,783:      pdf_renderer.py:  470: printSegment: | PRAW | Reddit API client |
+   DEBUG: 2026-02-18 23:15:15,784:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,787:      pdf_renderer.py:  470: printSegment: | Parquet + Snappy |
+   DEBUG: 2026-02-18 23:15:15,788:      pdf_renderer.py:  470: printSegment: Columnar storage format |
+   DEBUG: 2026-02-18 23:15:15,789:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-02-18 23:15:15,791:      pdf_renderer.py:  470: printSegment: | PyArrow 
+   DEBUG: 2026-02-18 23:15:15,792:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-02-18 23:15:15,794:      pdf_renderer.py:  470: printSegment:  Pandas | Data processing |
+   DEBUG: 2026-02-18 23:15:15,796:      pdf_renderer.py:  470: printSegment: Troubleshooting
+   DEBUG: 2026-02-18 23:15:15,798:      pdf_renderer.py:  470: printSegment: # Rebuild a specific service
+   DEBUG: 2026-02-18 23:15:15,800:      pdf_renderer.py:  470: printSegment: docker compose build --no-cache reddit-producer
+   DEBUG: 2026-02-18 23:15:15,801:      pdf_renderer.py:  470: printSegment: # Restart a service
+   DEBUG: 2026-02-18 23:15:15,803:      pdf_renderer.py:  470: printSegment: docker compose restart flink-processor
+   DEBUG: 2026-02-18 23:15:15,804:      pdf_renderer.py:  470: printSegment: # Check Kafka consumer lag
+   DEBUG: 2026-02-18 23:15:15,806:      pdf_renderer.py:  470: printSegment: docker compose exec kafka kafka-consumer-groups \
+   DEBUG: 2026-02-18 23:15:15,808:      pdf_renderer.py:  470: printSegment:   --bootstrap-server localhost:9092 \
+   DEBUG: 2026-02-18 23:15:15,810:      pdf_renderer.py:  470: printSegment:   --describe --all-groups
+   DEBUG: 2026-02-18 23:15:15,811:      pdf_renderer.py:  470: printSegment: # View HDFS health report
+   DEBUG: 2026-02-18 23:15:15,813:      pdf_renderer.py:  470: printSegment: docker compose exec namenode hdfs dfsadmin -report
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 0, [1, 'Real-Time Reddit Data Engineering Pipeline', 1, 68.0]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 1, [2, 'Architecture', 1, 106.0]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 2, [2, 'Step-by-Step Guide', 1, 259.6]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 3, [3, 'Step 1 — Verify Docker is installed', 1, 292.8]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 4, [3, 'Step 2 — Configure Reddit API credentials', 1, 387.59999999999997]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 5, [3, 'Step 3 — Build and start all services', 1, 524.4]
+   DEBUG: 2026-02-18 23:15:15,815:      pdf_renderer.py:   53: 6, [3, 'Step 4 — Verify all services are running', 1, 637.1999999999999]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 7, [3, 'Step 5 — Watch the producer collecting posts in real-time', 2, 72.0]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 8, [3, 'Step 6 — Let the producer collect posts', 2, 220.8]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 9, [3, 'Step 7 — Fetch comments for collected posts (manual)', 2, 315.6]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 10, [3, 'Step 8 — Verify Kafka topics', 2, 518.4]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 11, [3, 'Step 9 — Check data stored in HDFS', 2, 673.1999999999999]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 12, [3, 'Step 10 — Access HDFS Web UI', 3, 128.4]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 13, [3, 'Step 11 — Stop the pipeline', 3, 223.20000000000002]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 14, [2, 'Quick Reference', 3, 324.40000000000003]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 15, [2, 'Project Structure', 3, 502.0]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 16, [2, 'Technologies', 4, 224.8]
+   DEBUG: 2026-02-18 23:15:15,816:      pdf_renderer.py:   53: 17, [2, 'Troubleshooting', 4, 324.40000000000003]

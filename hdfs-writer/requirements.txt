@@ -1,0 +1,6 @@
+confluent-kafka==2.6.1
+hdfs==2.7.3
+pyarrow==18.1.0
+pandas==2.2.3
+python-dotenv==1.0.1
+requests==2.32.3

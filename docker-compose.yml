@@ -1,0 +1,348 @@
+services:
+
+  # ─── Zookeeper ──────────────────────────────────────────────────────────────
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.7.1
+    container_name: zookeeper
+    hostname: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_INIT_LIMIT: 5
+      ZOOKEEPER_SYNC_LIMIT: 2
+      KAFKA_OPTS: "-Dzookeeper.4lw.commands.whitelist=ruok"
+    ports:
+      - "2182:2181"
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_log:/var/lib/zookeeper/log
+    healthcheck:
+      test: [ "CMD-SHELL", "echo ruok | nc localhost 2181 | grep imok" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── Kafka ──────────────────────────────────────────────────────────────────
+  kafka:
+    image: confluentinc/cp-kafka:7.7.1
+    container_name: kafka
+    hostname: kafka
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_NUM_PARTITIONS: 3
+      KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_HOURS: 168 # 7 days
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824 # 1 GB
+      KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS: 300000
+    ports:
+      - "29092:29092" # External access
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    healthcheck:
+      test: [ "CMD-SHELL", "kafka-broker-api-versions --bootstrap-server localhost:9092 > /dev/null 2>&1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── Kafka Topic Initialization ─────────────────────────────────────────────
+  kafka-init:
+    image: confluentinc/cp-kafka:7.7.1
+    container_name: kafka-init
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: [ "/bin/bash", "-c" ]
+    command: |
+      "
+      echo 'Creating Kafka topics...'
+
+      kafka-topics --create --if-not-exists \
+        --bootstrap-server kafka:9092 \
+        --topic reddit.posts \
+        --partitions 3 \
+        --replication-factor 1
+
+      kafka-topics --create --if-not-exists \
+        --bootstrap-server kafka:9092 \
+        --topic reddit.comments \
+        --partitions 3 \
+        --replication-factor 1
+
+      kafka-topics --create --if-not-exists \
+        --bootstrap-server kafka:9092 \
+        --topic reddit.posts.processed \
+        --partitions 3 \
+        --replication-factor 1
+
+      kafka-topics --create --if-not-exists \
+        --bootstrap-server kafka:9092 \
+        --topic reddit.comments.processed \
+        --partitions 3 \
+        --replication-factor 1
+
+      echo 'Topics created:'
+      kafka-topics --list --bootstrap-server kafka:9092
+
+      echo 'Kafka initialization complete!'
+      "
+    networks:
+      - reddit-pipeline
+
+  # ─── HDFS NameNode ──────────────────────────────────────────────────────────
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    hostname: namenode
+    environment:
+      CLUSTER_NAME: reddit-pipeline
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      CORE_CONF_hadoop_http_staticuser_user: root
+      HDFS_CONF_dfs_replication: 2
+      HDFS_CONF_dfs_permissions_enabled: "false"
+      HDFS_CONF_dfs_webhdfs_enabled: "true"
+      HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check: "false"
+    ports:
+      - "9870:9870" # Web UI
+      - "9000:9000" # HDFS RPC
+    volumes:
+      - namenode_data:/hadoop/dfs/name
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:9870/ || exit 1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── HDFS DataNode 1 ────────────────────────────────────────────────────────
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode1
+    hostname: datanode1
+    depends_on:
+      namenode:
+        condition: service_healthy
+    environment:
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_replication: 2
+      HDFS_CONF_dfs_permissions_enabled: "false"
+      HDFS_CONF_dfs_datanode_data_dir: /hadoop/dfs/data
+    ports:
+      - "9864:9864" # DataNode 1 Web UI
+    volumes:
+      - datanode1_data:/hadoop/dfs/data
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:9864/ || exit 1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── HDFS DataNode 2 ────────────────────────────────────────────────────────
+  datanode2:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode2
+    hostname: datanode2
+    depends_on:
+      namenode:
+        condition: service_healthy
+    environment:
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_replication: 2
+      HDFS_CONF_dfs_permissions_enabled: "false"
+      HDFS_CONF_dfs_datanode_data_dir: /hadoop/dfs/data
+    ports:
+      - "9865:9864" # DataNode 2 Web UI
+    volumes:
+      - datanode2_data:/hadoop/dfs/data
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:9864/ || exit 1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── HDFS Initialization ───────────────────────────────────────────────────
+  hdfs-init:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: hdfs-init
+    depends_on:
+      namenode:
+        condition: service_healthy
+      datanode1:
+        condition: service_healthy
+      datanode2:
+        condition: service_healthy
+    environment:
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+    entrypoint: [ "/bin/bash", "-c" ]
+    command: |
+      "
+      echo 'Waiting for HDFS safe mode to exit...'
+      until hdfs dfsadmin -safemode get 2>/dev/null | grep -q 'Safe mode is OFF'; do
+        echo '  Still in safe mode, waiting...'
+        sleep 5
+      done
+
+      echo 'Creating HDFS directories...'
+      hdfs dfs -mkdir -p /data/reddit/posts
+      hdfs dfs -mkdir -p /data/reddit/comments
+      hdfs dfs -mkdir -p /data/reddit/images
+      hdfs dfs -mkdir -p /data/reddit/post_updates
+      hdfs dfs -chmod -R 777 /data
+
+      echo 'HDFS directory structure:'
+      hdfs dfs -ls -R /data/reddit
+
+      echo 'HDFS initialization complete!'
+      "
+    networks:
+      - reddit-pipeline
+
+  # ─── Reddit Producer ───────────────────────────────────────────────────────
+  reddit-producer:
+    build:
+      context: ./reddit-producer
+      dockerfile: Dockerfile
+    container_name: reddit-producer
+    hostname: reddit-producer
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      REDDIT_CLIENT_ID: ${REDDIT_CLIENT_ID}
+      REDDIT_CLIENT_SECRET: ${REDDIT_CLIENT_SECRET}
+      REDDIT_USER_AGENT: ${REDDIT_USER_AGENT:-reddit-pipeline-producer}
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_TOPIC_POSTS: reddit.posts
+      TARGET_SUBREDDITS: ${TARGET_SUBREDDITS:-all}
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── Comment Fetcher (Manual) ──────────────────────────────────────────────
+  # Run manually: docker compose run --rm fetch-comments
+  # This fetches comments for all collected posts that haven't been processed yet.
+  # Progress is saved — safe to interrupt and resume later.
+  fetch-comments:
+    build:
+      context: ./fetch-comments
+      dockerfile: Dockerfile
+    container_name: fetch-comments
+    hostname: fetch-comments
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      REDDIT_CLIENT_ID: ${REDDIT_CLIENT_ID}
+      REDDIT_CLIENT_SECRET: ${REDDIT_CLIENT_SECRET}
+      REDDIT_USER_AGENT: ${REDDIT_USER_AGENT:-reddit-pipeline-comment-fetcher}
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_TOPIC_POSTS: reddit.posts
+      KAFKA_TOPIC_COMMENTS: reddit.comments
+      CHECKPOINT_DIR: /app/data
+    volumes:
+      - checkpoint_data:/app/data
+    profiles:
+      - manual
+    networks:
+      - reddit-pipeline
+
+  # ─── Flink Processor ───────────────────────────────────────────────────────
+  flink-processor:
+    build:
+      context: ./flink-processor
+      dockerfile: Dockerfile
+    container_name: flink-processor
+    hostname: flink-processor
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      INPUT_TOPICS: reddit.posts,reddit.comments
+      OUTPUT_TOPIC_POSTS: reddit.posts.processed
+      OUTPUT_TOPIC_COMMENTS: reddit.comments.processed
+      CONSUMER_GROUP_ID: flink-processor-group
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+  # ─── HDFS Writer ────────────────────────────────────────────────────────────
+  hdfs-writer:
+    build:
+      context: ./hdfs-writer
+      dockerfile: Dockerfile
+    container_name: hdfs-writer
+    hostname: hdfs-writer
+    depends_on:
+      kafka:
+        condition: service_healthy
+      namenode:
+        condition: service_healthy
+      datanode1:
+        condition: service_healthy
+      datanode2:
+        condition: service_healthy
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      INPUT_TOPICS: reddit.posts.processed,reddit.comments.processed
+      CONSUMER_GROUP_ID: hdfs-writer-group
+      HDFS_URL: http://namenode:9870
+      HDFS_USER: root
+      HDFS_BASE_PATH: /data/reddit
+      BATCH_SIZE: 500
+      FLUSH_INTERVAL_SECONDS: 60
+    restart: unless-stopped
+    networks:
+      - reddit-pipeline
+
+# ─── Volumes ──────────────────────────────────────────────────────────────────
+volumes:
+  zookeeper_data:
+    driver: local
+  zookeeper_log:
+    driver: local
+  kafka_data:
+    driver: local
+  namenode_data:
+    driver: local
+  datanode1_data:
+    driver: local
+  datanode2_data:
+    driver: local
+  checkpoint_data:
+    driver: local
+
+# ─── Networks ─────────────────────────────────────────────────────────────────
+networks:
+  reddit-pipeline:
+    driver: bridge
+    name: reddit-pipeline
